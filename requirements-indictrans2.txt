@@ -1,0 +1,13 @@
+# IndicTrans2 (config indictrans2) runs its checkpoints' remote code, written for transformers 4 (it imports
+# transformers.onnx and tokenizer internals that transformers 5 removed), so it has a venv of its own:
+#   python3.14 -m venv .venv-it2 && .venv-it2/bin/pip install -r requirements-indictrans2.txt
+#   .venv-it2/bin/pip install --no-deps indic-nlp-library==0.92 urduhack==1.1.1 IndicTransToolkit==1.1.1
+torch==2.14.0
+numpy==2.5.2
+transformers==4.57.6      # pulls huggingface_hub 0.36.2, tokenizers 0.22.2
+safetensors==0.8.0
+sentencepiece==0.2.2
+sacremoses==0.2.0
+pandas==3.1.0
+regex==2026.9.3
+sacrebleu==2.6.0

@@ -1,0 +1,11 @@
+# Engine configs, the report and the tests: the engine's own venv (InferenceEngine/requirements-dev.txt) plus these.
+sacrebleu==2.6.0          # chrF++ and its signature
+pyarrow==26.0.0           # `data`: reads IN22-Gen's parquet
+sentencepiece==0.2.2      # IndicTrans2's tokenizers (tests)
+sacremoses==0.2.0         # IndicProcessor: English punctuation normalisation and tokenisation
+pandas==3.1.0             # imported by IndicNLP's transliterator (IndicProcessor)
+# IN22-Gen's chrF++ protocol (IndicNLP normalize + trivial_tokenize, urduhack's Urdu normalizer under it) and
+# IndicProcessor. Installed without their declared dependencies: TensorFlow (urduhack) has no build for Python 3.14;
+# IndicTransToolkit's indic-nlp-library-itt would replace indic-nlp-library (the same `indicnlp` package) that the
+# protocol pins; the report checks these versions:
+#   pip install --no-deps indic-nlp-library==0.92 urduhack==1.1.1 IndicTransToolkit==1.1.1
