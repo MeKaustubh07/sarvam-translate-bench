@@ -1,0 +1,5830 @@
+{
+ "dataset": {
+  "repo": "ai4bharat/IN22-Gen",
+  "revision": "e042ab3d3063110b1a85efa0a59bdbf8553bb928",
+  "file": "data/train-00000-of-00001.parquet",
+  "sha256": "e79c7889abe97c78cf03c09f04e50874b7932b381b49a08a4431e58aefc5fb5c",
+  "jsonl_sha256": "394a34e98c308ea64a7bdf69613690f87c7075821b04b4c4f5dae6714be9cc20",
+  "languages": {
+   "eng": {
+    "column": "eng_Latn",
+    "script": "Latn",
+    "other_scripts": [],
+    "script_share": 1.0,
+    "empty": 0
+   },
+   "asm": {
+    "column": "asm_Beng",
+    "script": "Beng",
+    "other_scripts": [],
+    "script_share": 1.0,
+    "empty": 0
+   },
+   "ben": {
+    "column": "ben_Beng",
+    "script": "Beng",
+    "other_scripts": [],
+    "script_share": 0.9999,
+    "empty": 0
+   },
+   "brx": {
+    "column": "brx_Deva",
+    "script": "Deva",
+    "other_scripts": [],
+    "script_share": 0.9998,
+    "empty": 0
+   },
+   "doi": {
+    "column": "doi_Deva",
+    "script": "Deva",
+    "other_scripts": [],
+    "script_share": 0.9968,
+    "empty": 0
+   },
+   "gom": {
+    "column": "gom_Deva",
+    "script": "Deva",
+    "other_scripts": [],
+    "script_share": 0.9999,
+    "empty": 0
+   },
+   "guj": {
+    "column": "guj_Gujr",
+    "script": "Gujr",
+    "other_scripts": [],
+    "script_share": 1.0,
+    "empty": 0
+   },
+   "hin": {
+    "column": "hin_Deva",
+    "script": "Deva",
+    "other_scripts": [],
+    "script_share": 0.9999,
+    "empty": 0
+   },
+   "kan": {
+    "column": "kan_Knda",
+    "script": "Knda",
+    "other_scripts": [],
+    "script_share": 0.9993,
+    "empty": 0
+   },
+   "kas": {
+    "column": "kas_Arab",
+    "script": "Arab",
+    "other_scripts": [],
+    "script_share": 0.9989,
+    "empty": 0
+   },
+   "mai": {
+    "column": "mai_Deva",
+    "script": "Deva",
+    "other_scripts": [],
+    "script_share": 0.9999,
+    "empty": 0
+   },
+   "mal": {
+    "column": "mal_Mlym",
+    "script": "Mlym",
+    "other_scripts": [],
+    "script_share": 0.9999,
+    "empty": 0
+   },
+   "mar": {
+    "column": "mar_Deva",
+    "script": "Deva",
+    "other_scripts": [],
+    "script_share": 0.9999,
+    "empty": 0
+   },
+   "mni": {
+    "column": "mni_Mtei",
+    "script": "Mtei",
+    "other_scripts": [],
+    "script_share": 1.0,
+    "empty": 0
+   },
+   "npi": {
+    "column": "npi_Deva",
+    "script": "Deva",
+    "other_scripts": [],
+    "script_share": 0.9999,
+    "empty": 0
+   },
+   "ory": {
+    "column": "ory_Orya",
+    "script": "Orya",
+    "other_scripts": [],
+    "script_share": 1.0,
+    "empty": 0
+   },
+   "pan": {
+    "column": "pan_Guru",
+    "script": "Guru",
+    "other_scripts": [],
+    "script_share": 0.9938,
+    "empty": 0
+   },
+   "san": {
+    "column": "san_Deva",
+    "script": "Deva",
+    "other_scripts": [],
+    "script_share": 1.0,
+    "empty": 0
+   },
+   "sat": {
+    "column": "sat_Olck",
+    "script": "Olck",
+    "other_scripts": [],
+    "script_share": 0.9991,
+    "empty": 0
+   },
+   "snd": {
+    "column": "snd_Deva",
+    "script": "Deva",
+    "other_scripts": [],
+    "script_share": 0.9994,
+    "empty": 0
+   },
+   "tam": {
+    "column": "tam_Taml",
+    "script": "Taml",
+    "other_scripts": [],
+    "script_share": 0.9999,
+    "empty": 0
+   },
+   "tel": {
+    "column": "tel_Telu",
+    "script": "Telu",
+    "other_scripts": [],
+    "script_share": 1.0,
+    "empty": 0
+   },
+   "urd": {
+    "column": "urd_Arab",
+    "script": "Arab",
+    "other_scripts": [],
+    "script_share": 1.0,
+    "empty": 0
+   }
+  }
+ },
+ "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+ "protocol": "IN22-Gen / IndicTrans2 compute_metrics.sh: Indic targets IndicNLP normalize (default options) + trivial_tokenize, English raw; indic-nlp-library 0.92, urduhack 1.1.1",
+ "baseline": "gemma-int4@neutral",
+ "boot": 1000,
+ "seed": 0,
+ "chrf": {
+  "asm-eng": {
+   "gemma-int4@neutral": {
+    "score": 57.962278353987216,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 43.03834762526798,
+    "n": 3,
+    "delta": -14.923930728719235,
+    "ci": [
+     -17.866522092180915,
+     -12.337253876239892
+    ]
+   }
+  },
+  "ben-eng": {
+   "gemma-int4@neutral": {
+    "score": 54.053131870345496,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 51.298948235100816,
+    "n": 3,
+    "delta": -2.7541836352446794,
+    "ci": [
+     -23.46447753486234,
+     14.019733656339824
+    ]
+   }
+  },
+  "brx-eng": {
+   "gemma-int4@neutral": {
+    "score": 24.168760777491897,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 15.018795063750604,
+    "n": 3,
+    "delta": -9.149965713741294,
+    "ci": [
+     -14.031278853165166,
+     -7.811885571804039
+    ]
+   }
+  },
+  "doi-eng": {
+   "gemma-int4@neutral": {
+    "score": 47.65796061394525,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 39.83739458536034,
+    "n": 3,
+    "delta": -7.820566028584906,
+    "ci": [
+     -8.240342097131368,
+     -1.0153626904690256
+    ]
+   }
+  },
+  "eng-asm": {
+   "gemma-int4@neutral": {
+    "score": 23.60360857056766,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 12.637506289796638,
+    "n": 3,
+    "delta": -10.96610228077102,
+    "ci": [
+     -12.223993209051287,
+     -6.24650734490273
+    ]
+   }
+  },
+  "eng-ben": {
+   "gemma-int4@neutral": {
+    "score": 43.09719503589867,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 17.02920448088799,
+    "n": 3,
+    "delta": -26.06799055501068,
+    "ci": [
+     -42.88172468298205,
+     -8.10884167735842
+    ]
+   }
+  },
+  "eng-brx": {
+   "gemma-int4@neutral": {
+    "score": 1.2658640825477854,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 3.8394891318578974,
+    "n": 3,
+    "delta": 2.5736250493101123,
+    "ci": [
+     -1.663689534567369,
+     5.009156381117709
+    ]
+   }
+  },
+  "eng-doi": {
+   "gemma-int4@neutral": {
+    "score": 23.54649401484223,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 3.4904153343606645,
+    "n": 3,
+    "delta": -20.056078680481566,
+    "ci": [
+     -30.054606225259256,
+     -1.520386405516125
+    ]
+   }
+  },
+  "eng-gom": {
+   "gemma-int4@neutral": {
+    "score": 2.05059250293277,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 3.5206715969440654,
+    "n": 3,
+    "delta": 1.4700790940112953,
+    "ci": [
+     -0.886633633249245,
+     5.304520239552211
+    ]
+   }
+  },
+  "eng-guj": {
+   "gemma-int4@neutral": {
+    "score": 42.540836764960574,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 18.661072829135357,
+    "n": 3,
+    "delta": -23.879763935825217,
+    "ci": [
+     -32.67388957125749,
+     -16.968264961719576
+    ]
+   }
+  },
+  "eng-hin": {
+   "gemma-int4@neutral": {
+    "score": 63.453607868219706,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 24.87166028073983,
+    "n": 3,
+    "delta": -38.581947587479874,
+    "ci": [
+     -55.22484959294229,
+     -26.60687743055653
+    ]
+   }
+  },
+  "eng-kan": {
+   "gemma-int4@neutral": {
+    "score": 24.36211785049452,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 12.467929266005127,
+    "n": 3,
+    "delta": -11.894188584489394,
+    "ci": [
+     -34.78193435508683,
+     -1.6416020619489071
+    ]
+   }
+  },
+  "eng-kas": {
+   "gemma-int4@neutral": {
+    "score": 6.5616689967278905,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 3.7791951793816216,
+    "n": 3,
+    "delta": -2.782473817346269,
+    "ci": [
+     -9.808532299797314,
+     1.6360785414741459
+    ]
+   }
+  },
+  "eng-mai": {
+   "gemma-int4@neutral": {
+    "score": 32.07299959608951,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 12.149297085524688,
+    "n": 3,
+    "delta": -19.923702510564823,
+    "ci": [
+     -22.062392607626116,
+     -14.829366507523748
+    ]
+   }
+  },
+  "eng-mal": {
+   "gemma-int4@neutral": {
+    "score": 17.71241456560591,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 7.3420694287716355,
+    "n": 3,
+    "delta": -10.370345136834276,
+    "ci": [
+     -21.471965254815213,
+     -2.8845350496929005
+    ]
+   }
+  },
+  "eng-mar": {
+   "gemma-int4@neutral": {
+    "score": 50.87231460845024,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 20.09438918428078,
+    "n": 3,
+    "delta": -30.77792542416946,
+    "ci": [
+     -40.084610153793555,
+     -21.86894631646786
+    ]
+   }
+  },
+  "eng-mni": {
+   "gemma-int4@neutral": {
+    "score": 1.3872706775804116,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 0.49991337640578026,
+    "n": 3,
+    "delta": -0.8873573011746313,
+    "ci": [
+     -3.2219542181298175,
+     0.6243692727915942
+    ]
+   }
+  },
+  "eng-npi": {
+   "gemma-int4@neutral": {
+    "score": 43.359015103904255,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 16.683755302846922,
+    "n": 3,
+    "delta": -26.675259801057333,
+    "ci": [
+     -31.049280635761257,
+     -21.77916248005802
+    ]
+   }
+  },
+  "eng-ory": {
+   "gemma-int4@neutral": {
+    "score": 6.299790831198178,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 12.495621222745228,
+    "n": 3,
+    "delta": 6.195830391547051,
+    "ci": [
+     -1.8111139812569004,
+     12.670295156167597
+    ]
+   }
+  },
+  "eng-pan": {
+   "gemma-int4@neutral": {
+    "score": 32.64296225499804,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 15.771278888279038,
+    "n": 3,
+    "delta": -16.871683366719,
+    "ci": [
+     -17.177516572737563,
+     -12.593915206325125
+    ]
+   }
+  },
+  "eng-san": {
+   "gemma-int4@neutral": {
+    "score": 19.300696556534465,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 8.613276411103989,
+    "n": 3,
+    "delta": -10.687420145430476,
+    "ci": [
+     -15.8013881343897,
+     -8.727333567036336
+    ]
+   }
+  },
+  "eng-sat": {
+   "gemma-int4@neutral": {
+    "score": 1.3947344355497895,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 0.49061178343332507,
+    "n": 3,
+    "delta": -0.9041226521164645,
+    "ci": [
+     -1.0125762524049104,
+     -0.37654661553865615
+    ]
+   }
+  },
+  "eng-snd": {
+   "gemma-int4@neutral": {
+    "score": 0.9935549040983016,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 0.8800322215745772,
+    "n": 3,
+    "delta": -0.11352268252372444,
+    "ci": [
+     -1.62128206225371,
+     0.2606087984038615
+    ]
+   }
+  },
+  "eng-tam": {
+   "gemma-int4@neutral": {
+    "score": 47.171142519958195,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 20.916680043131343,
+    "n": 3,
+    "delta": -26.254462476826852,
+    "ci": [
+     -36.42663188622074,
+     -20.87883450750764
+    ]
+   }
+  },
+  "eng-tel": {
+   "gemma-int4@neutral": {
+    "score": 54.87682247140723,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 21.88389356656272,
+    "n": 3,
+    "delta": -32.99292890484451,
+    "ci": [
+     -35.37615561601764,
+     -27.626721820086384
+    ]
+   }
+  },
+  "eng-urd": {
+   "gemma-int4@neutral": {
+    "score": 53.28508200231475,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 20.311151011281872,
+    "n": 3,
+    "delta": -32.97393099103288,
+    "ci": [
+     -49.91490081915778,
+     -23.593195916598667
+    ]
+   }
+  },
+  "gom-eng": {
+   "gemma-int4@neutral": {
+    "score": 49.45761392948093,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 36.85232679233963,
+    "n": 3,
+    "delta": -12.605287137141296,
+    "ci": [
+     -18.24249182226037,
+     -6.345764174118564
+    ]
+   }
+  },
+  "guj-eng": {
+   "gemma-int4@neutral": {
+    "score": 63.30384177047955,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 53.04162721101642,
+    "n": 3,
+    "delta": -10.262214559463132,
+    "ci": [
+     -11.688474705482648,
+     -4.005406677044135
+    ]
+   }
+  },
+  "hin-eng": {
+   "gemma-int4@neutral": {
+    "score": 62.52931393290964,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 48.72502065883273,
+    "n": 3,
+    "delta": -13.804293274076905,
+    "ci": [
+     -22.86673111465317,
+     -0.26528219158044664
+    ]
+   }
+  },
+  "kan-eng": {
+   "gemma-int4@neutral": {
+    "score": 57.953010603378296,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 50.829563395112544,
+    "n": 3,
+    "delta": -7.123447208265752,
+    "ci": [
+     -23.20086308001205,
+     8.506065623453281
+    ]
+   }
+  },
+  "kas-eng": {
+   "gemma-int4@neutral": {
+    "score": 41.25683390148014,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 36.63687304247466,
+    "n": 3,
+    "delta": -4.619960859005481,
+    "ci": [
+     -9.508529364997692,
+     2.7813000774529932
+    ]
+   }
+  },
+  "mai-eng": {
+   "gemma-int4@neutral": {
+    "score": 63.07985831640083,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 40.013656291180354,
+    "n": 3,
+    "delta": -23.066202025220477,
+    "ci": [
+     -24.167518667713836,
+     -15.043935044107435
+    ]
+   }
+  },
+  "mal-eng": {
+   "gemma-int4@neutral": {
+    "score": 60.176592346696744,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 47.9115242378651,
+    "n": 3,
+    "delta": -12.265068108831642,
+    "ci": [
+     -23.19142875113311,
+     1.3073124861766914
+    ]
+   }
+  },
+  "mar-eng": {
+   "gemma-int4@neutral": {
+    "score": 67.19021327313577,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 50.20357344736029,
+    "n": 3,
+    "delta": -16.986639825775477,
+    "ci": [
+     -25.837567951658325,
+     -0.3811857590264225
+    ]
+   }
+  },
+  "mni-eng": {
+   "gemma-int4@neutral": {
+    "score": 21.412100271596078,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 16.521678733483945,
+    "n": 3,
+    "delta": -4.8904215381121325,
+    "ci": [
+     -9.932059176343316,
+     -2.051137359418398
+    ]
+   }
+  },
+  "npi-eng": {
+   "gemma-int4@neutral": {
+    "score": 59.449600533631184,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 48.00272849019803,
+    "n": 3,
+    "delta": -11.446872043433153,
+    "ci": [
+     -21.181638113435888,
+     -2.7020740180873517
+    ]
+   }
+  },
+  "ory-eng": {
+   "gemma-int4@neutral": {
+    "score": 56.1104122669041,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 46.285925803581584,
+    "n": 3,
+    "delta": -9.824486463322515,
+    "ci": [
+     -23.96550677628254,
+     -5.74833777936351
+    ]
+   }
+  },
+  "pan-eng": {
+   "gemma-int4@neutral": {
+    "score": 56.33356899324492,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 53.414375440753545,
+    "n": 3,
+    "delta": -2.9191935524913717,
+    "ci": [
+     -10.43339305721046,
+     7.980089373716275
+    ]
+   }
+  },
+  "san-eng": {
+   "gemma-int4@neutral": {
+    "score": 49.406553469345496,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 29.516390992765167,
+    "n": 3,
+    "delta": -19.89016247658033,
+    "ci": [
+     -33.41179748368121,
+     -3.0432033758857457
+    ]
+   }
+  },
+  "sat-eng": {
+   "gemma-int4@neutral": {
+    "score": 28.381453104601583,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 28.43196517540215,
+    "n": 3,
+    "delta": 0.05051207080056841,
+    "ci": [
+     -3.9856282427530942,
+     3.8849922188965884
+    ]
+   }
+  },
+  "snd-eng": {
+   "gemma-int4@neutral": {
+    "score": 29.862530221111477,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 19.552563094217586,
+    "n": 3,
+    "delta": -10.309967126893891,
+    "ci": [
+     -17.06373641889718,
+     -4.570418379874344
+    ]
+   }
+  },
+  "tam-eng": {
+   "gemma-int4@neutral": {
+    "score": 53.908472736233925,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 40.4491579718986,
+    "n": 3,
+    "delta": -13.459314764335325,
+    "ci": [
+     -40.12507647943359,
+     0.5566546365450975
+    ]
+   }
+  },
+  "tel-eng": {
+   "gemma-int4@neutral": {
+    "score": 72.5284605571902,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 59.15601633580503,
+    "n": 3,
+    "delta": -13.372444221385173,
+    "ci": [
+     -19.017556377791934,
+     -3.461129836906025
+    ]
+   }
+  },
+  "urd-eng": {
+   "gemma-int4@neutral": {
+    "score": 64.1375419045263,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 47.787185136332354,
+    "n": 3,
+    "delta": -16.350356768193947,
+    "ci": [
+     -29.959514345597782,
+     -2.449997352369344
+    ]
+   }
+  }
+ },
+ "comet": {
+  "asm-eng": {
+   "gemma-int4@neutral": {
+    "score": 86.61144375801086,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 70.54466406504314,
+    "n": 3,
+    "delta": -16.066779692967728,
+    "ci": [
+     -29.640811681747437,
+     -3.275054693222046
+    ]
+   }
+  },
+  "ben-eng": {
+   "gemma-int4@neutral": {
+    "score": 87.8380537033081,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 72.7993110815684,
+    "n": 3,
+    "delta": -15.0387426217397,
+    "ci": [
+     -36.058348417282104,
+     0.6772160530090332
+    ]
+   }
+  },
+  "brx-eng": {
+   "gemma-int4@neutral": {
+    "score": 53.82778445879618,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 47.0240592956543,
+    "n": 3,
+    "delta": -6.803725163141884,
+    "ci": [
+     -17.479288578033447,
+     8.286237716674805
+    ]
+   }
+  },
+  "doi-eng": {
+   "gemma-int4@neutral": {
+    "score": 81.97966019312541,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 52.81998117764791,
+    "n": 3,
+    "delta": -29.1596790154775,
+    "ci": [
+     -38.056522607803345,
+     -24.34294819831848
+    ]
+   }
+  },
+  "eng-asm": {
+   "gemma-int4@neutral": {
+    "score": 72.18274275461833,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 39.357566833496094,
+    "n": 3,
+    "delta": -32.82517592112224,
+    "ci": [
+     -39.45093750953674,
+     -26.411956548690796
+    ]
+   }
+  },
+  "eng-ben": {
+   "gemma-int4@neutral": {
+    "score": 88.97143006324768,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 46.25219404697418,
+    "n": 3,
+    "delta": -42.7192360162735,
+    "ci": [
+     -52.462412913640335,
+     -24.519121646881104
+    ]
+   }
+  },
+  "eng-brx": {
+   "gemma-int4@neutral": {
+    "score": 26.063771545886993,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 27.212076882521313,
+    "n": 3,
+    "delta": 1.1483053366343192,
+    "ci": [
+     -6.4300477504730225,
+     6.007266044616699
+    ]
+   }
+  },
+  "eng-doi": {
+   "gemma-int4@neutral": {
+    "score": 51.46913627783457,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 32.29142129421234,
+    "n": 3,
+    "delta": -19.17771498362223,
+    "ci": [
+     -29.621845483779907,
+     -13.341408967971802
+    ]
+   }
+  },
+  "eng-gom": {
+   "gemma-int4@neutral": {
+    "score": 42.732152342796326,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 30.1074355840683,
+    "n": 3,
+    "delta": -12.624716758728027,
+    "ci": [
+     -28.060945868492126,
+     3.1866997480392456
+    ]
+   }
+  },
+  "eng-guj": {
+   "gemma-int4@neutral": {
+    "score": 89.50523336728413,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 43.96858811378479,
+    "n": 3,
+    "delta": -45.536645253499344,
+    "ci": [
+     -52.64439880847931,
+     -37.373608350753784
+    ]
+   }
+  },
+  "eng-hin": {
+   "gemma-int4@neutral": {
+    "score": 84.35827096303304,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 43.03602675596873,
+    "n": 3,
+    "delta": -41.32224420706431,
+    "ci": [
+     -47.7445125579834,
+     -36.04595363140106
+    ]
+   }
+  },
+  "eng-kan": {
+   "gemma-int4@neutral": {
+    "score": 77.4537702401479,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 38.70516816775004,
+    "n": 3,
+    "delta": -38.748602072397865,
+    "ci": [
+     -47.58519530296326,
+     -25.044330954551697
+    ]
+   }
+  },
+  "eng-kas": {
+   "gemma-int4@neutral": {
+    "score": 34.60475107034048,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 35.565486550331116,
+    "n": 3,
+    "delta": 0.9607354799906389,
+    "ci": [
+     -1.153033971786499,
+     4.417246580123901
+    ]
+   }
+  },
+  "eng-mai": {
+   "gemma-int4@neutral": {
+    "score": 66.12404187520345,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 34.02924338976542,
+    "n": 3,
+    "delta": -32.09479848543803,
+    "ci": [
+     -42.719489336013794,
+     -19.274628162384033
+    ]
+   }
+  },
+  "eng-mal": {
+   "gemma-int4@neutral": {
+    "score": 66.49922132492065,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 35.87311704953512,
+    "n": 3,
+    "delta": -30.626104275385536,
+    "ci": [
+     -47.44400978088379,
+     -22.05755114555359
+    ]
+   }
+  },
+  "eng-mar": {
+   "gemma-int4@neutral": {
+    "score": 78.96993160247803,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 32.678197820981346,
+    "n": 3,
+    "delta": -46.29173378149668,
+    "ci": [
+     -52.3545116186142,
+     -37.82057762145996
+    ]
+   }
+  },
+  "eng-mni": {
+   "gemma-int4@neutral": {
+    "score": 76.97729468345642,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 53.080037236213684,
+    "n": 3,
+    "delta": -23.897257447242737,
+    "ci": [
+     -48.89863431453705,
+     -2.4860799312591553
+    ]
+   }
+  },
+  "eng-npi": {
+   "gemma-int4@neutral": {
+    "score": 83.43746860822041,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 33.104732632637024,
+    "n": 3,
+    "delta": -50.33273597558339,
+    "ci": [
+     -55.22276759147644,
+     -44.39161419868469
+    ]
+   }
+  },
+  "eng-ory": {
+   "gemma-int4@neutral": {
+    "score": 50.47047734260559,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 33.329386015733085,
+    "n": 3,
+    "delta": -17.141091326872505,
+    "ci": [
+     -45.49539536237717,
+     8.877390623092651
+    ]
+   }
+  },
+  "eng-pan": {
+   "gemma-int4@neutral": {
+    "score": 73.0160375436147,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 41.9320285320282,
+    "n": 3,
+    "delta": -31.084009011586502,
+    "ci": [
+     -41.62569046020508,
+     -17.73529052734375
+    ]
+   }
+  },
+  "eng-san": {
+   "gemma-int4@neutral": {
+    "score": 60.29371817906698,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 28.610100348790485,
+    "n": 3,
+    "delta": -31.683617830276493,
+    "ci": [
+     -39.9013876914978,
+     -25.178968906402588
+    ]
+   }
+  },
+  "eng-sat": {
+   "gemma-int4@neutral": {
+    "score": 16.131533185640972,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 17.557390530904133,
+    "n": 3,
+    "delta": 1.4258573452631609,
+    "ci": [
+     -1.9101470708847046,
+     3.398318588733673
+    ]
+   }
+  },
+  "eng-snd": {
+   "gemma-int4@neutral": {
+    "score": 32.047089437643685,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 30.235348145167034,
+    "n": 3,
+    "delta": -1.8117412924766505,
+    "ci": [
+     -12.544769048690796,
+     17.163018882274628
+    ]
+   }
+  },
+  "eng-tam": {
+   "gemma-int4@neutral": {
+    "score": 91.53741399447124,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 43.454004327456154,
+    "n": 3,
+    "delta": -48.08340966701508,
+    "ci": [
+     -53.787052631378174,
+     -44.55481469631195
+    ]
+   }
+  },
+  "eng-tel": {
+   "gemma-int4@neutral": {
+    "score": 88.4964923063914,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 45.5859104792277,
+    "n": 3,
+    "delta": -42.9105818271637,
+    "ci": [
+     -47.60926365852356,
+     -34.98954772949219
+    ]
+   }
+  },
+  "eng-urd": {
+   "gemma-int4@neutral": {
+    "score": 83.92914930979411,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 41.234748562177025,
+    "n": 3,
+    "delta": -42.69440074761709,
+    "ci": [
+     -53.21635901927948,
+     -35.59025824069977
+    ]
+   }
+  },
+  "gom-eng": {
+   "gemma-int4@neutral": {
+    "score": 80.50425450007121,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 64.0560249487559,
+    "n": 3,
+    "delta": -16.448229551315308,
+    "ci": [
+     -21.489274501800537,
+     -12.667286396026611
+    ]
+   }
+  },
+  "guj-eng": {
+   "gemma-int4@neutral": {
+    "score": 89.46810960769653,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 79.8348069190979,
+    "n": 3,
+    "delta": -9.633302688598633,
+    "ci": [
+     -21.375668048858643,
+     -0.5097866058349609
+    ]
+   }
+  },
+  "hin-eng": {
+   "gemma-int4@neutral": {
+    "score": 90.36938746770223,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 76.75352295239766,
+    "n": 3,
+    "delta": -13.615864515304565,
+    "ci": [
+     -19.469447930653885,
+     -2.5370538234710693
+    ]
+   }
+  },
+  "kan-eng": {
+   "gemma-int4@neutral": {
+    "score": 88.46444288889568,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 67.72254705429077,
+    "n": 3,
+    "delta": -20.741895834604904,
+    "ci": [
+     -41.85587167739868,
+     -0.7370710372924805
+    ]
+   }
+  },
+  "kas-eng": {
+   "gemma-int4@neutral": {
+    "score": 76.01608236630757,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 60.54091453552246,
+    "n": 3,
+    "delta": -15.47516783078511,
+    "ci": [
+     -17.331314086914062,
+     -13.80884051322937
+    ]
+   }
+  },
+  "mai-eng": {
+   "gemma-int4@neutral": {
+    "score": 84.29313699404399,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 62.06491788228353,
+    "n": 3,
+    "delta": -22.22821911176046,
+    "ci": [
+     -23.33051562309265,
+     -21.437454223632812
+    ]
+   }
+  },
+  "mal-eng": {
+   "gemma-int4@neutral": {
+    "score": 89.72745339075725,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 75.50488909085591,
+    "n": 3,
+    "delta": -14.222564299901336,
+    "ci": [
+     -29.633963108062744,
+     -3.107309341430664
+    ]
+   }
+  },
+  "mar-eng": {
+   "gemma-int4@neutral": {
+    "score": 89.69898223876953,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 80.07992108662923,
+    "n": 3,
+    "delta": -9.619061152140304,
+    "ci": [
+     -23.482990264892578,
+     -1.2620627880096436
+    ]
+   }
+  },
+  "mni-eng": {
+   "gemma-int4@neutral": {
+    "score": 43.92870763937632,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 43.4107651313146,
+    "n": 3,
+    "delta": -0.5179425080617222,
+    "ci": [
+     -2.0001500844955444,
+     0.5958974361419678
+    ]
+   }
+  },
+  "npi-eng": {
+   "gemma-int4@neutral": {
+    "score": 91.33465091387431,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 82.71676103274028,
+    "n": 3,
+    "delta": -8.617889881134033,
+    "ci": [
+     -17.05908179283142,
+     -4.134678840637207
+    ]
+   }
+  },
+  "ory-eng": {
+   "gemma-int4@neutral": {
+    "score": 87.19948331514995,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 71.73378467559814,
+    "n": 3,
+    "delta": -15.465698639551803,
+    "ci": [
+     -27.452969551086426,
+     -2.981919050216675
+    ]
+   }
+  },
+  "pan-eng": {
+   "gemma-int4@neutral": {
+    "score": 83.40789477030437,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 79.51298554738362,
+    "n": 3,
+    "delta": -3.894909222920745,
+    "ci": [
+     -11.711937189102173,
+     0.511014461517334
+    ]
+   }
+  },
+  "san-eng": {
+   "gemma-int4@neutral": {
+    "score": 82.48952627182007,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 59.89646911621094,
+    "n": 3,
+    "delta": -22.59305715560913,
+    "ci": [
+     -29.831665754318237,
+     -9.582734107971191
+    ]
+   }
+  },
+  "sat-eng": {
+   "gemma-int4@neutral": {
+    "score": 60.35583019256592,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 53.17391653855642,
+    "n": 3,
+    "delta": -7.181913654009499,
+    "ci": [
+     -12.736734747886658,
+     -1.375061273574829
+    ]
+   }
+  },
+  "snd-eng": {
+   "gemma-int4@neutral": {
+    "score": 67.90804068247478,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 48.54193925857544,
+    "n": 3,
+    "delta": -19.366101423899337,
+    "ci": [
+     -20.871180295944214,
+     -16.559267044067383
+    ]
+   }
+  },
+  "tam-eng": {
+   "gemma-int4@neutral": {
+    "score": 87.2593343257904,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 74.01710549990337,
+    "n": 3,
+    "delta": -13.24222882588704,
+    "ci": [
+     -26.292330026626587,
+     -0.9898364543914795
+    ]
+   }
+  },
+  "tel-eng": {
+   "gemma-int4@neutral": {
+    "score": 89.99862670898438,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 80.87930083274841,
+    "n": 3,
+    "delta": -9.119325876235962,
+    "ci": [
+     -15.872883796691895,
+     -3.6037802696228027
+    ]
+   }
+  },
+  "urd-eng": {
+   "gemma-int4@neutral": {
+    "score": 89.22890822092693,
+    "n": 3
+   },
+   "gemma-int4": {
+    "score": 76.87307000160217,
+    "n": 3,
+    "delta": -12.355838219324752,
+    "ci": [
+     -28.64024043083191,
+     1.1051535606384277
+    ]
+   }
+  }
+ },
+ "bpc": {
+  "asm-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.3874543389614342,
+    "n": 50
+   }
+  },
+  "ben-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.0998758845619048,
+    "n": 50
+   }
+  },
+  "brx-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.6006725843959375,
+    "n": 50
+   }
+  },
+  "doi-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.3129730435720979,
+    "n": 50
+   }
+  },
+  "eng-asm": {
+   "gemma-int4@neutral": {
+    "score": 3.1230883290890796,
+    "n": 50
+   }
+  },
+  "eng-ben": {
+   "gemma-int4@neutral": {
+    "score": 1.5841746675268151,
+    "n": 50
+   }
+  },
+  "eng-brx": {
+   "gemma-int4@neutral": {
+    "score": 4.149322494433604,
+    "n": 50
+   }
+  },
+  "eng-doi": {
+   "gemma-int4@neutral": {
+    "score": 3.018330568894809,
+    "n": 50
+   }
+  },
+  "eng-gom": {
+   "gemma-int4@neutral": {
+    "score": 3.9295253832826704,
+    "n": 50
+   }
+  },
+  "eng-guj": {
+   "gemma-int4@neutral": {
+    "score": 1.7767202169803304,
+    "n": 50
+   }
+  },
+  "eng-hin": {
+   "gemma-int4@neutral": {
+    "score": 1.1809202699969132,
+    "n": 50
+   }
+  },
+  "eng-kan": {
+   "gemma-int4@neutral": {
+    "score": 2.340096524542938,
+    "n": 50
+   }
+  },
+  "eng-kas": {
+   "gemma-int4@neutral": {
+    "score": 4.891218493505975,
+    "n": 50
+   }
+  },
+  "eng-mai": {
+   "gemma-int4@neutral": {
+    "score": 2.7240529352940746,
+    "n": 50
+   }
+  },
+  "eng-mal": {
+   "gemma-int4@neutral": {
+    "score": 2.185608572109748,
+    "n": 50
+   }
+  },
+  "eng-mar": {
+   "gemma-int4@neutral": {
+    "score": 1.4689132779907927,
+    "n": 50
+   }
+  },
+  "eng-mni": {
+   "gemma-int4@neutral": {
+    "score": 5.850428576158452,
+    "n": 50
+   }
+  },
+  "eng-npi": {
+   "gemma-int4@neutral": {
+    "score": 2.1019024825896824,
+    "n": 50
+   }
+  },
+  "eng-ory": {
+   "gemma-int4@neutral": {
+    "score": 3.536750230536379,
+    "n": 50
+   }
+  },
+  "eng-pan": {
+   "gemma-int4@neutral": {
+    "score": 3.0334195083823556,
+    "n": 50
+   }
+  },
+  "eng-san": {
+   "gemma-int4@neutral": {
+    "score": 3.3870859017613233,
+    "n": 50
+   }
+  },
+  "eng-sat": {
+   "gemma-int4@neutral": {
+    "score": 4.887433868082652,
+    "n": 50
+   }
+  },
+  "eng-snd": {
+   "gemma-int4@neutral": {
+    "score": 4.717598506690642,
+    "n": 50
+   }
+  },
+  "eng-tam": {
+   "gemma-int4@neutral": {
+    "score": 1.1880112992953595,
+    "n": 50
+   }
+  },
+  "eng-tel": {
+   "gemma-int4@neutral": {
+    "score": 1.6676124179700678,
+    "n": 50
+   }
+  },
+  "eng-urd": {
+   "gemma-int4@neutral": {
+    "score": 1.420932055939547,
+    "n": 50
+   }
+  },
+  "gom-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.5281694198045945,
+    "n": 50
+   }
+  },
+  "guj-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.0867231819106093,
+    "n": 50
+   }
+  },
+  "hin-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.1878992594799678,
+    "n": 50
+   }
+  },
+  "kan-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.1878225002541563,
+    "n": 50
+   }
+  },
+  "kas-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.5571255999104927,
+    "n": 50
+   }
+  },
+  "mai-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.2915331595521844,
+    "n": 50
+   }
+  },
+  "mal-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.3172300093864466,
+    "n": 50
+   }
+  },
+  "mar-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.189693007677971,
+    "n": 50
+   }
+  },
+  "mni-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.871945567032216,
+    "n": 50
+   }
+  },
+  "npi-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.1040370723514787,
+    "n": 50
+   }
+  },
+  "ory-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.3239211140969134,
+    "n": 50
+   }
+  },
+  "pan-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.3742609402504973,
+    "n": 50
+   }
+  },
+  "san-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.6106825663319322,
+    "n": 50
+   }
+  },
+  "sat-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.5901176231266814,
+    "n": 50
+   }
+  },
+  "snd-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.4613860370173808,
+    "n": 50
+   }
+  },
+  "tam-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.3111044252979167,
+    "n": 50
+   }
+  },
+  "tel-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.1681779631616909,
+    "n": 50
+   }
+  },
+  "urd-eng": {
+   "gemma-int4@neutral": {
+    "score": 0.9744200546631138,
+    "n": 50
+   }
+  }
+ },
+ "bpc_end": {
+  "asm-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.3874552751144207,
+    "n": 50
+   }
+  },
+  "ben-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.0998785717464994,
+    "n": 50
+   }
+  },
+  "brx-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.6071657409758977,
+    "n": 50
+   }
+  },
+  "doi-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.3170589272509274,
+    "n": 50
+   }
+  },
+  "eng-asm": {
+   "gemma-int4@neutral": {
+    "score": 3.1233209728794082,
+    "n": 50
+   }
+  },
+  "eng-ben": {
+   "gemma-int4@neutral": {
+    "score": 1.584229837033687,
+    "n": 50
+   }
+  },
+  "eng-brx": {
+   "gemma-int4@neutral": {
+    "score": 4.149372120930303,
+    "n": 50
+   }
+  },
+  "eng-doi": {
+   "gemma-int4@neutral": {
+    "score": 3.01836596320637,
+    "n": 50
+   }
+  },
+  "eng-gom": {
+   "gemma-int4@neutral": {
+    "score": 3.93293049555229,
+    "n": 50
+   }
+  },
+  "eng-guj": {
+   "gemma-int4@neutral": {
+    "score": 1.7801016728101315,
+    "n": 50
+   }
+  },
+  "eng-hin": {
+   "gemma-int4@neutral": {
+    "score": 1.1810627983396198,
+    "n": 50
+   }
+  },
+  "eng-kan": {
+   "gemma-int4@neutral": {
+    "score": 2.3465644578512013,
+    "n": 50
+   }
+  },
+  "eng-kas": {
+   "gemma-int4@neutral": {
+    "score": 4.892604781574033,
+    "n": 50
+   }
+  },
+  "eng-mai": {
+   "gemma-int4@neutral": {
+    "score": 2.7240798555139247,
+    "n": 50
+   }
+  },
+  "eng-mal": {
+   "gemma-int4@neutral": {
+    "score": 2.188194028907303,
+    "n": 50
+   }
+  },
+  "eng-mar": {
+   "gemma-int4@neutral": {
+    "score": 1.4693845461673865,
+    "n": 50
+   }
+  },
+  "eng-mni": {
+   "gemma-int4@neutral": {
+    "score": 5.859645277533427,
+    "n": 50
+   }
+  },
+  "eng-npi": {
+   "gemma-int4@neutral": {
+    "score": 2.102469628586623,
+    "n": 50
+   }
+  },
+  "eng-ory": {
+   "gemma-int4@neutral": {
+    "score": 3.538904574592706,
+    "n": 50
+   }
+  },
+  "eng-pan": {
+   "gemma-int4@neutral": {
+    "score": 3.03460109285113,
+    "n": 50
+   }
+  },
+  "eng-san": {
+   "gemma-int4@neutral": {
+    "score": 3.389567420341783,
+    "n": 50
+   }
+  },
+  "eng-sat": {
+   "gemma-int4@neutral": {
+    "score": 4.889289275391717,
+    "n": 50
+   }
+  },
+  "eng-snd": {
+   "gemma-int4@neutral": {
+    "score": 4.720012908179097,
+    "n": 50
+   }
+  },
+  "eng-tam": {
+   "gemma-int4@neutral": {
+    "score": 1.1881165913052083,
+    "n": 50
+   }
+  },
+  "eng-tel": {
+   "gemma-int4@neutral": {
+    "score": 1.6678273105296473,
+    "n": 50
+   }
+  },
+  "eng-urd": {
+   "gemma-int4@neutral": {
+    "score": 1.4211351928930824,
+    "n": 50
+   }
+  },
+  "gom-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.5305752719871886,
+    "n": 50
+   }
+  },
+  "guj-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.0867311427570256,
+    "n": 50
+   }
+  },
+  "hin-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.1879175343209887,
+    "n": 50
+   }
+  },
+  "kan-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.1878243339083567,
+    "n": 50
+   }
+  },
+  "kas-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.5620978123149987,
+    "n": 50
+   }
+  },
+  "mai-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.2915513092182025,
+    "n": 50
+   }
+  },
+  "mal-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.3172304306552898,
+    "n": 50
+   }
+  },
+  "mar-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.1896939204271322,
+    "n": 50
+   }
+  },
+  "mni-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.9122604787231685,
+    "n": 50
+   }
+  },
+  "npi-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.1040443495225327,
+    "n": 50
+   }
+  },
+  "ory-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.3239221240074068,
+    "n": 50
+   }
+  },
+  "pan-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.3742622061846488,
+    "n": 50
+   }
+  },
+  "san-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.6109188676573902,
+    "n": 50
+   }
+  },
+  "sat-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.5975796276585208,
+    "n": 50
+   }
+  },
+  "snd-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.4787292334792594,
+    "n": 50
+   }
+  },
+  "tam-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.3111061862584203,
+    "n": 50
+   }
+  },
+  "tel-eng": {
+   "gemma-int4@neutral": {
+    "score": 1.1681787283958356,
+    "n": 50
+   }
+  },
+  "urd-eng": {
+   "gemma-int4@neutral": {
+    "score": 0.974420500044989,
+    "n": 50
+   }
+  }
+ },
+ "macro": {
+  "chrf": {
+   "English -> X": {
+    "all": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "kas",
+      "mai",
+      "mal",
+      "mar",
+      "mni",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "sat",
+      "snd",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 26.902308464312775,
+       "n": 3
+      },
+      "gemma-int4": {
+       "score": 11.746777905229596,
+       "n": 3,
+       "delta": -15.155530559083179,
+       "ci": [
+        -18.031829428158737,
+        -11.72363438665976
+       ]
+      }
+     }
+    },
+    "one script": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "mai",
+      "mal",
+      "mar",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 32.30630873338471,
+       "n": 3
+      },
+      "gemma-int4": {
+       "score": 14.043297853014211,
+       "n": 3,
+       "delta": -18.2630108803705,
+       "ci": [
+        -21.71584685581415,
+        -13.776368939482904
+       ]
+      }
+     }
+    }
+   },
+   "X -> English": {
+    "all": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "kas",
+      "mai",
+      "mal",
+      "mar",
+      "mni",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "sat",
+      "snd",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 51.83273198855078,
+       "n": 3
+      },
+      "gemma-int4": {
+       "score": 41.02389262545907,
+       "n": 3,
+       "delta": -10.808839363091714,
+       "ci": [
+        -15.013785471298625,
+        -4.457296334870989
+       ]
+      }
+     }
+    },
+    "one script": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "mai",
+      "mal",
+      "mar",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 56.6337325694071,
+       "n": 3
+      },
+      "gemma-int4": {
+       "score": 44.52125320636229,
+       "n": 3,
+       "delta": -12.112479363044812,
+       "ci": [
+        -16.755595863590933,
+        -4.767523693431549
+       ]
+      }
+     }
+    }
+   }
+  },
+  "comet": {
+   "English -> X": {
+    "all": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "kas",
+      "mai",
+      "mal",
+      "mar",
+      "mni",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "sat",
+      "snd",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 65.2395967281226,
+       "n": 3
+      },
+      "gemma-int4": {
+       "score": 36.690918604532875,
+       "n": 3,
+       "delta": -28.54867812358973,
+       "ci": [
+        -32.62098621238361,
+        -22.400036521933295
+       ]
+      }
+     }
+    },
+    "one script": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "mai",
+      "mal",
+      "mar",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 70.86169220231199,
+       "n": 3
+      },
+      "gemma-int4": {
+       "score": 37.264552602061514,
+       "n": 3,
+       "delta": -33.59713960025047,
+       "ci": [
+        -36.99534643027518,
+        -28.065866066349884
+       ]
+      }
+     }
+    },
+    "XLM-R's languages": {
+     "langs": [
+      "asm",
+      "ben",
+      "guj",
+      "hin",
+      "kan",
+      "mal",
+      "mar",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 77.79438268570674,
+       "n": 3
+      },
+      "gemma-int4": {
+       "score": 39.08012640618143,
+       "n": 3,
+       "delta": -38.71425627952531,
+       "ci": [
+        -43.419890637908665,
+        -31.020059117249076
+       ]
+      }
+     }
+    }
+   },
+   "X -> English": {
+    "all": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "kas",
+      "mai",
+      "mal",
+      "mar",
+      "mni",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "sat",
+      "snd",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 80.99589975494328,
+       "n": 3
+      },
+      "gemma-int4": {
+       "score": 67.29552989656275,
+       "n": 3,
+       "delta": -13.700369858380526,
+       "ci": [
+        -18.926361474123873,
+        -6.260537965731189
+       ]
+      }
+     }
+    },
+    "one script": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "mai",
+      "mal",
+      "mar",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 85.20561854044598,
+       "n": 3
+      },
+      "gemma-int4": {
+       "score": 70.8241179033562,
+       "n": 3,
+       "delta": -14.381500637089786,
+       "ci": [
+        -20.489645666546295,
+        -5.695111552874252
+       ]
+      }
+     }
+    },
+    "XLM-R's languages": {
+     "langs": [
+      "asm",
+      "ben",
+      "guj",
+      "hin",
+      "kan",
+      "mal",
+      "mar",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 88.07830697014218,
+       "n": 3
+      },
+      "gemma-int4": {
+       "score": 74.91922421114785,
+       "n": 3,
+       "delta": -13.15908275899433,
+       "ci": [
+        -21.151186312947942,
+        -2.210938079016543
+       ]
+      }
+     }
+    }
+   }
+  },
+  "bpc": {
+   "English -> X": {
+    "all": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "kas",
+      "mai",
+      "mal",
+      "mar",
+      "mni",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "sat",
+      "snd",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 2.9165066627751917,
+       "n": 50
+      }
+     }
+    },
+    "one script": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "mai",
+      "mal",
+      "mar",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 2.4342481742564717,
+       "n": 50
+      }
+     }
+    }
+   },
+   "X -> English": {
+    "all": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "kas",
+      "mai",
+      "mal",
+      "mar",
+      "mni",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "sat",
+      "snd",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 1.3426011523998915,
+       "n": 50
+      }
+     }
+    },
+    "one script": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "mai",
+      "mal",
+      "mar",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 1.2809250292061582,
+       "n": 50
+      }
+     }
+    }
+   }
+  },
+  "bpc_end": {
+   "English -> X": {
+    "all": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "kas",
+      "mai",
+      "mal",
+      "mar",
+      "mni",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "sat",
+      "snd",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 2.918262763771367,
+       "n": 50
+      }
+     }
+    },
+    "one script": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "mai",
+      "mal",
+      "mar",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 2.4355682533495444,
+       "n": 50
+      }
+     }
+    }
+   },
+   "X -> English": {
+    "all": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "kas",
+      "mai",
+      "mal",
+      "mar",
+      "mni",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "sat",
+      "snd",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 1.3463910260276866,
+       "n": 50
+      }
+     }
+    },
+    "one script": {
+     "langs": [
+      "asm",
+      "ben",
+      "brx",
+      "doi",
+      "gom",
+      "guj",
+      "hin",
+      "kan",
+      "mai",
+      "mal",
+      "mar",
+      "npi",
+      "ory",
+      "pan",
+      "san",
+      "tam",
+      "tel",
+      "urd"
+     ],
+     "configs": {
+      "gemma-int4@neutral": {
+       "score": 1.2816630789129528,
+       "n": 50
+      }
+     }
+    }
+   }
+  }
+ },
+ "configs": {
+  "gemma-int4@neutral": {
+   "config": "gemma-int4",
+   "model": "gemma-3-4b-it",
+   "backend": "metal-int4",
+   "weights": {
+    "file": "model.int4.qt",
+    "bytes": 2845634064,
+    "header_sha256": "01aa4a7b50e577d784d57d8952885142ad62cddf3337f164b24a0ae772852821",
+    "schemes": {
+     "int8": 54,
+     "int4": 185
+    },
+    "policy_int8": 53
+   },
+   "eos": [
+    1,
+    106
+   ],
+   "end_of_answer": 106,
+   "max_new": [
+    32,
+    4.0
+   ],
+   "prompt": "neutral",
+   "messages": [
+    {
+     "role": "user",
+     "content": "Translate the following text from {Source} to {Target}. Reply with the translation only.\n\n{text}"
+    }
+   ],
+   "seed": 0,
+   "dataset": "394a34e98c308ea64a7bdf69613690f87c7075821b04b4c4f5dae6714be9cc20"
+  },
+  "gemma-int4": {
+   "config": "gemma-int4",
+   "model": "gemma-3-4b-it",
+   "backend": "metal-int4",
+   "weights": {
+    "file": "model.int4.qt",
+    "bytes": 2845634064,
+    "header_sha256": "01aa4a7b50e577d784d57d8952885142ad62cddf3337f164b24a0ae772852821",
+    "schemes": {
+     "int8": 54,
+     "int4": 185
+    },
+    "policy_int8": 53
+   },
+   "eos": [
+    1,
+    106
+   ],
+   "end_of_answer": 106,
+   "max_new": [
+    32,
+    4.0
+   ],
+   "prompt": "card",
+   "messages": [
+    {
+     "role": "system",
+     "content": "Translate the text below to {Target}."
+    },
+    {
+     "role": "user",
+     "content": "{text}"
+    }
+   ],
+   "seed": 0,
+   "dataset": "394a34e98c308ea64a7bdf69613690f87c7075821b04b4c4f5dae6714be9cc20"
+  }
+ },
+ "comet_model": {
+  "gemma-int4@neutral": {
+   "repo": "Unbabel/wmt22-comet-da",
+   "revision": "2760a223ac957f30acfb18c8aa649b01cf1d75f2",
+   "sha256": "e213091cde220f97b89f8bdfa750c458cfea741ad62affb455b59900210ff2af",
+   "encoder": "FacebookAI/xlm-roberta-large",
+   "encoder_revision": "c23d21b0620b635a76227c604d44e43a9f0ee389",
+   "package": "2.2.7",
+   "scale": "segment score x 100"
+  },
+  "gemma-int4": {
+   "repo": "Unbabel/wmt22-comet-da",
+   "revision": "2760a223ac957f30acfb18c8aa649b01cf1d75f2",
+   "sha256": "e213091cde220f97b89f8bdfa750c458cfea741ad62affb455b59900210ff2af",
+   "encoder": "FacebookAI/xlm-roberta-large",
+   "encoder_revision": "c23d21b0620b635a76227c604d44e43a9f0ee389",
+   "package": "2.2.7",
+   "scale": "segment score x 100"
+  }
+ },
+ "diagnostics": {
+  "gemma-int4@neutral": {
+   "asm-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "ben-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "brx-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "doi-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-asm": {
+    "outputs": 50,
+    "wrong_script": 10,
+    "length_stops": 4,
+    "special": 0,
+    "added": 0
+   },
+   "eng-ben": {
+    "outputs": 50,
+    "wrong_script": 1,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-brx": {
+    "outputs": 50,
+    "wrong_script": 49,
+    "length_stops": 22,
+    "special": 0,
+    "added": 0
+   },
+   "eng-doi": {
+    "outputs": 50,
+    "wrong_script": 4,
+    "length_stops": 2,
+    "special": 0,
+    "added": 0
+   },
+   "eng-gom": {
+    "outputs": 50,
+    "wrong_script": 48,
+    "length_stops": 1,
+    "special": 0,
+    "added": 0
+   },
+   "eng-guj": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-hin": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-kan": {
+    "outputs": 50,
+    "wrong_script": 19,
+    "length_stops": 1,
+    "special": 0,
+    "added": 0
+   },
+   "eng-kas": {
+    "outputs": 50,
+    "wrong_script": 7,
+    "length_stops": 18,
+    "special": 0,
+    "added": 0
+   },
+   "eng-mai": {
+    "outputs": 50,
+    "wrong_script": 6,
+    "length_stops": 2,
+    "special": 0,
+    "added": 0
+   },
+   "eng-mal": {
+    "outputs": 50,
+    "wrong_script": 22,
+    "length_stops": 3,
+    "special": 0,
+    "added": 0
+   },
+   "eng-mar": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-mni": {
+    "outputs": 50,
+    "wrong_script": 30,
+    "length_stops": 32,
+    "special": 0,
+    "added": 0
+   },
+   "eng-npi": {
+    "outputs": 50,
+    "wrong_script": 2,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-ory": {
+    "outputs": 50,
+    "wrong_script": 4,
+    "length_stops": 6,
+    "special": 0,
+    "added": 0
+   },
+   "eng-pan": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-san": {
+    "outputs": 50,
+    "wrong_script": 4,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-sat": {
+    "outputs": 50,
+    "wrong_script": 50,
+    "length_stops": 4,
+    "special": 0,
+    "added": 0
+   },
+   "eng-snd": {
+    "outputs": 50,
+    "wrong_script": 50,
+    "length_stops": 3,
+    "special": 0,
+    "added": 0
+   },
+   "eng-tam": {
+    "outputs": 50,
+    "wrong_script": 1,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-tel": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-urd": {
+    "outputs": 50,
+    "wrong_script": 2,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "gom-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "guj-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "hin-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "kan-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "kas-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "mai-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "mal-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "mar-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "mni-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "npi-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "ory-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "pan-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "san-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "sat-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "snd-eng": {
+    "outputs": 50,
+    "wrong_script": 1,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "tam-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "tel-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "urd-eng": {
+    "outputs": 50,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   }
+  },
+  "gemma-int4": {
+   "asm-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "ben-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "brx-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "doi-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-asm": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-ben": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 1,
+    "special": 0,
+    "added": 0
+   },
+   "eng-brx": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 2,
+    "special": 0,
+    "added": 0
+   },
+   "eng-doi": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-gom": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 2,
+    "special": 0,
+    "added": 0
+   },
+   "eng-guj": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 1,
+    "special": 0,
+    "added": 0
+   },
+   "eng-hin": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-kan": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 1,
+    "special": 0,
+    "added": 0
+   },
+   "eng-kas": {
+    "outputs": 3,
+    "wrong_script": 2,
+    "length_stops": 2,
+    "special": 0,
+    "added": 0
+   },
+   "eng-mai": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 1,
+    "special": 0,
+    "added": 0
+   },
+   "eng-mal": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 1,
+    "special": 0,
+    "added": 0
+   },
+   "eng-mar": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 1,
+    "special": 0,
+    "added": 0
+   },
+   "eng-mni": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 2,
+    "special": 0,
+    "added": 0
+   },
+   "eng-npi": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-ory": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 1,
+    "special": 0,
+    "added": 0
+   },
+   "eng-pan": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 2,
+    "special": 0,
+    "added": 0
+   },
+   "eng-san": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 2,
+    "special": 0,
+    "added": 0
+   },
+   "eng-sat": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 1,
+    "special": 0,
+    "added": 0
+   },
+   "eng-snd": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "eng-tam": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 1,
+    "special": 0,
+    "added": 0
+   },
+   "eng-tel": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 1,
+    "special": 0,
+    "added": 0
+   },
+   "eng-urd": {
+    "outputs": 3,
+    "wrong_script": 3,
+    "length_stops": 1,
+    "special": 0,
+    "added": 0
+   },
+   "gom-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "guj-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "hin-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "kan-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "kas-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "mai-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "mal-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "mar-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "mni-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "npi-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "ory-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "pan-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "san-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "sat-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "snd-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "tam-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "tel-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   },
+   "urd-eng": {
+    "outputs": 3,
+    "wrong_script": 0,
+    "length_stops": 0,
+    "special": 0,
+    "added": 0
+   }
+  }
+ },
+ "tokens_per_char": {
+  "gemma-int4@neutral": {
+   "eng": [
+    0.21417525773195875,
+    155.2
+   ],
+   "asm": [
+    0.411403164639728,
+    152.94
+   ],
+   "ben": [
+    0.28004487449165616,
+    142.62
+   ],
+   "brx": [
+    0.45677774993735903,
+    159.64
+   ],
+   "doi": [
+    0.3737106585559376,
+    151.24
+   ],
+   "gom": [
+    0.410302444413755,
+    144.82
+   ],
+   "guj": [
+    0.43333333333333335,
+    142.2
+   ],
+   "hin": [
+    0.281093569503273,
+    155.82
+   ],
+   "kan": [
+    0.40764331210191085,
+    163.28
+   ],
+   "kas": [
+    0.5704108891998474,
+    157.22
+   ],
+   "mai": [
+    0.3474866456649774,
+    146.02
+   ],
+   "mal": [
+    0.3631728045325779,
+    176.5
+   ],
+   "mar": [
+    0.30217619297325643,
+    152.56
+   ],
+   "mni": [
+    1.8303739574926015,
+    148.68
+   ],
+   "npi": [
+    0.325145093804832,
+    148.18
+   ],
+   "ory": [
+    0.7298657718120806,
+    166.88
+   ],
+   "pan": [
+    0.5690269269126657,
+    140.38
+   ],
+   "san": [
+    0.4081714133617248,
+    150.28
+   ],
+   "sat": [
+    1.016260162601626,
+    162.36
+   ],
+   "snd": [
+    0.4324110671936759,
+    151.8
+   ],
+   "tam": [
+    0.28228097006772995,
+    183.08
+   ],
+   "tel": [
+    0.38980155079511103,
+    152.18
+   ],
+   "urd": [
+    0.334545944489356,
+    148.44
+   ]
+  },
+  "gemma-int4": {}
+ },
+ "speed": {
+  "gemma-int4@neutral": {
+   "stack": "metal-int4",
+   "tok_s": 27.45254335279237,
+   "chars_s": 75.07455004567878,
+   "ttft_p50": 0.8616833750002115,
+   "ttft_p90": 2.0276066249989526,
+   "weights_gb": 2.846236672,
+   "gpu_peak_gib": 3.7515869140625,
+   "footprint_peak_gib": 5.777301840484142,
+   "requests": 2200,
+   "preempted": 153,
+   "prefix_cache": "a 4-token common prefix does not fit whole blocks inside the 97-block ring",
+   "batch": 8,
+   "kv_blocks": 192
+  },
+  "gemma-int4": {
+   "stack": "metal-int4",
+   "tok_s": 32.99820483750977,
+   "chars_s": 113.43629235965298,
+   "ttft_p50": 1.0834785000006377,
+   "ttft_p90": 8.292838207999012,
+   "weights_gb": 2.846236672,
+   "gpu_peak_gib": 3.7437744140625,
+   "footprint_peak_gib": 4.647280916571617,
+   "requests": 127,
+   "preempted": 73,
+   "prefix_cache": "a 4-token common prefix does not fit whole blocks inside the 97-block ring",
+   "batch": 8,
+   "kv_blocks": 192
+  }
+ },
+ "counts": {
+  "gemma-int4@neutral": {
+   "translations": 2200,
+   "references": 2200,
+   "not_roundtrip": 0
+  },
+  "gemma-int4": {
+   "translations": 132,
+   "references": 0,
+   "not_roundtrip": 0
+  }
+ },
+ "code": {
+  "gemma-int4@neutral": [
+   "c0df389-dirty engine 324313a-dirty 626af229de5f2f07"
+  ],
+  "gemma-int4": [
+   "c0df389-dirty engine 324313a-dirty 626af229de5f2f07"
+  ]
+ },
+ "ids": {
+  "asm-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "ben-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "brx-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "doi-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-asm": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-ben": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-brx": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-doi": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-gom": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-guj": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-hin": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-kan": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-kas": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-mai": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-mal": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-mar": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-mni": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-npi": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-ory": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-pan": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-san": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-sat": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-snd": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-tam": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-tel": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "eng-urd": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "gom-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "guj-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "hin-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "kan-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "kas-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "mai-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "mal-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "mar-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "mni-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "npi-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "ory-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "pan-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "san-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "sat-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "snd-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "tam-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "tel-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ],
+  "urd-eng": [
+   0,
+   27,
+   40,
+   67,
+   101,
+   105,
+   143,
+   150,
+   182,
+   192,
+   229,
+   237,
+   247,
+   275,
+   290,
+   298,
+   336,
+   355,
+   366,
+   407,
+   418,
+   434,
+   470,
+   492,
+   502,
+   536,
+   551,
+   570,
+   581,
+   610,
+   620,
+   650,
+   668,
+   674,
+   684,
+   723,
+   736,
+   757,
+   786,
+   815,
+   817,
+   862,
+   865,
+   895,
+   907,
+   940,
+   950,
+   954,
+   994,
+   1010
+  ]
+ }
+}

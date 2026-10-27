@@ -1,5 +1,6 @@
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -7,16 +8,14 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from types import SimpleNamespace
 
-os.environ.setdefault("HF_HUB_OFFLINE", "1")
+from bench_fixtures import check, ev, finish, in22_rows, refused, results
 import numpy as np
 import torch
-
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-import eval_translate as ev
 
 sys.path.append(str(ev.ENGINE / "tests"))
 import decision
 import engine
+import engine_run as er
 import eval_translate_report as report
 import indictrans
 from sacrebleu.metrics import CHRF
@@ -24,44 +23,7 @@ from serving_targets import TEMPLATE, train_tokenizer
 from tokenizer import Tokenizer
 
 torch.set_grad_enabled(False)
-results = []
-def check(name, ok):
-    results.append(bool(ok)); print(f"{'PASS' if ok else 'FAIL'}  {name}", flush=True)
-
-
-# synthetic text: English words, and the same words spelled letter for letter in each language's script
-def letters(script: str) -> list[str]:
-    import unicodedata
-    blocks = {"Latn": (0x61, 0x7B), "Arab": (0x620, 0x64B), "Mtei": (0xABC0, 0xABDB), "Olck": (0x1C5A, 0x1C78)}
-    lo, hi = blocks.get(script, (0x900, 0xD80))
-    return [chr(c) for c in range(lo, hi) if unicodedata.category(chr(c)) == "Lo"
-            and unicodedata.name(chr(c), "").startswith(ev.SCRIPTS[script] + " LETTER")]
-
-
-WORDS = "the river city school market rain festival court train doctor music field".split()
-SCRIPT_OF = {"eng": "Latn", "asm": "Beng", "ben": "Beng", "guj": "Gujr", "kan": "Knda", "kas": "Arab", "mal": "Mlym",
-             "mni": "Mtei", "ory": "Orya", "pan": "Guru", "sat": "Olck", "tam": "Taml", "tel": "Telu", "urd": "Arab"}
-DOMAINS = ["culture", "economy", "education", "entertainment", "geography", "governments", "health", "industry",
-           "legal", "news", "religion", "sports", "tourism"]
-
-
-def spell(text: str, script: str) -> str:
-    al = letters(script)
-    return "".join(al[(ord(ch) - 97) % len(al)] if ch.isalpha() else ch for ch in text)
-
-
-rng = np.random.default_rng(0)
-rows = []
-for k in range(104):                                   # 13 domains x 2 sources x 4
-    en = " ".join(rng.choice(WORDS, size=int(rng.integers(3, 6)))).capitalize() + "."
-    row = dict(id=k + 1, context="ctx", source=("web", "wikipedia")[k % 2], url="", domain=DOMAINS[k // 2 % 13],
-               num_words=len(en.split()), bucket="1 - 10")
-    for code in ev.NAMES:
-        script = SCRIPT_OF.get(code, "Deva")
-        row[f"sentence_{code}_{script}"] = en if code == "eng" else spell(en.lower(), script)
-    row["sentence_mni_Beng"] = spell(en.lower(), "Beng")   # a second script for Manipuri: Meitei is picked
-    rows.append(row)
-
+rows = in22_rows()
 tmp = tempfile.TemporaryDirectory()
 T = Path(tmp.name)
 D, R, O = T / "data", T / "runs", T / "out"
@@ -95,18 +57,10 @@ for drop, add in (("sentence_mni_Mtei", {}), (None, {"sentence_hin_Latn": "x"}))
 check("data: a multi-script language without its prompt's column, and a second script for another, are refused",
       all(bad))
 (D / "in22_gen.jsonl").write_text((D / "in22_gen.jsonl").read_text().replace("River", "Rivers", 1))
-try:
-    ev.load_data(str(D)); refused = False
-except SystemExit:
-    refused = True
-check("data: a changed in22_gen.jsonl is refused (SHA-256 in the manifest)", refused)
+check("data: a changed in22_gen.jsonl is refused (SHA-256 in the manifest)", refused(lambda: ev.load_data(str(D))))
 ev.main(["data", "--data", str(D)])                     # rewritten from the parquet
 ev.IN22["sha256"] = "0" * 64
-try:
-    ev.main(["data", "--data", str(D)]); refused = False
-except SystemExit:
-    refused = True
-check("data: a parquet that is not the pinned one is refused", refused)
+check("data: a parquet that is not the pinned one is refused", refused(lambda: ev.main(["data", "--data", str(D)])))
 items, man = ev.load_data(str(D))
 
 # 2. the sample
@@ -126,8 +80,8 @@ for model in ("sarvam-translate", "gemma-3-4b-it"):
     tok, hf = Tokenizer(str(d / "tokenizer.json")), AutoTokenizer.from_pretrained(str(d))
     eng = SimpleNamespace(name=model, chat_style=engine.chat_style(engine.MODELS[model], d), tokenizer=tok,
                           eos_ids=set(engine.MODELS[model]["eos"]))
-    special, added = ev.added_tokens(model)
-    eoa = ev.end_of_answer(eng)
+    special, added = er.added_tokens(model)
+    eoa = er.end_of_answer(eng)
     ok = [eoa == 106, eoa in special]
     for src, tgt in (("eng", "hin"), ("eng", "mni"), ("mni", "eng")):
         for style in ("card", "neutral"):
@@ -154,32 +108,25 @@ def fake_qt(path, schemes, scheme="int4"):
     return str(path)
 
 
-def refused(fn):
-    try:
-        fn(); return False
-    except SystemExit:
-        return True
-
-
 mixed, flat = fake_qt(T / "mixed.qt", ["int8", "int4", "int8", "int4"]), fake_qt(T / "flat.qt", ["int8", "int4", "int4"])
 int8 = fake_qt(T / "int8.qt", ["int8", "int8"], "int8")
 ev.CONFIGS["sarvam-int4-flat"] = ("sarvam-translate", "metal-int4", "flat")   # an INT4 ablation, not compared
 spec, pol = engine.MODELS["sarvam-translate"], T / "policy.json"
 pol.write_text("{}")
 saved = spec.get("policy")
-w_mixed, w_flat = ev.weights_identity("sarvam-int4", mixed), ev.weights_identity("sarvam-int4-flat", flat)
+w_mixed, w_flat = er.weights_identity("sarvam-int4", mixed), er.weights_identity("sarvam-int4-flat", flat)
 spec["policy"] = str(T / "absent.json")
-no_policy = ev.weights_identity("sarvam-int4-flat", None)
+no_policy = er.weights_identity("sarvam-int4-flat", None)
 ok = [w_mixed["schemes"] == {"int4": 2, "int8": 2} and w_mixed["policy_int8"] == 1 and len(w_mixed["header_sha256"]) == 64,
       w_flat["schemes"] == {"int8": 1, "int4": 2} and w_flat["policy_int8"] == 0,
-      refused(lambda: ev.weights_identity("sarvam-int4", flat)),
-      refused(lambda: ev.weights_identity("sarvam-int4-flat", mixed)),
-      refused(lambda: ev.weights_identity("sarvam-int4", int8)), ev.weights_identity("sarvam-int8", int8)["file"],
-      refused(lambda: ev.weights_identity("sarvam-int4", None)), no_policy["policy"] is None]
+      refused(lambda: er.weights_identity("sarvam-int4", flat)),
+      refused(lambda: er.weights_identity("sarvam-int4-flat", mixed)),
+      refused(lambda: er.weights_identity("sarvam-int4", int8)), er.weights_identity("sarvam-int8", int8)["file"],
+      refused(lambda: er.weights_identity("sarvam-int4", None)), no_policy["policy"] is None]
 spec["policy"] = str(pol)
-ok += [ev.weights_identity("sarvam-int4", None)["policy_sha256"] == ev.sha256(pol),
-       refused(lambda: ev.weights_identity("sarvam-int4-flat", None)),
-       ev.weights_identity("sarvam-int8", None)["policy"] is None]
+ok += [er.weights_identity("sarvam-int4", None)["policy_sha256"] == ev.sha256(pol),
+       refused(lambda: er.weights_identity("sarvam-int4-flat", None)),
+       er.weights_identity("sarvam-int8", None)["policy"] is None]
 spec["policy"] = saved
 del ev.CONFIGS["sarvam-int4-flat"]
 check("weights: calibrated INT4 refuses flat weights and flat refuses calibrated (INT8 tensors beyond the tied "
@@ -230,14 +177,14 @@ for cfg in ("tiny-gemma3",):
           and len(speed) == 1 and speed[0]["requests"] == 24 and speed[0]["tokens"] > 0
           and len(seg) == 1 and seg[0]["kind"] == "gen" and seg[0]["items"] == 24 and len(seg[0]["code_sha256"]) == 16)
     args = SimpleNamespace(config=cfg, weights=None, runs=str(R), prompt=None, seed=0)
-    eng, run, _ = ev.open_run(args, "gen", man)
+    eng, run, _ = er.open_run(args, "gen", man)
     meta = json.load(open(run / "meta.json"))
     check(f"{cfg} generate: meta records the prompt messages (the card's), the rendered template, the seed, the "
           "dataset and the end-of-answer token", meta["config"] == cfg and meta["prompt"] == "card"
           and meta["messages"][0]["role"] == "system" and "{text}" in meta["example_prompt"]
           and meta["seed"] == 0 and meta["dataset"] == man["jsonl_sha256"]
           and meta["end_of_answer"] == eng.tokenizer.special["<|end|>"] and meta["weights"]["file"] is None)
-    special, added = ev.added_tokens(eng.name)
+    special, added = er.added_tokens(eng.name)
     same, stripped = True, 0
     for d_, recs in g.items():
         src, tgt = d_.split("-")
@@ -291,19 +238,19 @@ for cfg in ("tiny-gemma3",):
           and [x["kind"] for x in ev.read_jsonl(R / cfg / "segments.jsonl")] == ["gen", "gen", "score"])
     seqs = [(r["id"], eng.tokenizer.encode(ev.prompt(eng, "eng", "mni", items[r["id"]]["text"]["eng"])),
              eng.tokenizer.encode(items[r["id"]]["text"]["mni"]) + [eoa]) for r in sc["eng-mni"]]
-    packed = dict(ev.teacher_forced(eng.model, seqs, eng.tokenizer.vocab_size()))
+    packed = dict(er.teacher_forced(eng.model, seqs, eng.tokenizer.vocab_size()))
     budget, decision.FORK_BUDGET = decision.FORK_BUDGET, 1
-    alone = dict(ev.teacher_forced(eng.model, seqs, eng.tokenizer.vocab_size()))
+    alone = dict(er.teacher_forced(eng.model, seqs, eng.tokenizer.vocab_size()))
     decision.FORK_BUDGET = budget
     common = len(os.path.commonprefix([p for _, p, _ in seqs]))
     check(f"{cfg} score: packed forks == one at a time, token by token (common prefix {common} tokens)",
           all(len(packed[k]) == len(c) and np.allclose(packed[k], alone[k], rtol=1e-5, atol=1e-6)
               for (k, _, c) in seqs))
     json.dump(meta | {"weights": "another.qt"}, open(run / "meta.json", "w"))
-    other = refused(lambda: ev.open_run(args, "gen", man))
+    other = refused(lambda: er.open_run(args, "gen", man))
     json.dump(meta, open(run / "meta.json", "w"))
     check(f"{cfg}: results of another build, or of another seed, in the same run directory are refused",
-          other and refused(lambda: ev.open_run(SimpleNamespace(**vars(args) | {"seed": 1}), "gen", man)))
+          other and refused(lambda: er.open_run(SimpleNamespace(**vars(args) | {"seed": 1}), "gen", man)))
 
 # 4b. the seq2seq (IndicTrans2) path: language tags, and a tiny random encoder-decoder through generate and score
 real = json.load(open(ev.DATA / "manifest.json")) if (ev.DATA / "manifest.json").exists() else None
@@ -408,6 +355,31 @@ check(f"tiny-it2 score: nats and end_nats (eos) == -log p of the pre-processed r
       and all(r["roundtrip"] for v in sc.values() for r in v)
       and all(r["preprocessed"] for v in sc.values() for r in v))       # every synthetic sentence ends in "."
 
+model, tok = s2s.load("eng")
+cap, beam_same, hf_same = 12, True, True
+for r in g["eng-hin"]:
+    b = ip.preprocess_batch([items[r["id"]]["text"]["eng"]], src_lang="eng_Latn", tgt_lang="hin_Deva")
+    one, _, _ = indictrans.beam(model, tok, b[0], cap, 1, "cpu")
+    beam_same &= one == indictrans.greedy(model, tok, b, [cap], "cpu")[0][0]
+    five, _, _ = indictrans.beam(model, tok, b[0], cap, 5, "cpu", lenpen=0.0)
+    hf = model.generate(**tok(b, return_tensors="pt"), num_beams=5, num_return_sequences=1, length_penalty=0.0,
+                        early_stopping=True, do_sample=False, max_new_tokens=cap)[0].tolist()[1:]
+    hf_same &= five == [t for t in hf if t not in (model.config.eos_token_id, model.config.pad_token_id)]
+check("tiny-it2 beam: width 1 == greedy; width 5 (length penalty 0) == transformers' generate(num_beams=5, "
+      "early_stopping=True) on 6 sources", beam_same and hf_same)
+indictrans.HF["tiny-it2-beam5"], indictrans.BEAMS["tiny-it2-beam5"] = indictrans.HF["tiny-it2"], 5
+ev.CONFIGS["tiny-it2-beam5"] = ("tiny-it2-beam5", "hf", None)
+ev.main(["generate", "tiny-it2-beam5", "--data", str(D), "--runs", str(R), "--langs", "hin", "--n", "3", *HF_ARGS])
+gb = gen_lines("tiny-it2-beam5")
+pre_b = {r["id"]: ip.preprocess_batch([items[r["id"]]["text"]["eng"]], src_lang="eng_Latn", tgt_lang="hin_Deva")[0]
+         for r in gb["eng-hin"]}
+check("tiny-it2-beam5 generate: its own run directory, records == beam() alone, the decoding in meta",
+      sorted(gb) == ["eng-hin", "hin-eng"] and all(r["tokens"] == len(indictrans.beam(
+          model, tok, pre_b[r["id"]], ev.MAX_NEW[0] + int(np.ceil(ev.MAX_NEW[1] * len(items[r["id"]]["text"]["eng"]))),
+          5, "cpu")[0]) for r in gb["eng-hin"])
+      and "beam search, 5 beams" in json.load(open(R / "tiny-it2-beam5" / "meta.json"))["decoding"])
+shutil.rmtree(R / "tiny-it2-beam5")                      # a control: out of the report below
+
 # 5. report: chrF++ on IN22's protocol vs sacrebleu, macro rows, diagnostics; files read, never written
 from indicnlp.normalize.indic_normalize import IndicNormalizerFactory
 from indicnlp.tokenize.indic_tokenize import trivial_tokenize
@@ -420,10 +392,18 @@ def in22(text, tgt):
     return " ".join(trivial_tokenize(IndicNormalizerFactory().get_normalizer("hi").normalize(text.strip()), "hi"))
 
 
+TINY = ("tiny-gemma3", "tiny-it2")
+
+
 def snapshot():
     return {f: f.read_bytes() for f in sorted(R.rglob("*")) if f.is_file()}
 
 
+for cfg in TINY:
+    (R / cfg / "comet.json").write_text(json.dumps(dict(repo="Unbabel/wmt22-comet-da", revision="0" * 40, package="x")))
+    for d_, recs in gen_lines(cfg).items():
+        for r in recs:
+            ev.append_jsonl(R / cfg / "comet" / f"{d_}.jsonl", dict(id=r["id"], comet=len(r["hyp"]) % 7 * 10.0))
 f = R / "tiny-it2" / "gen" / "eng-hin.jsonl"
 f.write_bytes(f.read_bytes() + b'{"id": 99, "hy')     # a record being written while the report reads
 files = snapshot()
@@ -432,7 +412,6 @@ check("report: reads only (every run file byte-identical after it, a line being 
 f.write_bytes(f.read_bytes()[:f.read_bytes().rfind(b"\n") + 1])
 num = json.load(open(O / "numbers.json"))
 chrf = CHRF(word_order=2)
-TINY = ("tiny-gemma3", "tiny-it2")
 ok, diag = [], []
 for cfg in TINY:
     for d_, recs in gen_lines(cfg).items():
@@ -451,9 +430,14 @@ check("report: tables.md, numbers.json / .csv and chrf.svg written; chrF++ == sa
       all(ok) and len(ok) == 8 and "nc:6|nw:2" in md and "version:2.6.0" in md and report.PROTOCOL in md
       and ET.parse(O / "chrf.svg").getroot().tag.endswith("svg") and num["protocol"] == report.PROTOCOL
       and len((O / "numbers.csv").read_text().splitlines()) == 1 + sum(
-          len(cl) for m in ("chrf", *report.BPC) for cl in num[m].values()) + sum(
+          len(cl) for m in ("chrf", "comet", *report.BPC) for cl in num[m].values()) + sum(
           len(v["configs"]) for m in num["macro"].values() for side in m.values() for v in side.values())
       and "delta" in num["chrf"]["eng-hin"]["tiny-it2"] and num["ids"]["eng-hin"] == sorted(ev.sample_ids(items, 6, 0)))
+check("report: COMET per direction == the mean of the run's segment scores, deltas against the baseline; its model "
+      "named in tables.md", all(abs(num["comet"][d_][c]["score"] - np.mean([x["comet"] for x in ev.read_jsonl(
+          R / c / "comet" / f"{d_}.jsonl")])) < 1e-9 for c in TINY for d_ in num["comet"]) and len(num["comet"]) == 4
+      and "delta" in num["comet"]["eng-hin"]["tiny-it2"] and "COMET: Unbabel/wmt22-comet-da" in md
+      and "### COMET" in md)
 check("report: macro rows over all languages (2) and one script (1: not Manipuri), each with paired CIs; bits per "
       "character with the end-of-answer token above those without",
       all(f"**macro, {n}**" in md for n in ("all (2)", "one script (1)"))
@@ -491,80 +475,25 @@ check("control: --prompt neutral on the card model -> RUNS/tiny-gemma3@neutral (
       and "tiny-gemma3@neutral" not in mac2["all"]["configs"] and "ci" in mac2["one script"]["configs"][
           "tiny-gemma3@neutral"] and "tiny-gemma3@neutral" in num2["chrf"]["eng-hin"])
 
-# 6. the protocol on canonically equal text, the bootstrap
-import unicodedata
-nfc = unicodedata.normalize("NFC", "क़ानून और फ़ैसला सड़क पर हुआ।")
-pre = nfc.replace("क़", "क़").replace("फ़", "फ़").replace("ड़", "ड़")
-hi = report.in22_preprocess("hin", "Deva")
-raw, prot = chrf.sentence_score(nfc, [pre]).score, chrf.sentence_score(hi(nfc), [hi(pre)]).score
-danda = chrf.sentence_score(hi("सड़क पर हुआ।"), [hi("सड़क पर हुआ ।")]).score
-urd = report.in22_preprocess("urd", "Arab")("یہ ایک کتاب ہے۔")
-check(f"protocol: precomposed nukta letters vs their NFC form score 100 (raw {raw:.1f}); a danda attached or spaced "
-      "100; Urdu through urduhack's normalizer (its TensorFlow package init skipped); English raw",
-      pre != nfc and unicodedata.normalize("NFC", pre) == nfc and prot == 100 and raw < 60 and danda == 100
-      and urd.endswith(" ۔") and report.in22_preprocess("eng", "Latn")(" A b. ") == " A b. ")
-
-hyps, refs = [], []
-for k in range(40):                                    # Indic and English pairs with word and character edits
-    ref = items[k + 1]["text"]["hin" if k % 2 else "eng"]
-    hyp = " ".join(ref.split()[::-1]) if k % 3 == 0 else ref[: max(1, len(ref) - k % 5)]
-    hyps.append(hyp); refs.append(ref)
-(T / "hyp.txt").write_text("\n".join(hyps) + "\n"); (T / "ref.txt").write_text("\n".join(refs) + "\n")
-cli = subprocess.run([sys.executable, "-m", "sacrebleu", str(T / "ref.txt"), "-i", str(T / "hyp.txt"), "-m", "chrf",
-                      "--chrf-word-order", "2", "-b", "-w", "6"], capture_output=True, text=True).stdout.strip()
-fn = lambda s: chrf._compute_score_from_stats(list(s)).score
-stats = np.array(chrf._extract_corpus_statistics(hyps, [refs]))
-ids = list(range(40))
-other = np.array(chrf._extract_corpus_statistics(refs[:20] + hyps[20:], [refs]))
-per = {"a": {"d": (ids, stats)}, "b": {"d": (ids, other)}, "c": {"d": (ids, stats)}}
-r1, r2, r3 = (report.compare(per, fn, 300, s, "a") for s in (7, 7, 8))
-check(f"chrF++ of 40 pairs == sacrebleu's CLI ({cli})", cli and abs(r1["d"]["a"]["score"] - float(cli)) < 1e-6)
-check("bootstrap: the same seed gives the same CIs, another seed others; a system against itself: delta 0, CI [0, 0]; "
-      "lo <= delta <= hi", r1["d"]["b"]["ci"] == r2["d"]["b"]["ci"] and r1["d"]["b"]["ci"] != r3["d"]["b"]["ci"]
-      and r1["d"]["c"]["ci"] == [0.0, 0.0] and r1["d"]["c"]["delta"] == 0
-      and r1["d"]["b"]["ci"][0] <= r1["d"]["b"]["delta"] <= r1["d"]["b"]["ci"][1])
-
-
-def correlated(rng, dirs=22, n=50):
-    """Two configs' bits per character in `dirs` directions over the same n ids, each sentence's difficulty shared by
-    every direction (and larger for b): the case IN22-Gen's n-way parallel sample makes."""
-    chars, shared, per = rng.integers(60, 200, n), rng.normal(0, 1, n), {"a": {}, "b": {}}
-    for d in range(dirs):
-        a = 2.0 + .3 * shared + rng.normal(0, .3, n)
-        b = a + .1 + .4 * shared + rng.normal(0, .3, n)
-        per["a"][f"d{d:02d}"] = (list(range(n)), np.stack([a * chars, chars], 1))
-        per["b"][f"d{d:02d}"] = (list(range(n)), np.stack([b * chars, chars], 1))
-    return per
-
-
-ratio = lambda s: float(s[0] / s[1])
-rng, deltas, widths = np.random.default_rng(1), [], []
-for t in range(150):
-    m = report.macro(per := correlated(rng), ratio, sorted(per["a"]), 200, t, "a")
-    deltas.append(m["b"]["delta"]); widths.append(m["b"]["ci"][1] - m["b"]["ci"][0])
-spread = float(np.diff(np.percentile(deltas, [2.5, 97.5]))[0])
-per["c"] = per["a"]
-m, q = report.macro(per, ratio, sorted(per["a"]), 200, 0, "a"), report.compare(per, ratio, 200, 0, "a")
-check(f"macro bootstrap: the CI of a macro delta ({np.mean(widths):.3f} wide on average) covers the spread of the delta "
-      f"over 150 fresh samples ({spread:.3f}) when sentence difficulty is shared across directions; the mean of the "
-      "directions' scores; a config against itself: CI [0, 0]",
-      0.75 < np.mean(widths) / spread < 1.4 and m["c"]["ci"] == [0.0, 0.0]
-      and abs(m["b"]["score"] - np.mean([q[d]["b"]["score"] for d in q])) < 1e-12)
+# 6. the protocol, chrF++ against sacrebleu's CLI and the bootstraps: tests/test_report_stats.py
 check("script share: Hindi text is Devanagari, English is not, Meitei is Meetei Mayek",
       ev.script_share(TEXT["hin"], "Deva") == 1.0 and ev.script_share(TEXT["eng"], "Deva") == 0.0
       and ev.script_share(TEXT["mni"], "Mtei") == 1.0)
 
-# 7. IndicTrans2's own code (transformers 4) in its venv, on a tiny random model of its architecture
-it2 = ev.ROOT / ".venv-it2/bin/python"
-if it2.exists():
-    r = subprocess.run([str(it2), str(Path(__file__).with_name("test_indictrans_remote.py"))], capture_output=True,
-                       text=True)
+tmp.cleanup()
+
+
+def suite(python, name: str) -> None:
+    r = subprocess.run([str(python), str(Path(__file__).with_name(name))], capture_output=True, text=True)
     lines = [l for l in r.stdout.splitlines() if l.startswith(("PASS", "FAIL", "SKIP"))]
-    print("\n".join(lines))
-    results += [l.startswith("PASS") for l in lines] + [r.returncode == 0]
+    print("\n".join(lines) or r.stderr[-2000:])
+    results.extend([l.startswith("PASS") for l in lines] + [r.returncode == 0])
+
+
+suite(sys.executable, "test_report_stats.py")
+# 7. IndicTrans2's own code (transformers 4) in its venv, on a tiny random model of its architecture
+if (it2 := ev.ROOT / ".venv-it2/bin/python").exists():
+    suite(it2, "test_indictrans_remote.py")
 else:
     print(f"SKIP  IndicTrans2's remote code: no {it2} (README: the IndicTrans2 environment)")
-
-tmp.cleanup()
-print(f"\n{sum(results)}/{len(results)} passed")
-sys.exit(0 if all(results) else 1)
+finish()

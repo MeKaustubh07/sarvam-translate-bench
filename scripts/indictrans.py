@@ -5,7 +5,6 @@ import math
 import time
 from collections import Counter
 from contextlib import contextmanager
-from pathlib import Path
 
 import numpy as np
 
@@ -13,6 +12,8 @@ from eval_translate import (ENG, MAX_NEW, ROOT, append_jsonl, code_version, foot
                             import_without_init, load_data, open_dir, pairs, read_jsonl, sample_ids, sha256)
 
 HF = {"indictrans2": {"en-x": "data/models/indictrans2-en-indic-1B", "x-en": "data/models/indictrans2-indic-en-1B"}}
+HF["indictrans2-beam5"] = HF["indictrans2"]
+BEAMS = {"indictrans2-beam5": 5}                     # the paper's decoding, a control; every other config is greedy
 # IndicTrans2's languages, as FLORES-200 codes (its README); IN22-Gen's columns use the same codes
 CODES = {"asm_Beng", "ben_Beng", "brx_Deva", "doi_Deva", "eng_Latn", "gom_Deva", "guj_Gujr", "hin_Deva", "kan_Knda",
          "kas_Arab", "kas_Deva", "mai_Deva", "mal_Mlym", "mar_Deva", "mni_Beng", "mni_Mtei", "npi_Deva", "ory_Orya",
@@ -83,7 +84,8 @@ def identity(a, s: Seq2Seq, manifest: dict) -> dict:
     ip = processor(True)
     return json.loads(json.dumps(dict(
         config=a.config, model=a.config, backend="hf", weights=s.identity(), device=a.device, dtype=a.dtype,
-        decoding="greedy (num_beams=1), KV cache", max_new=MAX_NEW, prompt="none: IndicProcessor's language tags",
+        decoding=f"beam search, {BEAMS[a.config]} beams, length penalty 1 (fairseq's)" if a.config in BEAMS else
+        "greedy (num_beams=1), KV cache", max_new=MAX_NEW, prompt="none: IndicProcessor's language tags",
         messages=None, example_prompt=ip.preprocess_batch(["TEXT"], src_lang="eng_Latn", tgt_lang="mni_Mtei")[0],
         processor={k: importlib.metadata.version(k) for k in LIBS}, bpc_text=BPC_TEXT, seed=a.seed,
         dataset=manifest["jsonl_sha256"])))
@@ -129,6 +131,55 @@ def greedy(model, tok, src: list[str], max_new: list[int], device) -> tuple[list
     return out, stop, first
 
 
+def reorder(past, idx):
+    if hasattr(past, "reorder_cache"):
+        past.reorder_cache(idx)
+        return past
+    return tuple(tuple(x.index_select(0, idx) for x in layer) for layer in past)
+
+
+@no_grad()
+def beam(model, tok, src: str, max_new: int, k: int, device, lenpen: float = 1.0) -> tuple[list[int], str, float]:
+    """fairseq's beam search for one source: of the 2k best extensions of the k live hypotheses, those among the first
+    k that end in the end token are finished, scored by log-probability over length (the end token counted, length
+    penalty 1), and the first k others stay live; done once k are finished, or at max_new tokens, where the live ones
+    are finished as they are. -> (the best's tokens without the end token, "stop" | "length", seconds to the first
+    step)"""
+    import torch
+    t0, cfg = time.perf_counter(), model.config
+    enc_in = encode(tok, [src], device)
+    enc = model.get_encoder()(input_ids=enc_in["input_ids"], attention_mask=enc_in["attention_mask"])
+    enc.last_hidden_state = enc.last_hidden_state.expand(k, -1, -1).contiguous()
+    mask = enc_in["attention_mask"].expand(k, -1)
+    scores = torch.full((k,), float("-inf"), device=device)
+    scores[0] = 0.0                                          # k copies of the empty hypothesis, one of them live
+    live, done, past, first = [[] for _ in range(k)], [], None, None
+    cur = torch.full((k, 1), cfg.decoder_start_token_id, device=device)
+    for step in range(max_new):
+        o = model(encoder_outputs=enc, attention_mask=mask, decoder_input_ids=cur, past_key_values=past, use_cache=True)
+        first = first or time.perf_counter() - t0
+        lp = o.logits[:, -1].float().log_softmax(-1)
+        top = (scores[:, None] + lp).view(-1).topk(2 * k)
+        keep, vocab = [], lp.shape[-1]
+        for rank, (sc, j) in enumerate(zip(top.values.tolist(), top.indices.tolist())):
+            b, t = divmod(j, vocab)
+            if t == cfg.eos_token_id:
+                if rank < k:
+                    done.append((sc / (step + 1) ** lenpen, live[b], "stop"))
+            elif len(keep) < k:
+                keep.append((sc, b, t))
+        if len(done) >= k:
+            break
+        idx = torch.tensor([b for _, b, _ in keep], device=device)
+        live = [live[b] + [t] for _, b, t in keep]
+        scores = torch.tensor([sc for sc, _, _ in keep], device=device)
+        past, cur = reorder(o.past_key_values, idx), torch.tensor([[t] for *_, t in keep], device=device)
+    else:
+        done += [(sc / max_new ** lenpen, h, "length") for sc, h in zip(scores.tolist(), live)]
+    _, best, stop = max(done, key=lambda d: d[0])
+    return best, stop, first
+
+
 def generate(a) -> None:
     items, manifest = load_data(a.data)
     s = Seq2Seq(a.config, a.device, a.dtype)
@@ -148,7 +199,12 @@ def generate(a) -> None:
             texts = [items[i]["text"][src] for i in chunk]
             batch = ip.preprocess_batch(texts, src_lang=flores(src, manifest), tgt_lang=flores(tgt, manifest))
             max_new = [min(MAX_NEW[0] + math.ceil(MAX_NEW[1] * len(t)), cap - 1) for t in texts]
-            outs, stops, ttft = greedy(model, tok, batch, max_new, a.device)
+            if a.config in BEAMS:
+                outs, stops, ttft = zip(*(beam(model, tok, b, m, BEAMS[a.config], a.device) for b, m in zip(batch,
+                                                                                                    max_new)))
+                ttft = ttft[0]
+            else:
+                outs, stops, ttft = greedy(model, tok, batch, max_new, a.device)
             dec = tok.batch_decode(outs, skip_special_tokens=True, clean_up_tokenization_spaces=True)
             for i, out, stop, hyp in zip(chunk, outs, stops, ip.postprocess_batch(dec, lang=flores(tgt, manifest))):
                 hyp = hyp.strip()
@@ -182,9 +238,12 @@ def teacher_forced(model, tok, src: list[str], labels: list[list[int]], device) 
     width = max(map(len, labels))
     dec = torch.tensor([[cfg.decoder_start_token_id] + l[:-1] + [cfg.pad_token_id] * (width - len(l)) for l in labels],
                        device=device)
-    lp = model(**enc_in, decoder_input_ids=dec).logits.float().log_softmax(-1)
-    return [-lp[b, torch.arange(len(l), device=device), torch.tensor(l, device=device)].double().cpu().numpy()
-            for b, l in enumerate(labels)]
+    logits, out = model(**enc_in, decoder_input_ids=dec).logits, []
+    for b, l in enumerate(labels):              # a row at a time: a batch's float32 log-softmax over 122K tokens is GBs
+        x = logits[b, :len(l)].float()
+        nll = x.logsumexp(-1) - x[torch.arange(len(l), device=device), torch.tensor(l, device=device)]
+        out.append(nll.cpu().double().numpy())
+    return out
 
 
 def references(ip, tok, refs: list[str], tgt: str, eos: int) -> tuple[list[str], list[list[int]]]:

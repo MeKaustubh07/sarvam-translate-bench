@@ -1,0 +1,293 @@
+metric,config,direction,value,n,delta,ci_lo,ci_hi
+chrf,sarvam-int4,asm-eng,29.9851,10,,,
+chrf,sarvam-int4@neutral,asm-eng,56.7978,10,26.81275737315525,-6.525158867118578,42.316464012739104
+chrf,sarvam-int4,ben-eng,57.8297,10,,,
+chrf,sarvam-int4@neutral,ben-eng,58.265,10,0.4353822498046753,-4.607968826556717,5.014307615666777
+chrf,sarvam-int4,brx-eng,50.4592,10,,,
+chrf,sarvam-int4@neutral,brx-eng,46.4002,10,-4.059016325862771,-16.199637788563454,2.7830057253788434
+chrf,sarvam-int4,doi-eng,56.8912,10,,,
+chrf,sarvam-int4@neutral,doi-eng,52.6052,10,-4.286041313794492,-15.798959318185798,2.040719508746084
+chrf,sarvam-int4,eng-asm,48.1312,10,,,
+chrf,sarvam-int4@neutral,eng-asm,47.9733,10,-0.15797474703203562,-1.0764261612167125,0.3902228898614401
+chrf,sarvam-int4,eng-ben,57.1105,10,,,
+chrf,sarvam-int4@neutral,eng-ben,56.7359,10,-0.3746075012332497,-3.3413768825027814,2.2873904884474534
+chrf,sarvam-int4,eng-brx,44.51,10,,,
+chrf,sarvam-int4@neutral,eng-brx,44.6207,10,0.11069086047444898,-0.6190770457482125,0.994484123758261
+chrf,sarvam-int4,eng-doi,61.7485,10,,,
+chrf,sarvam-int4@neutral,eng-doi,61.7285,10,-0.02006669201395539,-1.8822006081522566,2.352420548287944
+chrf,sarvam-int4,eng-gom,44.0642,10,,,
+chrf,sarvam-int4@neutral,eng-gom,43.3707,10,-0.6934417087930953,-1.6244378321096107,0.17732212641429992
+chrf,sarvam-int4,eng-guj,61.3477,10,,,
+chrf,sarvam-int4@neutral,eng-guj,61.7845,10,0.4368096539275186,0.003154486621389374,1.5083908501838639
+chrf,sarvam-int4,eng-hin,60.6653,10,,,
+chrf,sarvam-int4@neutral,eng-hin,59.1785,10,-1.4868053652571191,-4.811226165389407,0.00686069571482708
+chrf,sarvam-int4,eng-kan,56.7973,10,,,
+chrf,sarvam-int4@neutral,eng-kan,56.9028,10,0.1054768885296653,-0.6459477886966051,0.923213484441122
+chrf,sarvam-int4,eng-kas,39.5464,10,,,
+chrf,sarvam-int4@neutral,eng-kas,40.0387,10,0.4922614787230515,-1.1413712047205054,2.782786475015545
+chrf,sarvam-int4,eng-mai,55.6572,10,,,
+chrf,sarvam-int4@neutral,eng-mai,56.8374,10,1.180237958469064,0.02337776991478755,2.5164212981721703
+chrf,sarvam-int4,eng-mal,58.6003,10,,,
+chrf,sarvam-int4@neutral,eng-mal,58.3392,10,-0.2610311645643293,-4.83599315487097,2.6265023184939977
+chrf,sarvam-int4,eng-mar,56.4416,10,,,
+chrf,sarvam-int4@neutral,eng-mar,55.4278,10,-1.0138481240326342,-2.654646060954396,1.2098865092324056
+chrf,sarvam-int4,eng-mni,53.5637,10,,,
+chrf,sarvam-int4@neutral,eng-mni,53.5564,10,-0.007319272571990609,-4.073474656961946,2.479490329969972
+chrf,sarvam-int4,eng-npi,56.7276,10,,,
+chrf,sarvam-int4@neutral,eng-npi,55.77,10,-0.9576122283104027,-3.9214704727575387,0.6462931650690231
+chrf,sarvam-int4,eng-ory,46.5516,10,,,
+chrf,sarvam-int4@neutral,eng-ory,47.6373,10,1.0857706667958453,0.003907597175589396,2.3211621588481375
+chrf,sarvam-int4,eng-pan,54.3003,10,,,
+chrf,sarvam-int4@neutral,eng-pan,53.7673,10,-0.5329832730105579,-2.8381164229537688,0.6511556217490259
+chrf,sarvam-int4,eng-san,43.9195,10,,,
+chrf,sarvam-int4@neutral,eng-san,43.3696,10,-0.5499446862038795,-1.29113659089157,-0.033057594489890256
+chrf,sarvam-int4,eng-sat,42.5945,10,,,
+chrf,sarvam-int4@neutral,eng-sat,43.5621,10,0.9676838099606755,-0.24193763964638762,1.795511531400701
+chrf,sarvam-int4,eng-snd,40.3294,10,,,
+chrf,sarvam-int4@neutral,eng-snd,40.2411,10,-0.08828261609926358,-0.5830351056200043,0.31217079586816254
+chrf,sarvam-int4,eng-tam,48.4408,10,,,
+chrf,sarvam-int4@neutral,eng-tam,48.6938,10,0.25299181949257843,-1.0787600716918182,1.3536984918127786
+chrf,sarvam-int4,eng-tel,62.7291,10,,,
+chrf,sarvam-int4@neutral,eng-tel,62.1142,10,-0.6148443309638125,-1.5454770606259702,0.010164959056829941
+chrf,sarvam-int4,eng-urd,73.4089,10,,,
+chrf,sarvam-int4@neutral,eng-urd,73.5754,10,0.16650365831443992,-0.6635707881520236,0.8750830009486144
+chrf,sarvam-int4,gom-eng,53.9847,10,,,
+chrf,sarvam-int4@neutral,gom-eng,45.2558,10,-8.728880025379041,-19.528861290962368,0.7448023318080034
+chrf,sarvam-int4,guj-eng,58.4183,10,,,
+chrf,sarvam-int4@neutral,guj-eng,62.2856,10,3.8672544200029364,-3.8414665987352654,11.940522215046816
+chrf,sarvam-int4,hin-eng,58.1947,10,,,
+chrf,sarvam-int4@neutral,hin-eng,68.1222,10,9.927494539070842,4.861533215149961,14.15070530747587
+chrf,sarvam-int4,kan-eng,57.2004,10,,,
+chrf,sarvam-int4@neutral,kan-eng,62.5967,10,5.396340482343888,0.9582184864023022,10.761260036877703
+chrf,sarvam-int4,kas-eng,47.7135,10,,,
+chrf,sarvam-int4@neutral,kas-eng,45.4928,10,-2.2206447257150046,-14.057042107524008,6.211886925134649
+chrf,sarvam-int4,mai-eng,61.2322,10,,,
+chrf,sarvam-int4@neutral,mai-eng,64.0355,10,2.803313452423474,-2.583886254400941,9.911586669630715
+chrf,sarvam-int4,mal-eng,59.3742,10,,,
+chrf,sarvam-int4@neutral,mal-eng,58.9977,10,-0.3764190718416458,-3.169686736930465,2.3575298181645277
+chrf,sarvam-int4,mar-eng,54.6218,10,,,
+chrf,sarvam-int4@neutral,mar-eng,59.4288,10,4.80699964786298,-1.5966613218436059,10.064401899841895
+chrf,sarvam-int4,mni-eng,52.9666,10,,,
+chrf,sarvam-int4@neutral,mni-eng,25.7525,10,-27.21408646661567,-44.7888105744758,-10.504070926429664
+chrf,sarvam-int4,npi-eng,58.526,10,,,
+chrf,sarvam-int4@neutral,npi-eng,60.5565,10,2.0305002596270043,-6.688601424456401,10.858606875167203
+chrf,sarvam-int4,ory-eng,54.6527,10,,,
+chrf,sarvam-int4@neutral,ory-eng,54.8691,10,0.21633250978563012,-2.252626283699667,2.4385540677684245
+chrf,sarvam-int4,pan-eng,51.6639,10,,,
+chrf,sarvam-int4@neutral,pan-eng,60.0405,10,8.376611448030182,3.414618871746836,11.633652417939704
+chrf,sarvam-int4,san-eng,50.0556,10,,,
+chrf,sarvam-int4@neutral,san-eng,53.0383,10,2.9827043615039415,-1.452113873706654,6.547561582952638
+chrf,sarvam-int4,sat-eng,44.8467,10,,,
+chrf,sarvam-int4@neutral,sat-eng,32.1167,10,-12.729986233980433,-24.375294846440994,-2.469816934650518
+chrf,sarvam-int4,snd-eng,49.5618,10,,,
+chrf,sarvam-int4@neutral,snd-eng,47.3735,10,-2.1882909018520706,-20.029451278126903,10.55160018175867
+chrf,sarvam-int4,tam-eng,53.8917,10,,,
+chrf,sarvam-int4@neutral,tam-eng,57.687,10,3.7953010773195643,0.03570435995686694,6.364254981865256
+chrf,sarvam-int4,tel-eng,59.4439,10,,,
+chrf,sarvam-int4@neutral,tel-eng,59.71,10,0.2661278025839309,-3.313984771311411,4.158820382368346
+chrf,sarvam-int4,urd-eng,62.0877,10,,,
+chrf,sarvam-int4@neutral,urd-eng,61.783,10,-0.30469978270031106,-4.777037757374247,4.045540815993167
+comet,sarvam-int4,asm-eng,83.691,10,,,
+comet,sarvam-int4@neutral,asm-eng,86.0338,10,2.342783212661743,-1.695484772324562,9.386787086725233
+comet,sarvam-int4,ben-eng,88.3447,10,,,
+comet,sarvam-int4@neutral,ben-eng,88.224,10,-0.12071073055267334,-2.255707561969757,1.609121292829513
+comet,sarvam-int4,brx-eng,74.972,10,,,
+comet,sarvam-int4@neutral,brx-eng,72.3778,10,-2.5941911339759827,-14.336619809269905,5.785522267222404
+comet,sarvam-int4,doi-eng,83.5633,10,,,
+comet,sarvam-int4@neutral,doi-eng,80.9648,10,-2.5985300540924072,-12.257722809910774,3.365815475583076
+comet,sarvam-int4,eng-asm,88.5595,10,,,
+comet,sarvam-int4@neutral,eng-asm,88.1127,10,-0.4468625783920288,-1.4005452543497086,0.059952735900878906
+comet,sarvam-int4,eng-ben,90.2077,10,,,
+comet,sarvam-int4@neutral,eng-ben,90.0087,10,-0.19898295402526855,-0.4306512475013733,0.004210531711578327
+comet,sarvam-int4,eng-brx,61.0233,10,,,
+comet,sarvam-int4@neutral,eng-brx,61.2474,10,0.2240857481956482,-0.5179465562105179,0.9788887053728099
+comet,sarvam-int4,eng-doi,66.6792,10,,,
+comet,sarvam-int4@neutral,eng-doi,67.7758,10,1.0965913534164429,-1.0767904072999954,4.047816038131714
+comet,sarvam-int4,eng-gom,60.1704,10,,,
+comet,sarvam-int4@neutral,eng-gom,60.033,10,-0.13741523027420044,-1.1603157967329025,0.8577035889029503
+comet,sarvam-int4,eng-guj,91.8772,10,,,
+comet,sarvam-int4@neutral,eng-guj,91.7552,10,-0.12202322483062744,-0.6887984424829483,0.23292244970798492
+comet,sarvam-int4,eng-hin,85.2928,10,,,
+comet,sarvam-int4@neutral,eng-hin,85.0275,10,-0.26525259017944336,-0.7772892713546753,1.1920928955078125e-06
+comet,sarvam-int4,eng-kan,87.8731,10,,,
+comet,sarvam-int4@neutral,eng-kan,87.8448,10,-0.02835392951965332,-0.35285787284374237,0.24217328429222107
+comet,sarvam-int4,eng-kas,68.7733,10,,,
+comet,sarvam-int4@neutral,eng-kas,67.1214,10,-1.6519016027450562,-4.7791760712862015,1.2050693929195404
+comet,sarvam-int4,eng-mai,70.8621,10,,,
+comet,sarvam-int4@neutral,eng-mai,71.4734,10,0.6112629175186157,0.06644248962402344,1.2331503629684448
+comet,sarvam-int4,eng-mal,90.2807,10,,,
+comet,sarvam-int4@neutral,eng-mal,90.0421,10,-0.23859620094299316,-0.9852844774723053,0.37764322757720925
+comet,sarvam-int4,eng-mar,81.3541,10,,,
+comet,sarvam-int4@neutral,eng-mar,80.8947,10,-0.4594355821609497,-0.945330873131752,-0.001468062400817871
+comet,sarvam-int4,eng-mni,87.9329,10,,,
+comet,sarvam-int4@neutral,eng-mni,88.3065,10,0.3736001253128052,-0.16844303905963898,0.9905900955200195
+comet,sarvam-int4,eng-npi,86.7511,10,,,
+comet,sarvam-int4@neutral,eng-npi,86.8377,10,0.08659243583679199,-0.1992616355419159,0.3709834814071655
+comet,sarvam-int4,eng-ory,87.1456,10,,,
+comet,sarvam-int4@neutral,eng-ory,87.4185,10,0.2728903293609619,-0.050072669982910156,0.7558977603912354
+comet,sarvam-int4,eng-pan,85.9654,10,,,
+comet,sarvam-int4@neutral,eng-pan,85.8745,10,-0.09080708026885986,-0.5131480246782303,0.2532958984375
+comet,sarvam-int4,eng-san,82.7137,10,,,
+comet,sarvam-int4@neutral,eng-san,82.7781,10,0.06435573101043701,-0.19821301102638245,0.27813132107257843
+comet,sarvam-int4,eng-sat,89.8492,10,,,
+comet,sarvam-int4@neutral,eng-sat,89.4533,10,-0.3958839178085327,-1.138011634349823,0.24042546749114976
+comet,sarvam-int4,eng-snd,61.1787,10,,,
+comet,sarvam-int4@neutral,eng-snd,61.1568,10,-0.021921992301940918,-0.6840233504772186,0.6871146112680435
+comet,sarvam-int4,eng-tam,90.804,10,,,
+comet,sarvam-int4@neutral,eng-tam,90.5559,10,-0.24802029132843018,-0.6235254406929016,0.04204213619232178
+comet,sarvam-int4,eng-tel,89.8796,10,,,
+comet,sarvam-int4@neutral,eng-tel,89.5101,10,-0.36952078342437744,-1.4932006746530533,0.4127591997385025
+comet,sarvam-int4,eng-urd,90.1972,10,,,
+comet,sarvam-int4@neutral,eng-urd,90.011,10,-0.18612205982208252,-0.4105180501937866,-0.014801025390625
+comet,sarvam-int4,gom-eng,82.2532,10,,,
+comet,sarvam-int4@neutral,gom-eng,74.9562,10,-7.296958416700363,-19.549816995859146,0.6916775256395336
+comet,sarvam-int4,guj-eng,88.6078,10,,,
+comet,sarvam-int4@neutral,guj-eng,87.8318,10,-0.7760506868362427,-3.3228334188461304,1.4058671891689294
+comet,sarvam-int4,hin-eng,89.2088,10,,,
+comet,sarvam-int4@neutral,hin-eng,90.7961,10,1.5873152017593384,0.7787982225418091,2.385071948170662
+comet,sarvam-int4,kan-eng,87.0389,10,,,
+comet,sarvam-int4@neutral,kan-eng,87.76,10,0.7211500406265259,0.145054429769516,1.4816597402095795
+comet,sarvam-int4,kas-eng,79.6344,10,,,
+comet,sarvam-int4@neutral,kas-eng,72.5406,10,-7.0937395095825195,-16.254914835095406,0.6553837209939942
+comet,sarvam-int4,mai-eng,84.5722,10,,,
+comet,sarvam-int4@neutral,mai-eng,85.6837,10,1.1115199327468872,-1.0433686524629593,4.327185198664664
+comet,sarvam-int4,mal-eng,88.0105,10,,,
+comet,sarvam-int4@neutral,mal-eng,87.6524,10,-0.3580969572067261,-1.226718619465828,0.583379179239273
+comet,sarvam-int4,mar-eng,86.1876,10,,,
+comet,sarvam-int4@neutral,mar-eng,86.8441,10,0.6565070152282715,-1.9669181108474731,2.7445742487907405
+comet,sarvam-int4,mni-eng,76.0266,10,,,
+comet,sarvam-int4@neutral,mni-eng,40.0669,10,-35.959752947092056,-54.476395819336176,-16.883702591061596
+comet,sarvam-int4,npi-eng,89.9983,10,,,
+comet,sarvam-int4@neutral,npi-eng,90.9624,10,0.9641242027282715,-0.5863809883594513,2.6391919255256653
+comet,sarvam-int4,ory-eng,87.7042,10,,,
+comet,sarvam-int4@neutral,ory-eng,89.12,10,1.4157909154891968,-0.06806835532188414,2.9426720738410945
+comet,sarvam-int4,pan-eng,86.5747,10,,,
+comet,sarvam-int4@neutral,pan-eng,89.0446,10,2.4699437618255615,0.9280582964420319,4.187680587172508
+comet,sarvam-int4,san-eng,84.4134,10,,,
+comet,sarvam-int4@neutral,san-eng,84.7013,10,0.2879166603088379,-1.3864113986492157,1.920744583010673
+comet,sarvam-int4,sat-eng,70.5441,10,,,
+comet,sarvam-int4@neutral,sat-eng,59.509,10,-11.035146713256836,-24.02778747677803,-1.1861746609210972
+comet,sarvam-int4,snd-eng,81.936,10,,,
+comet,sarvam-int4@neutral,snd-eng,77.5852,10,-4.350854158401489,-17.26536764204502,3.3664066493511196
+comet,sarvam-int4,tam-eng,85.2457,10,,,
+comet,sarvam-int4@neutral,tam-eng,87.1528,10,1.9070422649383545,-1.1567984521389008,6.014875933527946
+comet,sarvam-int4,tel-eng,88.0931,10,,,
+comet,sarvam-int4@neutral,tel-eng,88.2588,10,0.16570091247558594,-0.6167582720518112,1.1573123931884766
+comet,sarvam-int4,urd-eng,88.4724,10,,,
+comet,sarvam-int4@neutral,urd-eng,87.3377,10,-1.1346662044525146,-2.6756570637226105,0.05487082898616785
+bpc,sarvam-int4,asm-eng,0.497463,50,,,
+bpc,sarvam-int4,ben-eng,0.501841,50,,,
+bpc,sarvam-int4,brx-eng,0.554837,50,,,
+bpc,sarvam-int4,doi-eng,0.455846,50,,,
+bpc,sarvam-int4,eng-asm,0.619076,50,,,
+bpc,sarvam-int4,eng-ben,0.50053,50,,,
+bpc,sarvam-int4,eng-brx,0.631288,50,,,
+bpc,sarvam-int4,eng-doi,0.452646,50,,,
+bpc,sarvam-int4,eng-gom,0.724566,50,,,
+bpc,sarvam-int4,eng-guj,0.54139,50,,,
+bpc,sarvam-int4,eng-hin,0.448001,50,,,
+bpc,sarvam-int4,eng-kan,0.468006,50,,,
+bpc,sarvam-int4,eng-kas,1.02566,50,,,
+bpc,sarvam-int4,eng-mai,0.647564,50,,,
+bpc,sarvam-int4,eng-mal,0.460537,50,,,
+bpc,sarvam-int4,eng-mar,0.440825,50,,,
+bpc,sarvam-int4,eng-mni,0.744038,50,,,
+bpc,sarvam-int4,eng-npi,0.54151,50,,,
+bpc,sarvam-int4,eng-ory,0.517124,50,,,
+bpc,sarvam-int4,eng-pan,0.937689,50,,,
+bpc,sarvam-int4,eng-san,0.834823,50,,,
+bpc,sarvam-int4,eng-sat,1.08052,50,,,
+bpc,sarvam-int4,eng-snd,1.03172,50,,,
+bpc,sarvam-int4,eng-tam,0.443535,50,,,
+bpc,sarvam-int4,eng-tel,0.540282,50,,,
+bpc,sarvam-int4,eng-urd,0.35754,50,,,
+bpc,sarvam-int4,gom-eng,0.60507,50,,,
+bpc,sarvam-int4,guj-eng,0.502418,50,,,
+bpc,sarvam-int4,hin-eng,0.527553,50,,,
+bpc,sarvam-int4,kan-eng,0.489893,50,,,
+bpc,sarvam-int4,kas-eng,0.587357,50,,,
+bpc,sarvam-int4,mai-eng,0.501101,50,,,
+bpc,sarvam-int4,mal-eng,0.507471,50,,,
+bpc,sarvam-int4,mar-eng,0.508977,50,,,
+bpc,sarvam-int4,mni-eng,0.540783,50,,,
+bpc,sarvam-int4,npi-eng,0.464107,50,,,
+bpc,sarvam-int4,ory-eng,0.471464,50,,,
+bpc,sarvam-int4,pan-eng,0.587683,50,,,
+bpc,sarvam-int4,san-eng,0.60545,50,,,
+bpc,sarvam-int4,sat-eng,0.611398,50,,,
+bpc,sarvam-int4,snd-eng,0.571219,50,,,
+bpc,sarvam-int4,tam-eng,0.551216,50,,,
+bpc,sarvam-int4,tel-eng,0.528882,50,,,
+bpc,sarvam-int4,urd-eng,0.464465,50,,,
+bpc_end,sarvam-int4,asm-eng,0.497465,50,,,
+bpc_end,sarvam-int4,ben-eng,0.501845,50,,,
+bpc_end,sarvam-int4,brx-eng,0.55486,50,,,
+bpc_end,sarvam-int4,doi-eng,0.455852,50,,,
+bpc_end,sarvam-int4,eng-asm,0.619081,50,,,
+bpc_end,sarvam-int4,eng-ben,0.500532,50,,,
+bpc_end,sarvam-int4,eng-brx,0.63129,50,,,
+bpc_end,sarvam-int4,eng-doi,0.45265,50,,,
+bpc_end,sarvam-int4,eng-gom,0.724744,50,,,
+bpc_end,sarvam-int4,eng-guj,0.542393,50,,,
+bpc_end,sarvam-int4,eng-hin,0.448003,50,,,
+bpc_end,sarvam-int4,eng-kan,0.468111,50,,,
+bpc_end,sarvam-int4,eng-kas,1.02568,50,,,
+bpc_end,sarvam-int4,eng-mai,0.64757,50,,,
+bpc_end,sarvam-int4,eng-mal,0.461302,50,,,
+bpc_end,sarvam-int4,eng-mar,0.440827,50,,,
+bpc_end,sarvam-int4,eng-mni,0.744054,50,,,
+bpc_end,sarvam-int4,eng-npi,0.541513,50,,,
+bpc_end,sarvam-int4,eng-ory,0.517127,50,,,
+bpc_end,sarvam-int4,eng-pan,0.937782,50,,,
+bpc_end,sarvam-int4,eng-san,0.834827,50,,,
+bpc_end,sarvam-int4,eng-sat,1.08074,50,,,
+bpc_end,sarvam-int4,eng-snd,1.03202,50,,,
+bpc_end,sarvam-int4,eng-tam,0.443538,50,,,
+bpc_end,sarvam-int4,eng-tel,0.540296,50,,,
+bpc_end,sarvam-int4,eng-urd,0.359989,50,,,
+bpc_end,sarvam-int4,gom-eng,0.605073,50,,,
+bpc_end,sarvam-int4,guj-eng,0.502424,50,,,
+bpc_end,sarvam-int4,hin-eng,0.527562,50,,,
+bpc_end,sarvam-int4,kan-eng,0.489898,50,,,
+bpc_end,sarvam-int4,kas-eng,0.587365,50,,,
+bpc_end,sarvam-int4,mai-eng,0.501114,50,,,
+bpc_end,sarvam-int4,mal-eng,0.507482,50,,,
+bpc_end,sarvam-int4,mar-eng,0.508979,50,,,
+bpc_end,sarvam-int4,mni-eng,0.540788,50,,,
+bpc_end,sarvam-int4,npi-eng,0.464112,50,,,
+bpc_end,sarvam-int4,ory-eng,0.471482,50,,,
+bpc_end,sarvam-int4,pan-eng,0.587687,50,,,
+bpc_end,sarvam-int4,san-eng,0.60548,50,,,
+bpc_end,sarvam-int4,sat-eng,0.611399,50,,,
+bpc_end,sarvam-int4,snd-eng,0.571233,50,,,
+bpc_end,sarvam-int4,tam-eng,0.551228,50,,,
+bpc_end,sarvam-int4,tel-eng,0.528883,50,,,
+bpc_end,sarvam-int4,urd-eng,0.46447,50,,,
+chrf,sarvam-int4,macro English -> X all (22),53.0539,10,,,
+chrf,sarvam-int4@neutral,macro English -> X all (22),52.9648,10,-0.08910613251812549,-0.7269174665665131,0.28495508029590627
+chrf,sarvam-int4,macro English -> X one script (18),55.064,10,,,
+chrf,sarvam-int4@neutral,macro English -> X one script (18),54.8793,10,-0.18470435085619386,-0.7450371323477241,0.13103301192086841
+chrf,sarvam-int4,macro X -> English all (22),53.8001,10,,,
+chrf,sarvam-int4@neutral,macro X -> English all (22),54.2368,10,0.4367752170805801,-3.825942290779767,3.629850863369612
+chrf,sarvam-int4,macro X -> English one script (18),54.9174,10,,,
+chrf,sarvam-int4@neutral,macro X -> English one script (18),57.9153,10,2.997892394663104,-0.9834716453579696,5.457222339367285
+comet,sarvam-int4,macro English -> X all (22),81.6078,10,,,
+comet,sarvam-int4@neutral,macro English -> X all (22),81.5109,10,-0.09689642624421424,-0.30190533264117186,0.09664140099828024
+comet,sarvam-int4,macro English -> X one script (18),82.6465,10,,,
+comet,sarvam-int4@neutral,macro English -> X one script (18),82.6223,10,-0.024200777212783464,-0.23894793705807513,0.21319671720266337
+comet,sarvam-int4,macro English -> X XLM-R's languages (14),87.7787,10,,,
+comet,sarvam-int4@neutral,macro English -> X XLM-R's languages (14),87.6194,10,-0.15929562704903333,-0.34763268594231145,-0.01026932362999454
+comet,sarvam-int4,macro X -> English all (22),84.3224,10,,,
+comet,sarvam-int4@neutral,macro X -> English all (22),81.6093,10,-2.713131972334608,-5.282490073787887,-0.5576849691569868
+comet,sarvam-int4,macro X -> English one script (18),85.9418,10,,,
+comet,sarvam-int4@neutral,macro X -> English one script (18),85.8724,10,-0.06941167016823613,-1.7378264003329729,1.1209500150548086
+comet,sarvam-int4,macro X -> English XLM-R's languages (14),87.2565,10,,,
+comet,sarvam-int4@neutral,macro X -> English XLM-R's languages (14),87.98,10,0.7234821149281032,0.11238364875316834,1.6102916715400444
+bpc,sarvam-int4,macro English -> X all (22),0.635857,50,,,
+bpc,sarvam-int4,macro English -> X one script (18),0.561496,50,,,
+bpc,sarvam-int4,macro X -> English all (22),0.528931,50,,,
+bpc,sarvam-int4,macro X -> English one script (18),0.518096,50,,,
+bpc_end,sarvam-int4,macro English -> X all (22),0.636094,50,,,
+bpc_end,sarvam-int4,macro English -> X one script (18),0.561754,50,,,
+bpc_end,sarvam-int4,macro X -> English all (22),0.52894,50,,,
+bpc_end,sarvam-int4,macro X -> English one script (18),0.518105,50,,,

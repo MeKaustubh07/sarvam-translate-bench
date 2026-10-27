@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 584" font-family="system-ui,sans-serif" font-size="12"><style>circle{stroke-width:2} text{fill:#1a1a19} .g{stroke:#e4e3df} .bg{fill:#fcfcfb} .m0{fill:#2a78d6;stroke:#2a78d6} .m1{fill:#eb6834;stroke:#eb6834} .m2{fill:#1baf7a;stroke:#1baf7a} .h{fill:none} @media (prefers-color-scheme: dark){text{fill:#e8e7e3} .g{stroke:#383835} .bg{fill:#1a1a19} .m0{fill:#3987e5;stroke:#3987e5} .m1{fill:#d95926;stroke:#d95926} .m2{fill:#199e70;stroke:#199e70} .h{fill:none}}</style><rect class="bg" width="1000" height="584"/><text x="16" y="22" font-size="15">IN22-Gen chrF++ per language, greedy</text>
+<circle class="m0" cx="22.0" cy="42" r="5"></circle><text x="32" y="46">sarvam-int4</text>
+<circle class="m0 h" cx="172.0" cy="42" r="5"></circle><text x="182" y="46">sarvam-int8</text>
+<circle class="m1" cx="322.0" cy="42" r="5"></circle><text x="332" y="46">gemma-int4@neutral</text>
+<circle class="m1 h" cx="472.0" cy="42" r="5"></circle><text x="482" y="46">gemma-int8@neutral</text>
+<text x="90" y="64">English → X</text>
+<line class="g" x1="90.0" x2="90.0" y1="70" y2="560"/><text x="90.0" y="574" text-anchor="middle">0</text>
+<line class="g" x1="140.0" x2="140.0" y1="70" y2="560"/><text x="140.0" y="574" text-anchor="middle">10</text>
+<line class="g" x1="190.0" x2="190.0" y1="70" y2="560"/><text x="190.0" y="574" text-anchor="middle">20</text>
+<line class="g" x1="240.0" x2="240.0" y1="70" y2="560"/><text x="240.0" y="574" text-anchor="middle">30</text>
+<line class="g" x1="290.0" x2="290.0" y1="70" y2="560"/><text x="290.0" y="574" text-anchor="middle">40</text>
+<line class="g" x1="340.0" x2="340.0" y1="70" y2="560"/><text x="340.0" y="574" text-anchor="middle">50</text>
+<line class="g" x1="390.0" x2="390.0" y1="70" y2="560"/><text x="390.0" y="574" text-anchor="middle">60</text>
+<line class="g" x1="440.0" x2="440.0" y1="70" y2="560"/><text x="440.0" y="574" text-anchor="middle">70</text>
+<line class="g" x1="490.0" x2="490.0" y1="70" y2="560"/><text x="490.0" y="574" text-anchor="middle">80</text>
+<text x="82" y="85.0" text-anchor="end">Assamese</text>
+<circle class="m0" cx="330.7" cy="81.0" r="5"><title>sarvam-int4, Assamese, English → X: 48.1</title></circle>
+<circle class="m0 h" cx="324.2" cy="81.0" r="5"><title>sarvam-int8, Assamese, English → X: 46.8</title></circle>
+<circle class="m1" cx="207.4" cy="81.0" r="5"><title>gemma-int4@neutral, Assamese, English → X: 23.5</title></circle>
+<circle class="m1 h" cx="203.8" cy="81.0" r="5"><title>gemma-int8@neutral, Assamese, English → X: 22.8</title></circle>
+<text x="82" y="107.0" text-anchor="end">Bengali</text>
+<circle class="m0" cx="375.6" cy="103.0" r="5"><title>sarvam-int4, Bengali, English → X: 57.1</title></circle>
+<circle class="m0 h" cx="379.0" cy="103.0" r="5"><title>sarvam-int8, Bengali, English → X: 57.8</title></circle>
+<circle class="m1" cx="310.4" cy="103.0" r="5"><title>gemma-int4@neutral, Bengali, English → X: 44.1</title></circle>
+<circle class="m1 h" cx="329.2" cy="103.0" r="5"><title>gemma-int8@neutral, Bengali, English → X: 47.8</title></circle>
+<text x="82" y="129.0" text-anchor="end">Bodo</text>
+<circle class="m0" cx="312.5" cy="125.0" r="5"><title>sarvam-int4, Bodo, English → X: 44.5</title></circle>
+<circle class="m0 h" cx="314.1" cy="125.0" r="5"><title>sarvam-int8, Bodo, English → X: 44.8</title></circle>
+<circle class="m1" cx="95.4" cy="125.0" r="5"><title>gemma-int4@neutral, Bodo, English → X: 1.1</title></circle>
+<circle class="m1 h" cx="92.4" cy="125.0" r="5"><title>gemma-int8@neutral, Bodo, English → X: 0.5</title></circle>
+<text x="82" y="151.0" text-anchor="end">Dogri</text>
+<circle class="m0" cx="398.7" cy="147.0" r="5"><title>sarvam-int4, Dogri, English → X: 61.7</title></circle>
+<circle class="m0 h" cx="392.9" cy="147.0" r="5"><title>sarvam-int8, Dogri, English → X: 60.6</title></circle>
+<circle class="m1" cx="201.4" cy="147.0" r="5"><title>gemma-int4@neutral, Dogri, English → X: 22.3</title></circle>
+<circle class="m1 h" cx="180.9" cy="147.0" r="5"><title>gemma-int8@neutral, Dogri, English → X: 18.2</title></circle>
+<text x="82" y="173.0" text-anchor="end">Konkani</text>
+<circle class="m0" cx="310.3" cy="169.0" r="5"><title>sarvam-int4, Konkani, English → X: 44.1</title></circle>
+<circle class="m0 h" cx="311.9" cy="169.0" r="5"><title>sarvam-int8, Konkani, English → X: 44.4</title></circle>
+<circle class="m1" cx="114.0" cy="169.0" r="5"><title>gemma-int4@neutral, Konkani, English → X: 4.8</title></circle>
+<circle class="m1 h" cx="140.4" cy="169.0" r="5"><title>gemma-int8@neutral, Konkani, English → X: 10.1</title></circle>
+<text x="82" y="195.0" text-anchor="end">Gujarati</text>
+<circle class="m0" cx="396.7" cy="191.0" r="5"><title>sarvam-int4, Gujarati, English → X: 61.3</title></circle>
+<circle class="m0 h" cx="396.6" cy="191.0" r="5"><title>sarvam-int8, Gujarati, English → X: 61.3</title></circle>
+<circle class="m1" cx="305.8" cy="191.0" r="5"><title>gemma-int4@neutral, Gujarati, English → X: 43.2</title></circle>
+<circle class="m1 h" cx="326.6" cy="191.0" r="5"><title>gemma-int8@neutral, Gujarati, English → X: 47.3</title></circle>
+<text x="82" y="217.0" text-anchor="end">Hindi</text>
+<circle class="m0" cx="393.3" cy="213.0" r="5"><title>sarvam-int4, Hindi, English → X: 60.7</title></circle>
+<circle class="m0 h" cx="395.0" cy="213.0" r="5"><title>sarvam-int8, Hindi, English → X: 61.0</title></circle>
+<circle class="m1" cx="374.6" cy="213.0" r="5"><title>gemma-int4@neutral, Hindi, English → X: 56.9</title></circle>
+<circle class="m1 h" cx="366.5" cy="213.0" r="5"><title>gemma-int8@neutral, Hindi, English → X: 55.3</title></circle>
+<text x="82" y="239.0" text-anchor="end">Kannada</text>
+<circle class="m0" cx="374.0" cy="235.0" r="5"><title>sarvam-int4, Kannada, English → X: 56.8</title></circle>
+<circle class="m0 h" cx="377.0" cy="235.0" r="5"><title>sarvam-int8, Kannada, English → X: 57.4</title></circle>
+<circle class="m1" cx="208.0" cy="235.0" r="5"><title>gemma-int4@neutral, Kannada, English → X: 23.6</title></circle>
+<circle class="m1 h" cx="177.0" cy="235.0" r="5"><title>gemma-int8@neutral, Kannada, English → X: 17.4</title></circle>
+<text x="82" y="261.0" text-anchor="end">Kashmiri</text>
+<circle class="m0" cx="287.7" cy="257.0" r="5"><title>sarvam-int4, Kashmiri, English → X: 39.5</title></circle>
+<circle class="m0 h" cx="294.5" cy="257.0" r="5"><title>sarvam-int8, Kashmiri, English → X: 40.9</title></circle>
+<circle class="m1" cx="117.5" cy="257.0" r="5"><title>gemma-int4@neutral, Kashmiri, English → X: 5.5</title></circle>
+<circle class="m1 h" cx="108.6" cy="257.0" r="5"><title>gemma-int8@neutral, Kashmiri, English → X: 3.7</title></circle>
+<text x="82" y="283.0" text-anchor="end">Maithili</text>
+<circle class="m0" cx="368.3" cy="279.0" r="5"><title>sarvam-int4, Maithili, English → X: 55.7</title></circle>
+<circle class="m0 h" cx="372.5" cy="279.0" r="5"><title>sarvam-int8, Maithili, English → X: 56.5</title></circle>
+<circle class="m1" cx="248.3" cy="279.0" r="5"><title>gemma-int4@neutral, Maithili, English → X: 31.7</title></circle>
+<circle class="m1 h" cx="237.5" cy="279.0" r="5"><title>gemma-int8@neutral, Maithili, English → X: 29.5</title></circle>
+<text x="82" y="305.0" text-anchor="end">Malayalam</text>
+<circle class="m0" cx="383.0" cy="301.0" r="5"><title>sarvam-int4, Malayalam, English → X: 58.6</title></circle>
+<circle class="m0 h" cx="382.5" cy="301.0" r="5"><title>sarvam-int8, Malayalam, English → X: 58.5</title></circle>
+<circle class="m1" cx="136.4" cy="301.0" r="5"><title>gemma-int4@neutral, Malayalam, English → X: 9.3</title></circle>
+<circle class="m1 h" cx="190.5" cy="301.0" r="5"><title>gemma-int8@neutral, Malayalam, English → X: 20.1</title></circle>
+<text x="82" y="327.0" text-anchor="end">Marathi</text>
+<circle class="m0" cx="372.2" cy="323.0" r="5"><title>sarvam-int4, Marathi, English → X: 56.4</title></circle>
+<circle class="m0 h" cx="368.5" cy="323.0" r="5"><title>sarvam-int8, Marathi, English → X: 55.7</title></circle>
+<circle class="m1" cx="308.3" cy="323.0" r="5"><title>gemma-int4@neutral, Marathi, English → X: 43.7</title></circle>
+<circle class="m1 h" cx="325.0" cy="323.0" r="5"><title>gemma-int8@neutral, Marathi, English → X: 47.0</title></circle>
+<text x="82" y="349.0" text-anchor="end">Manipuri</text>
+<circle class="m0" cx="357.8" cy="345.0" r="5"><title>sarvam-int4, Manipuri, English → X: 53.6</title></circle>
+<circle class="m0 h" cx="359.9" cy="345.0" r="5"><title>sarvam-int8, Manipuri, English → X: 54.0</title></circle>
+<circle class="m1" cx="98.3" cy="345.0" r="5"><title>gemma-int4@neutral, Manipuri, English → X: 1.7</title></circle>
+<circle class="m1 h" cx="104.0" cy="345.0" r="5"><title>gemma-int8@neutral, Manipuri, English → X: 2.8</title></circle>
+<text x="82" y="371.0" text-anchor="end">Nepali</text>
+<circle class="m0" cx="373.6" cy="367.0" r="5"><title>sarvam-int4, Nepali, English → X: 56.7</title></circle>
+<circle class="m0 h" cx="363.2" cy="367.0" r="5"><title>sarvam-int8, Nepali, English → X: 54.6</title></circle>
+<circle class="m1" cx="273.5" cy="367.0" r="5"><title>gemma-int4@neutral, Nepali, English → X: 36.7</title></circle>
+<circle class="m1 h" cx="281.7" cy="367.0" r="5"><title>gemma-int8@neutral, Nepali, English → X: 38.3</title></circle>
+<text x="82" y="393.0" text-anchor="end">Odia</text>
+<circle class="m0" cx="322.8" cy="389.0" r="5"><title>sarvam-int4, Odia, English → X: 46.6</title></circle>
+<circle class="m0 h" cx="315.6" cy="389.0" r="5"><title>sarvam-int8, Odia, English → X: 45.1</title></circle>
+<circle class="m1" cx="136.8" cy="389.0" r="5"><title>gemma-int4@neutral, Odia, English → X: 9.4</title></circle>
+<circle class="m1 h" cx="182.0" cy="389.0" r="5"><title>gemma-int8@neutral, Odia, English → X: 18.4</title></circle>
+<text x="82" y="415.0" text-anchor="end">Punjabi</text>
+<circle class="m0" cx="361.5" cy="411.0" r="5"><title>sarvam-int4, Punjabi, English → X: 54.3</title></circle>
+<circle class="m0 h" cx="365.4" cy="411.0" r="5"><title>sarvam-int8, Punjabi, English → X: 55.1</title></circle>
+<circle class="m1" cx="262.2" cy="411.0" r="5"><title>gemma-int4@neutral, Punjabi, English → X: 34.4</title></circle>
+<circle class="m1 h" cx="281.2" cy="411.0" r="5"><title>gemma-int8@neutral, Punjabi, English → X: 38.2</title></circle>
+<text x="82" y="437.0" text-anchor="end">Sanskrit</text>
+<circle class="m0" cx="309.6" cy="433.0" r="5"><title>sarvam-int4, Sanskrit, English → X: 43.9</title></circle>
+<circle class="m0 h" cx="308.3" cy="433.0" r="5"><title>sarvam-int8, Sanskrit, English → X: 43.7</title></circle>
+<circle class="m1" cx="182.3" cy="433.0" r="5"><title>gemma-int4@neutral, Sanskrit, English → X: 18.5</title></circle>
+<circle class="m1 h" cx="178.7" cy="433.0" r="5"><title>gemma-int8@neutral, Sanskrit, English → X: 17.7</title></circle>
+<text x="82" y="459.0" text-anchor="end">Santali</text>
+<circle class="m0" cx="303.0" cy="455.0" r="5"><title>sarvam-int4, Santali, English → X: 42.6</title></circle>
+<circle class="m0 h" cx="305.4" cy="455.0" r="5"><title>sarvam-int8, Santali, English → X: 43.1</title></circle>
+<circle class="m1" cx="94.8" cy="455.0" r="5"><title>gemma-int4@neutral, Santali, English → X: 1.0</title></circle>
+<circle class="m1 h" cx="94.9" cy="455.0" r="5"><title>gemma-int8@neutral, Santali, English → X: 1.0</title></circle>
+<text x="82" y="481.0" text-anchor="end">Sindhi</text>
+<circle class="m0" cx="291.6" cy="477.0" r="5"><title>sarvam-int4, Sindhi, English → X: 40.3</title></circle>
+<circle class="m0 h" cx="281.4" cy="477.0" r="5"><title>sarvam-int8, Sindhi, English → X: 38.3</title></circle>
+<circle class="m1" cx="95.5" cy="477.0" r="5"><title>gemma-int4@neutral, Sindhi, English → X: 1.1</title></circle>
+<circle class="m1 h" cx="93.8" cy="477.0" r="5"><title>gemma-int8@neutral, Sindhi, English → X: 0.8</title></circle>
+<text x="82" y="503.0" text-anchor="end">Tamil</text>
+<circle class="m0" cx="332.2" cy="499.0" r="5"><title>sarvam-int4, Tamil, English → X: 48.4</title></circle>
+<circle class="m0 h" cx="337.3" cy="499.0" r="5"><title>sarvam-int8, Tamil, English → X: 49.5</title></circle>
+<circle class="m1" cx="315.9" cy="499.0" r="5"><title>gemma-int4@neutral, Tamil, English → X: 45.2</title></circle>
+<circle class="m1 h" cx="318.5" cy="499.0" r="5"><title>gemma-int8@neutral, Tamil, English → X: 45.7</title></circle>
+<text x="82" y="525.0" text-anchor="end">Telugu</text>
+<circle class="m0" cx="403.6" cy="521.0" r="5"><title>sarvam-int4, Telugu, English → X: 62.7</title></circle>
+<circle class="m0 h" cx="404.1" cy="521.0" r="5"><title>sarvam-int8, Telugu, English → X: 62.8</title></circle>
+<circle class="m1" cx="343.4" cy="521.0" r="5"><title>gemma-int4@neutral, Telugu, English → X: 50.7</title></circle>
+<circle class="m1 h" cx="340.0" cy="521.0" r="5"><title>gemma-int8@neutral, Telugu, English → X: 50.0</title></circle>
+<text x="82" y="547.0" text-anchor="end">Urdu</text>
+<circle class="m0" cx="457.0" cy="543.0" r="5"><title>sarvam-int4, Urdu, English → X: 73.4</title></circle>
+<circle class="m0 h" cx="457.0" cy="543.0" r="5"><title>sarvam-int8, Urdu, English → X: 73.4</title></circle>
+<circle class="m1" cx="310.8" cy="543.0" r="5"><title>gemma-int4@neutral, Urdu, English → X: 44.2</title></circle>
+<circle class="m1 h" cx="327.0" cy="543.0" r="5"><title>gemma-int8@neutral, Urdu, English → X: 47.4</title></circle>
+<text x="560" y="64">X → English</text>
+<line class="g" x1="560.0" x2="560.0" y1="70" y2="560"/><text x="560.0" y="574" text-anchor="middle">0</text>
+<line class="g" x1="610.0" x2="610.0" y1="70" y2="560"/><text x="610.0" y="574" text-anchor="middle">10</text>
+<line class="g" x1="660.0" x2="660.0" y1="70" y2="560"/><text x="660.0" y="574" text-anchor="middle">20</text>
+<line class="g" x1="710.0" x2="710.0" y1="70" y2="560"/><text x="710.0" y="574" text-anchor="middle">30</text>
+<line class="g" x1="760.0" x2="760.0" y1="70" y2="560"/><text x="760.0" y="574" text-anchor="middle">40</text>
+<line class="g" x1="810.0" x2="810.0" y1="70" y2="560"/><text x="810.0" y="574" text-anchor="middle">50</text>
+<line class="g" x1="860.0" x2="860.0" y1="70" y2="560"/><text x="860.0" y="574" text-anchor="middle">60</text>
+<line class="g" x1="910.0" x2="910.0" y1="70" y2="560"/><text x="910.0" y="574" text-anchor="middle">70</text>
+<line class="g" x1="960.0" x2="960.0" y1="70" y2="560"/><text x="960.0" y="574" text-anchor="middle">80</text>
+<circle class="m0" cx="709.9" cy="81.0" r="5"><title>sarvam-int4, Assamese, X → English: 30.0</title></circle>
+<circle class="m0 h" cx="737.3" cy="81.0" r="5"><title>sarvam-int8, Assamese, X → English: 35.5</title></circle>
+<circle class="m1" cx="832.5" cy="81.0" r="5"><title>gemma-int4@neutral, Assamese, X → English: 54.5</title></circle>
+<circle class="m1 h" cx="836.1" cy="81.0" r="5"><title>gemma-int8@neutral, Assamese, X → English: 55.2</title></circle>
+<circle class="m0" cx="849.1" cy="103.0" r="5"><title>sarvam-int4, Bengali, X → English: 57.8</title></circle>
+<circle class="m0 h" cx="831.3" cy="103.0" r="5"><title>sarvam-int8, Bengali, X → English: 54.3</title></circle>
+<circle class="m1" cx="844.0" cy="103.0" r="5"><title>gemma-int4@neutral, Bengali, X → English: 56.8</title></circle>
+<circle class="m1 h" cx="848.1" cy="103.0" r="5"><title>gemma-int8@neutral, Bengali, X → English: 57.6</title></circle>
+<circle class="m0" cx="812.3" cy="125.0" r="5"><title>sarvam-int4, Bodo, X → English: 50.5</title></circle>
+<circle class="m0 h" cx="826.4" cy="125.0" r="5"><title>sarvam-int8, Bodo, X → English: 53.3</title></circle>
+<circle class="m1" cx="690.0" cy="125.0" r="5"><title>gemma-int4@neutral, Bodo, X → English: 26.0</title></circle>
+<circle class="m1 h" cx="690.7" cy="125.0" r="5"><title>gemma-int8@neutral, Bodo, X → English: 26.1</title></circle>
+<circle class="m0" cx="844.5" cy="147.0" r="5"><title>sarvam-int4, Dogri, X → English: 56.9</title></circle>
+<circle class="m0 h" cx="866.7" cy="147.0" r="5"><title>sarvam-int8, Dogri, X → English: 61.3</title></circle>
+<circle class="m1" cx="781.6" cy="147.0" r="5"><title>gemma-int4@neutral, Dogri, X → English: 44.3</title></circle>
+<circle class="m1 h" cx="780.4" cy="147.0" r="5"><title>gemma-int8@neutral, Dogri, X → English: 44.1</title></circle>
+<circle class="m0" cx="829.9" cy="169.0" r="5"><title>sarvam-int4, Konkani, X → English: 54.0</title></circle>
+<circle class="m0 h" cx="822.6" cy="169.0" r="5"><title>sarvam-int8, Konkani, X → English: 52.5</title></circle>
+<circle class="m1" cx="791.5" cy="169.0" r="5"><title>gemma-int4@neutral, Konkani, X → English: 46.3</title></circle>
+<circle class="m1 h" cx="790.1" cy="169.0" r="5"><title>gemma-int8@neutral, Konkani, X → English: 46.0</title></circle>
+<circle class="m0" cx="852.1" cy="191.0" r="5"><title>sarvam-int4, Gujarati, X → English: 58.4</title></circle>
+<circle class="m0 h" cx="872.2" cy="191.0" r="5"><title>sarvam-int8, Gujarati, X → English: 62.4</title></circle>
+<circle class="m1" cx="856.9" cy="191.0" r="5"><title>gemma-int4@neutral, Gujarati, X → English: 59.4</title></circle>
+<circle class="m1 h" cx="871.6" cy="191.0" r="5"><title>gemma-int8@neutral, Gujarati, X → English: 62.3</title></circle>
+<circle class="m0" cx="851.0" cy="213.0" r="5"><title>sarvam-int4, Hindi, X → English: 58.2</title></circle>
+<circle class="m0 h" cx="856.3" cy="213.0" r="5"><title>sarvam-int8, Hindi, X → English: 59.3</title></circle>
+<circle class="m1" cx="853.7" cy="213.0" r="5"><title>gemma-int4@neutral, Hindi, X → English: 58.7</title></circle>
+<circle class="m1 h" cx="852.7" cy="213.0" r="5"><title>gemma-int8@neutral, Hindi, X → English: 58.5</title></circle>
+<circle class="m0" cx="846.0" cy="235.0" r="5"><title>sarvam-int4, Kannada, X → English: 57.2</title></circle>
+<circle class="m0 h" cx="861.8" cy="235.0" r="5"><title>sarvam-int8, Kannada, X → English: 60.4</title></circle>
+<circle class="m1" cx="849.0" cy="235.0" r="5"><title>gemma-int4@neutral, Kannada, X → English: 57.8</title></circle>
+<circle class="m1 h" cx="837.4" cy="235.0" r="5"><title>gemma-int8@neutral, Kannada, X → English: 55.5</title></circle>
+<circle class="m0" cx="798.6" cy="257.0" r="5"><title>sarvam-int4, Kashmiri, X → English: 47.7</title></circle>
+<circle class="m0 h" cx="810.4" cy="257.0" r="5"><title>sarvam-int8, Kashmiri, X → English: 50.1</title></circle>
+<circle class="m1" cx="753.8" cy="257.0" r="5"><title>gemma-int4@neutral, Kashmiri, X → English: 38.8</title></circle>
+<circle class="m1 h" cx="752.6" cy="257.0" r="5"><title>gemma-int8@neutral, Kashmiri, X → English: 38.5</title></circle>
+<circle class="m0" cx="866.2" cy="279.0" r="5"><title>sarvam-int4, Maithili, X → English: 61.2</title></circle>
+<circle class="m0 h" cx="857.5" cy="279.0" r="5"><title>sarvam-int8, Maithili, X → English: 59.5</title></circle>
+<circle class="m1" cx="836.7" cy="279.0" r="5"><title>gemma-int4@neutral, Maithili, X → English: 55.3</title></circle>
+<circle class="m1 h" cx="833.6" cy="279.0" r="5"><title>gemma-int8@neutral, Maithili, X → English: 54.7</title></circle>
+<circle class="m0" cx="856.9" cy="301.0" r="5"><title>sarvam-int4, Malayalam, X → English: 59.4</title></circle>
+<circle class="m0 h" cx="861.2" cy="301.0" r="5"><title>sarvam-int8, Malayalam, X → English: 60.2</title></circle>
+<circle class="m1" cx="848.0" cy="301.0" r="5"><title>gemma-int4@neutral, Malayalam, X → English: 57.6</title></circle>
+<circle class="m1 h" cx="846.8" cy="301.0" r="5"><title>gemma-int8@neutral, Malayalam, X → English: 57.4</title></circle>
+<circle class="m0" cx="833.1" cy="323.0" r="5"><title>sarvam-int4, Marathi, X → English: 54.6</title></circle>
+<circle class="m0 h" cx="834.4" cy="323.0" r="5"><title>sarvam-int8, Marathi, X → English: 54.9</title></circle>
+<circle class="m1" cx="838.7" cy="323.0" r="5"><title>gemma-int4@neutral, Marathi, X → English: 55.7</title></circle>
+<circle class="m1 h" cx="853.2" cy="323.0" r="5"><title>gemma-int8@neutral, Marathi, X → English: 58.6</title></circle>
+<circle class="m0" cx="824.8" cy="345.0" r="5"><title>sarvam-int4, Manipuri, X → English: 53.0</title></circle>
+<circle class="m0 h" cx="842.6" cy="345.0" r="5"><title>sarvam-int8, Manipuri, X → English: 56.5</title></circle>
+<circle class="m1" cx="660.7" cy="345.0" r="5"><title>gemma-int4@neutral, Manipuri, X → English: 20.1</title></circle>
+<circle class="m1 h" cx="658.7" cy="345.0" r="5"><title>gemma-int8@neutral, Manipuri, X → English: 19.7</title></circle>
+<circle class="m0" cx="852.6" cy="367.0" r="5"><title>sarvam-int4, Nepali, X → English: 58.5</title></circle>
+<circle class="m0 h" cx="866.1" cy="367.0" r="5"><title>sarvam-int8, Nepali, X → English: 61.2</title></circle>
+<circle class="m1" cx="849.2" cy="367.0" r="5"><title>gemma-int4@neutral, Nepali, X → English: 57.8</title></circle>
+<circle class="m1 h" cx="856.5" cy="367.0" r="5"><title>gemma-int8@neutral, Nepali, X → English: 59.3</title></circle>
+<circle class="m0" cx="833.3" cy="389.0" r="5"><title>sarvam-int4, Odia, X → English: 54.7</title></circle>
+<circle class="m0 h" cx="836.3" cy="389.0" r="5"><title>sarvam-int8, Odia, X → English: 55.3</title></circle>
+<circle class="m1" cx="845.5" cy="389.0" r="5"><title>gemma-int4@neutral, Odia, X → English: 57.1</title></circle>
+<circle class="m1 h" cx="832.2" cy="389.0" r="5"><title>gemma-int8@neutral, Odia, X → English: 54.4</title></circle>
+<circle class="m0" cx="818.3" cy="411.0" r="5"><title>sarvam-int4, Punjabi, X → English: 51.7</title></circle>
+<circle class="m0 h" cx="845.5" cy="411.0" r="5"><title>sarvam-int8, Punjabi, X → English: 57.1</title></circle>
+<circle class="m1" cx="839.7" cy="411.0" r="5"><title>gemma-int4@neutral, Punjabi, X → English: 55.9</title></circle>
+<circle class="m1 h" cx="841.0" cy="411.0" r="5"><title>gemma-int8@neutral, Punjabi, X → English: 56.2</title></circle>
+<circle class="m0" cx="810.3" cy="433.0" r="5"><title>sarvam-int4, Sanskrit, X → English: 50.1</title></circle>
+<circle class="m0 h" cx="816.6" cy="433.0" r="5"><title>sarvam-int8, Sanskrit, X → English: 51.3</title></circle>
+<circle class="m1" cx="763.6" cy="433.0" r="5"><title>gemma-int4@neutral, Sanskrit, X → English: 40.7</title></circle>
+<circle class="m1 h" cx="769.1" cy="433.0" r="5"><title>gemma-int8@neutral, Sanskrit, X → English: 41.8</title></circle>
+<circle class="m0" cx="784.2" cy="455.0" r="5"><title>sarvam-int4, Santali, X → English: 44.8</title></circle>
+<circle class="m0 h" cx="804.9" cy="455.0" r="5"><title>sarvam-int8, Santali, X → English: 49.0</title></circle>
+<circle class="m1" cx="712.8" cy="455.0" r="5"><title>gemma-int4@neutral, Santali, X → English: 30.6</title></circle>
+<circle class="m1 h" cx="727.6" cy="455.0" r="5"><title>gemma-int8@neutral, Santali, X → English: 33.5</title></circle>
+<circle class="m0" cx="807.8" cy="477.0" r="5"><title>sarvam-int4, Sindhi, X → English: 49.6</title></circle>
+<circle class="m0 h" cx="818.2" cy="477.0" r="5"><title>sarvam-int8, Sindhi, X → English: 51.6</title></circle>
+<circle class="m1" cx="742.8" cy="477.0" r="5"><title>gemma-int4@neutral, Sindhi, X → English: 36.6</title></circle>
+<circle class="m1 h" cx="755.5" cy="477.0" r="5"><title>gemma-int8@neutral, Sindhi, X → English: 39.1</title></circle>
+<circle class="m0" cx="829.5" cy="499.0" r="5"><title>sarvam-int4, Tamil, X → English: 53.9</title></circle>
+<circle class="m0 h" cx="832.0" cy="499.0" r="5"><title>sarvam-int8, Tamil, X → English: 54.4</title></circle>
+<circle class="m1" cx="835.1" cy="499.0" r="5"><title>gemma-int4@neutral, Tamil, X → English: 55.0</title></circle>
+<circle class="m1 h" cx="836.1" cy="499.0" r="5"><title>gemma-int8@neutral, Tamil, X → English: 55.2</title></circle>
+<circle class="m0" cx="857.2" cy="521.0" r="5"><title>sarvam-int4, Telugu, X → English: 59.4</title></circle>
+<circle class="m0 h" cx="860.6" cy="521.0" r="5"><title>sarvam-int8, Telugu, X → English: 60.1</title></circle>
+<circle class="m1" cx="877.2" cy="521.0" r="5"><title>gemma-int4@neutral, Telugu, X → English: 63.4</title></circle>
+<circle class="m1 h" cx="874.1" cy="521.0" r="5"><title>gemma-int8@neutral, Telugu, X → English: 62.8</title></circle>
+<circle class="m0" cx="870.4" cy="543.0" r="5"><title>sarvam-int4, Urdu, X → English: 62.1</title></circle>
+<circle class="m0 h" cx="862.8" cy="543.0" r="5"><title>sarvam-int8, Urdu, X → English: 60.6</title></circle>
+<circle class="m1" cx="868.8" cy="543.0" r="5"><title>gemma-int4@neutral, Urdu, X → English: 61.8</title></circle>
+<circle class="m1 h" cx="884.3" cy="543.0" r="5"><title>gemma-int8@neutral, Urdu, X → English: 64.9</title></circle>
+</svg>

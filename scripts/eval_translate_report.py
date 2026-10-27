@@ -27,6 +27,9 @@ LIBS = {"indic-nlp-library": "0.92", "urduhack": "1.1.1"}      # Urdu's normaliz
 PROTOCOL = ("IN22-Gen / IndicTrans2 compute_metrics.sh: Indic targets IndicNLP normalize (default options) + "
             "trivial_tokenize, English raw; " + ", ".join(f"{k} {v}" for k, v in LIBS.items()))
 MACROS = (("all", lambda x: True), ("one script", lambda x: x not in SCRIPT_PREF))
+# COMET's encoder: XLM-R's 100 pretraining languages (Conneau et al., 2020) hold 14 of the 22 as IN22-Gen writes them;
+# its Sindhi is in Perso-Arabic script, IN22-Gen's in Devanagari
+XLMR = {"asm", "ben", "guj", "hin", "kan", "mal", "mar", "npi", "ory", "pan", "san", "tam", "tel", "urd"}
 BPC = ("bpc", "bpc_end", "bpc_pre")
 SIDES = (("English -> X", lambda x: f"{ENG}-{x}"), ("X -> English", lambda x: f"{x}-{ENG}"))
 
@@ -144,7 +147,8 @@ def load_results(runs: Path, cfgs: list[str], meta: dict, items: dict, manifest:
     the end-of-answer token; "bpc_pre" for a config that scores another text than the reference), per-direction
     diagnostics, tokens per character (of each language's text, from the scored references), speed, counts and code
     versions."""
-    r = {k: defaultdict(dict) for k in ("chrf", *BPC, "diag", "tpc")} | dict(speed={}, counts={}, code={})
+    r = {k: defaultdict(dict) for k in ("chrf", "comet", *BPC, "diag", "tpc")} | dict(speed={}, counts={}, code={},
+                                                                                    comet_model={})
     prep = {}
     for c in cfgs:
         gen = {f.stem: read_jsonl(f) for f in sorted((runs / c / "gen").glob("*.jsonl"))}
@@ -157,6 +161,10 @@ def load_results(runs: Path, cfgs: list[str], meta: dict, items: dict, manifest:
             r["diag"][c][d] = dict(outputs=len(rs), wrong_script=sum(script_share(x["hyp"], script) < 0.5 for x in rs),
                                    length_stops=sum(x["stop"] == "length" for x in rs),
                                    special=sum(x["special"] > 0 for x in rs), added=sum(x["added"] > 0 for x in rs))
+        for f in sorted((runs / c / "comet").glob("*.jsonl")):
+            rs = read_jsonl(f)
+            r["comet"][c][f.stem] = ([x["id"] for x in rs], np.array([[x["comet"], 1.0] for x in rs]))
+            r["comet_model"][c] = json.load(open(runs / c / "comet.json"))
         scored = {f.stem: read_jsonl(f) for f in sorted((runs / c / "score").glob("*.jsonl"))}
         by_lang = defaultdict(list)
         same_text = meta[c].get("bpc_text", "reference") == "reference"
@@ -211,7 +219,7 @@ def cmd_report(a) -> None:
     meta = {c: json.load(open(runs / c / "meta.json")) for c in cfgs}
     res = load_results(runs, cfgs, meta, items, manifest, chrf)
     fns = {"chrf": lambda s: chrf._compute_score_from_stats(list(s)).score} | {
-        m: (lambda s: float(s[0] / s[1])) for m in BPC if res[m]}
+        m: (lambda s: float(s[0] / s[1])) for m in ("comet", *BPC) if res[m]}
     cols = {m: [c for c in cfgs if c in res[m]] for m in fns}
     tab = {m: compare(res[m], fn, a.boot, a.seed, base) for m, fn in fns.items()}
     langs = [x for x in LANGS if any(k(x) in t for t in tab.values() for _, k in SIDES)]
@@ -219,7 +227,8 @@ def cmd_report(a) -> None:
     for m, t in tab.items():
         for side, key in SIDES:
             present = [x for x in langs if key(x) in t]
-            sets = [(name, [x for x in present if keep(x)]) for name, keep in MACROS]
+            sets = [(name, [x for x in present if keep(x)]) for name, keep in MACROS] + (
+                [("XLM-R's languages", [x for x in present if x in XLMR])] if m == "comet" else [])
             if (common := [x for x in present if set(cols[m]) <= set(t[key(x)])]) and all(common != s for _, s in sets):
                 sets.append(("every config's", common))
             macros[m][side] = [(name, xs, macro(res[m], fns[m], [key(x) for x in xs], a.boot, a.seed, base))
@@ -237,7 +246,15 @@ def cmd_report(a) -> None:
           f"{' / '.join(models)}. Macro rows: all languages; one script "
           f"(without {', '.join(NAMES[x] for x in SCRIPT_PREF)}, written in more than one); a config without every "
           "language of a row shows -.", ""]
-    titles = {"chrf": ("chrF++ (higher is better)", 1), "bpc": ("bits per reference character (lower is better)", 3),
+    if cm := {json.dumps(v, sort_keys=True) for v in res["comet_model"].values()}:
+        v = json.loads(sorted(cm)[0])
+        md += [f"COMET: {v['repo']} (revision {v['revision'][:8]}, unbabel-comet {v['package']}), reference-based, raw text "
+               "(no IN22 normalisation), on the CPU. Its encoder (XLM-R) never saw "
+               f"{', '.join(NAMES[x] for x in LANGS if x not in XLMR)}: their COMET is not reliable; the macro over "
+               "XLM-R's languages leaves them out."
+               + (" **Warning:** configs scored with different COMET builds." if len(cm) > 1 else ""), ""]
+    titles = {"chrf": ("chrF++ (higher is better)", 1),
+              "comet": ("COMET, mean segment score x 100 (higher is better)", 1), "bpc": ("bits per reference character (lower is better)", 3),
               "bpc_end": ("bits per reference character with the end-of-answer token (lower is better)", 3),
               "bpc_pre": ("bits per character of IndicProcessor's pre-processed reference, NOT comparable with the "
                           "bits above: another text (normalised, tokenised, most Indic scripts transliterated to "
@@ -278,8 +295,8 @@ def cmd_report(a) -> None:
     md += ["Scored references whose tokens decode to other text: " + ", ".join(
                f"{c} {n['not_roundtrip']} / {n['references']}" for c, n in res["counts"].items()) + " (IndicTrans2: "
            "of its pre-processed reference).",
-           "Code versions (git describe of this repo and the engine; SHA-256 of eval_translate.py and the engine's "
-           "src/ or indictrans.py) per config: " + "; ".join(
+           "Code versions (git describe of this repo and the engine; SHA-256 of eval_translate.py with engine_run.py "
+           "and the engine's src/, or with indictrans.py) per config: " + "; ".join(
                f"{c} {', '.join(v) or 'n/a'}" for c, v in res["code"].items()) + "."]
     md += [f"**Warning:** {c}'s results come from {len(v)} code versions." for c, v in res["code"].items() if len(v) > 1]
     md += ["", "### Prompts (each through the model's own chat template; renderings in RUNS/CONFIG/meta.json)", ""]
@@ -295,7 +312,7 @@ def cmd_report(a) -> None:
                    chrf_signature=sig, protocol=PROTOCOL, baseline=base, boot=a.boot, seed=a.seed,
                    **{m: {d: nob(cl) for d, cl in t.items()} for m, t in tab.items()}, macro=mac,
                    configs={c: {k: v for k, v in m.items() if k != "example_prompt"} for c, m in meta.items()},
-                   diagnostics=res["diag"], tokens_per_char=res["tpc"], speed=res["speed"], counts=res["counts"],
+                   comet_model=res["comet_model"], diagnostics=res["diag"], tokens_per_char=res["tpc"], speed=res["speed"], counts=res["counts"],
                    code=res["code"], ids={d: sorted(v[0]) for d, v in next(iter(res["chrf"].values()), {}).items()}),
               open(out / "numbers.json", "w"), indent=1, ensure_ascii=False)
     with open(out / "numbers.csv", "w") as f:
@@ -305,5 +322,5 @@ def cmd_report(a) -> None:
             for name, xs, cl in v]
         f.writelines(f"{m},{c},{d},{v['score']:.6g},{v['n']},{v.get('delta', '')},"
                      f"{','.join(map(str, v.get('ci', ['', ''])))}\n" for m, d, cl in cells for c, v in cl.items())
-    (out / "chrf.svg").write_text(svg_chart(tab["chrf"], langs, [c for c in cfgs if "@" not in c], meta))
+    (out / "chrf.svg").write_text(svg_chart(tab["chrf"], langs, [c for c in cfgs if a.configs or "@" not in c], meta))
     print("\n".join(md) + f"\nchrF++ signature: {sig}\nwrote {out}/tables.md, numbers.json, numbers.csv, chrf.svg")

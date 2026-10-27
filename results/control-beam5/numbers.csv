@@ -1,0 +1,245 @@
+metric,config,direction,value,n,delta,ci_lo,ci_hi
+chrf,indictrans2,asm-eng,64.6993,10,,,
+chrf,indictrans2-beam5,asm-eng,66.1523,10,1.4529424840970648,-0.01130730084622602,4.03843255329364
+chrf,indictrans2,ben-eng,66.7059,10,,,
+chrf,indictrans2-beam5,ben-eng,67.3124,10,0.6065187413719713,-3.1929708507598757,5.044770462888079
+chrf,indictrans2,brx-eng,65.7716,10,,,
+chrf,indictrans2-beam5,brx-eng,65.4776,10,-0.29406813139313215,-3.905238209171557,2.698739480328812
+chrf,indictrans2,doi-eng,78.013,10,,,
+chrf,indictrans2-beam5,doi-eng,79.8225,10,1.809453949130301,0.09579761142700854,3.6030435302424593
+chrf,indictrans2,eng-asm,47.0193,10,,,
+chrf,indictrans2-beam5,eng-asm,48.644,10,1.6246619786635534,-0.45747353834019505,6.4083753847628815
+chrf,indictrans2,eng-ben,56.6076,10,,,
+chrf,indictrans2-beam5,eng-ben,57.0334,10,0.42583954761499143,-0.4386567667131468,1.6918788604220616
+chrf,indictrans2,eng-brx,48.4441,10,,,
+chrf,indictrans2-beam5,eng-brx,49.2251,10,0.7809461646979301,-0.870064016856344,2.359053315197494
+chrf,indictrans2,eng-doi,56.0947,10,,,
+chrf,indictrans2-beam5,eng-doi,56.466,10,0.3713494017884571,-1.2097310319839658,1.9368837611598473
+chrf,indictrans2,eng-gom,46.1543,10,,,
+chrf,indictrans2-beam5,eng-gom,45.3267,10,-0.8276136238130505,-3.164886513642389,0.9267961405240451
+chrf,indictrans2,eng-guj,57.2623,10,,,
+chrf,indictrans2-beam5,eng-guj,59.2197,10,1.9574428437917533,0.07356847875643471,5.108273696678705
+chrf,indictrans2,eng-hin,59.0694,10,,,
+chrf,indictrans2-beam5,eng-hin,59.9961,10,0.9266880227301826,-2.279482884799268,6.190713481552601
+chrf,indictrans2,eng-kan,55.7913,10,,,
+chrf,indictrans2-beam5,eng-kan,54.7028,10,-1.0885712206604836,-3.140118130775693,1.1533347341444937
+chrf,indictrans2,eng-kas,41.3329,10,,,
+chrf,indictrans2-beam5,eng-kas,40.6105,10,-0.7224191242077538,-1.4900705491875137,0.22780063903643105
+chrf,indictrans2,eng-mai,53.3182,10,,,
+chrf,indictrans2-beam5,eng-mai,52.2742,10,-1.0440308016406306,-3.476320339770976,1.7374190830605676
+chrf,indictrans2,eng-mal,59.9836,10,,,
+chrf,indictrans2-beam5,eng-mal,60.4303,10,0.44666216648833057,-1.3810619995557334,2.900093568490386
+chrf,indictrans2,eng-mar,55.8493,10,,,
+chrf,indictrans2-beam5,eng-mar,55.9379,10,0.08862330096738447,-1.0359454696861603,1.548333018426749
+chrf,indictrans2,eng-mni,48.6883,10,,,
+chrf,indictrans2-beam5,eng-mni,50.2545,10,1.5662115623431134,-0.30585619510347395,3.1089832250226057
+chrf,indictrans2,eng-npi,54.234,10,,,
+chrf,indictrans2-beam5,eng-npi,54.53,10,0.29605816349236846,-0.0053206353553674635,0.7601932717557899
+chrf,indictrans2,eng-ory,42.2058,10,,,
+chrf,indictrans2-beam5,eng-ory,41.899,10,-0.30672498302063644,-1.4932082965101718,0.6592759843569845
+chrf,indictrans2,eng-pan,51.3312,10,,,
+chrf,indictrans2-beam5,eng-pan,51.7801,10,0.44891684506237794,-0.5406929205016964,1.398233656135133
+chrf,indictrans2,eng-san,38.7961,10,,,
+chrf,indictrans2-beam5,eng-san,39.926,10,1.1298713273690524,-1.2519921338330586,5.612457894123142
+chrf,indictrans2,eng-sat,36.0252,10,,,
+chrf,indictrans2-beam5,eng-sat,37.1838,10,1.1585595848981356,-0.14198479825074947,2.63323507943471
+chrf,indictrans2,eng-snd,34.088,10,,,
+chrf,indictrans2-beam5,eng-snd,34.9691,10,0.8811517059998337,-2.272311563841879,5.437024627689598
+chrf,indictrans2,eng-tam,48.6455,10,,,
+chrf,indictrans2-beam5,eng-tam,50.9621,10,2.3166583813902406,0.14340248295438168,4.091531720203482
+chrf,indictrans2,eng-tel,60.6793,10,,,
+chrf,indictrans2-beam5,eng-tel,59.9849,10,-0.6943109400608236,-1.7144410752799193,0.046571870250745
+chrf,indictrans2,eng-urd,70.8872,10,,,
+chrf,indictrans2-beam5,eng-urd,75.114,10,4.226817974475821,1.6634686472152997,6.6062497475469675
+chrf,indictrans2,gom-eng,64.4276,10,,,
+chrf,indictrans2-beam5,gom-eng,64.6992,10,0.27161418688122296,-1.4335178433558653,1.3422008957180112
+chrf,indictrans2,guj-eng,73.9037,10,,,
+chrf,indictrans2-beam5,guj-eng,72.8008,10,-1.1028626334902896,-5.412132924874567,1.9696304994698992
+chrf,indictrans2,hin-eng,66.7182,10,,,
+chrf,indictrans2-beam5,hin-eng,66.7599,10,0.04173945854847716,-2.8990331261928493,2.0576099045494405
+chrf,indictrans2,kan-eng,71.575,10,,,
+chrf,indictrans2-beam5,kan-eng,69.4886,10,-2.086445242355424,-6.3217542784623575,0.6051969694143459
+chrf,indictrans2,kas-eng,59.3935,10,,,
+chrf,indictrans2-beam5,kas-eng,58.4045,10,-0.9889235447836242,-2.2065502614404586,0.06276317104918033
+chrf,indictrans2,mai-eng,76.4083,10,,,
+chrf,indictrans2-beam5,mai-eng,78.2315,10,1.8231860292999613,0.4211924513088022,3.7797931347380227
+chrf,indictrans2,mal-eng,70.2174,10,,,
+chrf,indictrans2-beam5,mal-eng,72.4492,10,2.23182494383056,0.4688812768646163,4.5534212886016165
+chrf,indictrans2,mar-eng,68.9087,10,,,
+chrf,indictrans2-beam5,mar-eng,69.6086,10,0.6999442422766862,-1.0254058235308903,2.381610300391574
+chrf,indictrans2,mni-eng,62.4529,10,,,
+chrf,indictrans2-beam5,mni-eng,64.8305,10,2.3775331341429933,-1.2653138666136634,5.702197589195558
+chrf,indictrans2,npi-eng,76.2144,10,,,
+chrf,indictrans2-beam5,npi-eng,74.8382,10,-1.376133731521989,-3.2441799826927307,-0.2248880536994264
+chrf,indictrans2,ory-eng,69.3219,10,,,
+chrf,indictrans2-beam5,ory-eng,69.8555,10,0.5335404506885055,-1.4267563233331386,3.464156427699982
+chrf,indictrans2,pan-eng,67.9571,10,,,
+chrf,indictrans2-beam5,pan-eng,66.7373,10,-1.2197824779684368,-2.391153494320154,0.1638272535209584
+chrf,indictrans2,san-eng,57.282,10,,,
+chrf,indictrans2-beam5,san-eng,59.686,10,2.4039568861825273,-0.4978025630450844,6.561606989962333
+chrf,indictrans2,sat-eng,48.2695,10,,,
+chrf,indictrans2-beam5,sat-eng,48.9638,10,0.6942541416456862,-1.9466147020073306,4.72157091591366
+chrf,indictrans2,snd-eng,60.5045,10,,,
+chrf,indictrans2-beam5,snd-eng,61.3195,10,0.8149532469421885,-2.938330304503525,3.7862518116766157
+chrf,indictrans2,tam-eng,64.7634,10,,,
+chrf,indictrans2-beam5,tam-eng,66.0943,10,1.33090495996764,-1.1976647967253957,4.280074317002795
+chrf,indictrans2,tel-eng,75.7879,10,,,
+chrf,indictrans2-beam5,tel-eng,76.7483,10,0.9604033614692185,-1.8441632861305717,5.791249947414402
+chrf,indictrans2,urd-eng,75.0271,10,,,
+chrf,indictrans2-beam5,urd-eng,74.9653,10,-0.06184178051898925,-3.1491472450855884,2.4539186589933513
+comet,indictrans2,asm-eng,88.1232,10,,,
+comet,indictrans2-beam5,asm-eng,87.6589,10,-0.46423494815826416,-1.3601318299770355,0.3277607113122939
+comet,indictrans2,ben-eng,89.5623,10,,,
+comet,indictrans2-beam5,ben-eng,89.9209,10,0.3585529327392578,-0.12036463618278502,1.00980806350708
+comet,indictrans2,brx-eng,81.1226,10,,,
+comet,indictrans2-beam5,brx-eng,79.8846,10,-1.2379246950149536,-2.736169755458832,0.0033075660467145386
+comet,indictrans2,doi-eng,88.9153,10,,,
+comet,indictrans2-beam5,doi-eng,89.3117,10,0.3963583707809448,0.020703494548797614,0.8286731690168377
+comet,indictrans2,eng-asm,87.2506,10,,,
+comet,indictrans2-beam5,eng-asm,87.3564,10,0.10583102703094482,-0.5771310478448868,0.8692889660596844
+comet,indictrans2,eng-ben,89.4167,10,,,
+comet,indictrans2-beam5,eng-ben,89.2855,10,-0.1311945915222168,-0.48789264261722565,0.08246302604675293
+comet,indictrans2,eng-brx,61.6798,10,,,
+comet,indictrans2-beam5,eng-brx,62.9513,10,1.2714242935180664,0.4964975267648697,2.070970401167869
+comet,indictrans2,eng-doi,66.4477,10,,,
+comet,indictrans2-beam5,eng-doi,67.3866,10,0.938946008682251,-0.07718504965305328,2.3244102448225017
+comet,indictrans2,eng-gom,60.8081,10,,,
+comet,indictrans2-beam5,eng-gom,61.2319,10,0.42379140853881836,-0.8802338093519211,1.737443208694458
+comet,indictrans2,eng-guj,91.0637,10,,,
+comet,indictrans2-beam5,eng-guj,91.1985,10,0.13478219509124756,-0.13864219188690186,0.5192393213510513
+comet,indictrans2,eng-hin,80.5077,10,,,
+comet,indictrans2-beam5,eng-hin,85.5312,10,5.023458003997803,-0.777773380279541,15.366626977920532
+comet,indictrans2,eng-kan,87.7784,10,,,
+comet,indictrans2-beam5,eng-kan,88.0061,10,0.2277052402496338,-0.780007392168045,1.155836552381515
+comet,indictrans2,eng-kas,62.4532,10,,,
+comet,indictrans2-beam5,eng-kas,61.0303,10,-1.4229509234428406,-5.164081729948521,0.8218162208795547
+comet,indictrans2,eng-mai,71.0282,10,,,
+comet,indictrans2-beam5,eng-mai,69.4255,10,-1.6026860475540161,-3.9405361860990524,0.3463982641696929
+comet,indictrans2,eng-mal,90.2484,10,,,
+comet,indictrans2-beam5,eng-mal,90.1862,10,-0.06218314170837402,-0.7050967216491699,0.5229091644287109
+comet,indictrans2,eng-mar,80.2852,10,,,
+comet,indictrans2-beam5,eng-mar,81.0246,10,0.7394170761108398,-0.4495649039745331,2.209486410021782
+comet,indictrans2,eng-mni,84.8895,10,,,
+comet,indictrans2-beam5,eng-mni,86.1213,10,1.2318438291549683,0.030814409255981445,3.51425664126873
+comet,indictrans2,eng-npi,87.5061,10,,,
+comet,indictrans2-beam5,eng-npi,87.321,10,-0.1850813627243042,-0.6686389446258545,0.2756863832473755
+comet,indictrans2,eng-ory,79.8944,10,,,
+comet,indictrans2-beam5,eng-ory,79.906,10,0.011590123176574707,-0.3801042139530182,0.3699928820133209
+comet,indictrans2,eng-pan,86.1476,10,,,
+comet,indictrans2-beam5,eng-pan,86.0046,10,-0.14301836490631104,-0.344718873500824,0.0036281347274780273
+comet,indictrans2,eng-san,78.6945,10,,,
+comet,indictrans2-beam5,eng-san,78.7497,10,0.05521237850189209,-0.4360157251358032,0.667275696992874
+comet,indictrans2,eng-sat,85.2268,10,,,
+comet,indictrans2-beam5,eng-sat,85.485,10,0.25822460651397705,-0.39350399374961853,0.9264414608478543
+comet,indictrans2,eng-snd,59.1929,10,,,
+comet,indictrans2-beam5,eng-snd,59.7784,10,0.5855190753936768,-0.5000493377447128,2.151390939950943
+comet,indictrans2,eng-tam,89.1459,10,,,
+comet,indictrans2-beam5,eng-tam,89.2259,10,0.07997572422027588,-0.5724507421255112,0.6733275204896924
+comet,indictrans2,eng-tel,88.9231,10,,,
+comet,indictrans2-beam5,eng-tel,88.8907,10,-0.03248333930969238,-0.27747634053230286,0.19732591509819025
+comet,indictrans2,eng-urd,89.2114,10,,,
+comet,indictrans2-beam5,eng-urd,89.5087,10,0.29736459255218506,-0.6216273158788681,0.9249447882175446
+comet,indictrans2,gom-eng,84.322,10,,,
+comet,indictrans2-beam5,gom-eng,84.5879,10,0.2659505605697632,-0.32024069130420685,1.0020135939121244
+comet,indictrans2,guj-eng,91.1899,10,,,
+comet,indictrans2-beam5,guj-eng,91.0138,10,-0.17613649368286133,-0.8183145672082901,0.43400883674621576
+comet,indictrans2,hin-eng,89.9318,10,,,
+comet,indictrans2-beam5,hin-eng,90.1465,10,0.21470606327056885,-0.16597416996955872,0.5827515721321106
+comet,indictrans2,kan-eng,89.0554,10,,,
+comet,indictrans2-beam5,kan-eng,88.2983,10,-0.7571470737457275,-2.352758541703224,0.23949386179447174
+comet,indictrans2,kas-eng,79.9114,10,,,
+comet,indictrans2-beam5,kas-eng,80.4032,10,0.49179136753082275,-0.9452186971902847,2.572218179702759
+comet,indictrans2,mai-eng,88.4074,10,,,
+comet,indictrans2-beam5,mai-eng,88.6655,10,0.2581167221069336,0.06143152713775635,0.4794617295265197
+comet,indictrans2,mal-eng,90.622,10,,,
+comet,indictrans2-beam5,mal-eng,90.9464,10,0.3244161605834961,-0.13161303102970123,0.7963431030511856
+comet,indictrans2,mar-eng,89.2726,10,,,
+comet,indictrans2-beam5,mar-eng,89.2029,10,-0.06972610950469971,-0.3186695873737335,0.15824830532073972
+comet,indictrans2,mni-eng,78.7396,10,,,
+comet,indictrans2-beam5,mni-eng,78.7253,10,-0.014297962188720703,-1.0847534835338593,0.8655424416065214
+comet,indictrans2,npi-eng,92.6889,10,,,
+comet,indictrans2-beam5,npi-eng,92.8302,10,0.141260027885437,-0.02335071563720703,0.3555870056152344
+comet,indictrans2,ory-eng,90.4533,10,,,
+comet,indictrans2-beam5,ory-eng,90.6901,10,0.2367401123046875,-0.058606863021850586,0.6621544361114501
+comet,indictrans2,pan-eng,89.3284,10,,,
+comet,indictrans2-beam5,pan-eng,89.0019,10,-0.3264904022216797,-0.9058851301670074,0.07055284082889557
+comet,indictrans2,san-eng,81.3341,10,,,
+comet,indictrans2-beam5,san-eng,80.399,10,-0.9351092576980591,-2.701465532183647,0.4974204152822492
+comet,indictrans2,sat-eng,69.7706,10,,,
+comet,indictrans2-beam5,sat-eng,69.4958,10,-0.27475059032440186,-2.6190129965543747,2.091606855392456
+comet,indictrans2,snd-eng,81.9364,10,,,
+comet,indictrans2-beam5,snd-eng,82.0743,10,0.13795077800750732,-1.2599609196186066,1.4878933131694791
+comet,indictrans2,tam-eng,88.9491,10,,,
+comet,indictrans2-beam5,tam-eng,88.9441,10,-0.004978775978088379,-0.7452441900968552,0.5612312108278271
+comet,indictrans2,tel-eng,91.7358,10,,,
+comet,indictrans2-beam5,tel-eng,91.6477,10,-0.08812785148620605,-0.6809661388397217,0.5364793539047241
+comet,indictrans2,urd-eng,90.4678,10,,,
+comet,indictrans2-beam5,urd-eng,90.4223,10,-0.04557013511657715,-0.3944571763277054,0.21502985060214994
+bpc_pre,indictrans2,asm-eng,0.292532,50,,,
+bpc_pre,indictrans2,ben-eng,0.292246,50,,,
+bpc_pre,indictrans2,brx-eng,0.308714,50,,,
+bpc_pre,indictrans2,doi-eng,0.216704,50,,,
+bpc_pre,indictrans2,eng-asm,0.769759,50,,,
+bpc_pre,indictrans2,eng-ben,0.575499,50,,,
+bpc_pre,indictrans2,eng-brx,0.782208,50,,,
+bpc_pre,indictrans2,eng-doi,0.589023,50,,,
+bpc_pre,indictrans2,eng-gom,0.905014,50,,,
+bpc_pre,indictrans2,eng-guj,0.609923,50,,,
+bpc_pre,indictrans2,eng-hin,0.537109,50,,,
+bpc_pre,indictrans2,eng-kan,0.545971,50,,,
+bpc_pre,indictrans2,eng-kas,1.19248,50,,,
+bpc_pre,indictrans2,eng-mai,0.728405,50,,,
+bpc_pre,indictrans2,eng-mal,0.529301,50,,,
+bpc_pre,indictrans2,eng-mar,0.514531,50,,,
+bpc_pre,indictrans2,eng-mni,0.981097,50,,,
+bpc_pre,indictrans2,eng-npi,0.636876,50,,,
+bpc_pre,indictrans2,eng-ory,0.595051,50,,,
+bpc_pre,indictrans2,eng-pan,1.005,50,,,
+bpc_pre,indictrans2,eng-san,1.05993,50,,,
+bpc_pre,indictrans2,eng-sat,1.68153,50,,,
+bpc_pre,indictrans2,eng-snd,1.35074,50,,,
+bpc_pre,indictrans2,eng-tam,0.552553,50,,,
+bpc_pre,indictrans2,eng-tel,0.619742,50,,,
+bpc_pre,indictrans2,eng-urd,0.413469,50,,,
+bpc_pre,indictrans2,gom-eng,0.364005,50,,,
+bpc_pre,indictrans2,guj-eng,0.291917,50,,,
+bpc_pre,indictrans2,hin-eng,0.351779,50,,,
+bpc_pre,indictrans2,kan-eng,0.284091,50,,,
+bpc_pre,indictrans2,kas-eng,0.393473,50,,,
+bpc_pre,indictrans2,mai-eng,0.307506,50,,,
+bpc_pre,indictrans2,mal-eng,0.313041,50,,,
+bpc_pre,indictrans2,mar-eng,0.294046,50,,,
+bpc_pre,indictrans2,mni-eng,0.346355,50,,,
+bpc_pre,indictrans2,npi-eng,0.263024,50,,,
+bpc_pre,indictrans2,ory-eng,0.259929,50,,,
+bpc_pre,indictrans2,pan-eng,0.414574,50,,,
+bpc_pre,indictrans2,san-eng,0.410747,50,,,
+bpc_pre,indictrans2,sat-eng,0.541514,50,,,
+bpc_pre,indictrans2,snd-eng,0.401882,50,,,
+bpc_pre,indictrans2,tam-eng,0.364362,50,,,
+bpc_pre,indictrans2,tel-eng,0.321819,50,,,
+bpc_pre,indictrans2,urd-eng,0.253044,50,,,
+chrf,indictrans2,macro English -> X all (22),51.0231,10,,,
+chrf,indictrans2-beam5,macro English -> X all (22),51.6577,10,0.6346721944713707,0.202805815047674,1.4918647986977465
+chrf,indictrans2,macro English -> X one script (18),53.4652,10,,,
+chrf,indictrans2-beam5,macro English -> X one script (18),54.0807,10,0.615515808296486,0.09967007759834115,1.5882999334465184
+chrf,indictrans2,macro X -> English all (22),67.4692,10,,,
+chrf,indictrans2-beam5,macro X -> English all (22),67.9657,10,0.4964869397474132,-0.28776603544842505,1.3456510608028251
+chrf,indictrans2,macro X -> English one script (18),69.6501,10,,,
+chrf,indictrans2-beam5,macro X -> English one script (18),70.096,10,0.44582753869421765,-0.49198398071121546,1.5313452758651236
+comet,indictrans2,macro English -> X all (22),79.9,10,,,
+comet,indictrans2-beam5,macro English -> X all (22),80.2548,10,0.35479490052570384,0.0025382275608429004,0.9028381715444052
+comet,indictrans2,macro English -> X one script (18),81.4465,10,,,
+comet,indictrans2-beam5,macro English -> X one script (18),81.8439,10,0.3973806235525359,-0.04521674000554619,1.0484979690776957
+comet,indictrans2,macro English -> X XLM-R's languages (14),86.1481,10,,,
+comet,indictrans2-beam5,macro English -> X XLM-R's languages (14),86.5854,10,0.4372411114828907,-0.05893451826913001,1.3449114337563515
+comet,indictrans2,macro X -> English all (22),86.6291,10,,,
+comet,indictrans2-beam5,macro X -> English all (22),86.5578,10,-0.07130232724277619,-0.27705659107728164,0.09737582301551513
+comet,indictrans2,macro X -> English one script (18),88.6379,10,,,
+comet,indictrans2-beam5,macro X -> English one script (18),88.5318,10,-0.10607471068701102,-0.39452865223090006,0.14166198919216944
+comet,indictrans2,macro X -> English XLM-R's languages (14),89.4796,10,,,
+comet,indictrans2-beam5,macro X -> English XLM-R's languages (14),89.3659,10,-0.11370326791490015,-0.3581095593316174,0.09246587753295896
+bpc_pre,indictrans2,macro English -> X all (22),0.780691,50,,,
+bpc_pre,indictrans2,macro English -> X one script (18),0.664964,50,,,
+bpc_pre,indictrans2,macro X -> English all (22),0.331241,50,,,
+bpc_pre,indictrans2,macro X -> English one script (18),0.311338,50,,,

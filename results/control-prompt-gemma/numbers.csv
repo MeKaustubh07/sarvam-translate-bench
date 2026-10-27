@@ -1,0 +1,293 @@
+metric,config,direction,value,n,delta,ci_lo,ci_hi
+chrf,gemma-int4@neutral,asm-eng,57.9623,3,,,
+chrf,gemma-int4,asm-eng,43.0383,3,-14.923930728719235,-17.866522092180915,-12.337253876239892
+chrf,gemma-int4@neutral,ben-eng,54.0531,3,,,
+chrf,gemma-int4,ben-eng,51.2989,3,-2.7541836352446794,-23.46447753486234,14.019733656339824
+chrf,gemma-int4@neutral,brx-eng,24.1688,3,,,
+chrf,gemma-int4,brx-eng,15.0188,3,-9.149965713741294,-14.031278853165166,-7.811885571804039
+chrf,gemma-int4@neutral,doi-eng,47.658,3,,,
+chrf,gemma-int4,doi-eng,39.8374,3,-7.820566028584906,-8.240342097131368,-1.0153626904690256
+chrf,gemma-int4@neutral,eng-asm,23.6036,3,,,
+chrf,gemma-int4,eng-asm,12.6375,3,-10.96610228077102,-12.223993209051287,-6.24650734490273
+chrf,gemma-int4@neutral,eng-ben,43.0972,3,,,
+chrf,gemma-int4,eng-ben,17.0292,3,-26.06799055501068,-42.88172468298205,-8.10884167735842
+chrf,gemma-int4@neutral,eng-brx,1.26586,3,,,
+chrf,gemma-int4,eng-brx,3.83949,3,2.5736250493101123,-1.663689534567369,5.009156381117709
+chrf,gemma-int4@neutral,eng-doi,23.5465,3,,,
+chrf,gemma-int4,eng-doi,3.49042,3,-20.056078680481566,-30.054606225259256,-1.520386405516125
+chrf,gemma-int4@neutral,eng-gom,2.05059,3,,,
+chrf,gemma-int4,eng-gom,3.52067,3,1.4700790940112953,-0.886633633249245,5.304520239552211
+chrf,gemma-int4@neutral,eng-guj,42.5408,3,,,
+chrf,gemma-int4,eng-guj,18.6611,3,-23.879763935825217,-32.67388957125749,-16.968264961719576
+chrf,gemma-int4@neutral,eng-hin,63.4536,3,,,
+chrf,gemma-int4,eng-hin,24.8717,3,-38.581947587479874,-55.22484959294229,-26.60687743055653
+chrf,gemma-int4@neutral,eng-kan,24.3621,3,,,
+chrf,gemma-int4,eng-kan,12.4679,3,-11.894188584489394,-34.78193435508683,-1.6416020619489071
+chrf,gemma-int4@neutral,eng-kas,6.56167,3,,,
+chrf,gemma-int4,eng-kas,3.7792,3,-2.782473817346269,-9.808532299797314,1.6360785414741459
+chrf,gemma-int4@neutral,eng-mai,32.073,3,,,
+chrf,gemma-int4,eng-mai,12.1493,3,-19.923702510564823,-22.062392607626116,-14.829366507523748
+chrf,gemma-int4@neutral,eng-mal,17.7124,3,,,
+chrf,gemma-int4,eng-mal,7.34207,3,-10.370345136834276,-21.471965254815213,-2.8845350496929005
+chrf,gemma-int4@neutral,eng-mar,50.8723,3,,,
+chrf,gemma-int4,eng-mar,20.0944,3,-30.77792542416946,-40.084610153793555,-21.86894631646786
+chrf,gemma-int4@neutral,eng-mni,1.38727,3,,,
+chrf,gemma-int4,eng-mni,0.499913,3,-0.8873573011746313,-3.2219542181298175,0.6243692727915942
+chrf,gemma-int4@neutral,eng-npi,43.359,3,,,
+chrf,gemma-int4,eng-npi,16.6838,3,-26.675259801057333,-31.049280635761257,-21.77916248005802
+chrf,gemma-int4@neutral,eng-ory,6.29979,3,,,
+chrf,gemma-int4,eng-ory,12.4956,3,6.195830391547051,-1.8111139812569004,12.670295156167597
+chrf,gemma-int4@neutral,eng-pan,32.643,3,,,
+chrf,gemma-int4,eng-pan,15.7713,3,-16.871683366719,-17.177516572737563,-12.593915206325125
+chrf,gemma-int4@neutral,eng-san,19.3007,3,,,
+chrf,gemma-int4,eng-san,8.61328,3,-10.687420145430476,-15.8013881343897,-8.727333567036336
+chrf,gemma-int4@neutral,eng-sat,1.39473,3,,,
+chrf,gemma-int4,eng-sat,0.490612,3,-0.9041226521164645,-1.0125762524049104,-0.37654661553865615
+chrf,gemma-int4@neutral,eng-snd,0.993555,3,,,
+chrf,gemma-int4,eng-snd,0.880032,3,-0.11352268252372444,-1.62128206225371,0.2606087984038615
+chrf,gemma-int4@neutral,eng-tam,47.1711,3,,,
+chrf,gemma-int4,eng-tam,20.9167,3,-26.254462476826852,-36.42663188622074,-20.87883450750764
+chrf,gemma-int4@neutral,eng-tel,54.8768,3,,,
+chrf,gemma-int4,eng-tel,21.8839,3,-32.99292890484451,-35.37615561601764,-27.626721820086384
+chrf,gemma-int4@neutral,eng-urd,53.2851,3,,,
+chrf,gemma-int4,eng-urd,20.3112,3,-32.97393099103288,-49.91490081915778,-23.593195916598667
+chrf,gemma-int4@neutral,gom-eng,49.4576,3,,,
+chrf,gemma-int4,gom-eng,36.8523,3,-12.605287137141296,-18.24249182226037,-6.345764174118564
+chrf,gemma-int4@neutral,guj-eng,63.3038,3,,,
+chrf,gemma-int4,guj-eng,53.0416,3,-10.262214559463132,-11.688474705482648,-4.005406677044135
+chrf,gemma-int4@neutral,hin-eng,62.5293,3,,,
+chrf,gemma-int4,hin-eng,48.725,3,-13.804293274076905,-22.86673111465317,-0.26528219158044664
+chrf,gemma-int4@neutral,kan-eng,57.953,3,,,
+chrf,gemma-int4,kan-eng,50.8296,3,-7.123447208265752,-23.20086308001205,8.506065623453281
+chrf,gemma-int4@neutral,kas-eng,41.2568,3,,,
+chrf,gemma-int4,kas-eng,36.6369,3,-4.619960859005481,-9.508529364997692,2.7813000774529932
+chrf,gemma-int4@neutral,mai-eng,63.0799,3,,,
+chrf,gemma-int4,mai-eng,40.0137,3,-23.066202025220477,-24.167518667713836,-15.043935044107435
+chrf,gemma-int4@neutral,mal-eng,60.1766,3,,,
+chrf,gemma-int4,mal-eng,47.9115,3,-12.265068108831642,-23.19142875113311,1.3073124861766914
+chrf,gemma-int4@neutral,mar-eng,67.1902,3,,,
+chrf,gemma-int4,mar-eng,50.2036,3,-16.986639825775477,-25.837567951658325,-0.3811857590264225
+chrf,gemma-int4@neutral,mni-eng,21.4121,3,,,
+chrf,gemma-int4,mni-eng,16.5217,3,-4.8904215381121325,-9.932059176343316,-2.051137359418398
+chrf,gemma-int4@neutral,npi-eng,59.4496,3,,,
+chrf,gemma-int4,npi-eng,48.0027,3,-11.446872043433153,-21.181638113435888,-2.7020740180873517
+chrf,gemma-int4@neutral,ory-eng,56.1104,3,,,
+chrf,gemma-int4,ory-eng,46.2859,3,-9.824486463322515,-23.96550677628254,-5.74833777936351
+chrf,gemma-int4@neutral,pan-eng,56.3336,3,,,
+chrf,gemma-int4,pan-eng,53.4144,3,-2.9191935524913717,-10.43339305721046,7.980089373716275
+chrf,gemma-int4@neutral,san-eng,49.4066,3,,,
+chrf,gemma-int4,san-eng,29.5164,3,-19.89016247658033,-33.41179748368121,-3.0432033758857457
+chrf,gemma-int4@neutral,sat-eng,28.3815,3,,,
+chrf,gemma-int4,sat-eng,28.432,3,0.05051207080056841,-3.9856282427530942,3.8849922188965884
+chrf,gemma-int4@neutral,snd-eng,29.8625,3,,,
+chrf,gemma-int4,snd-eng,19.5526,3,-10.309967126893891,-17.06373641889718,-4.570418379874344
+chrf,gemma-int4@neutral,tam-eng,53.9085,3,,,
+chrf,gemma-int4,tam-eng,40.4492,3,-13.459314764335325,-40.12507647943359,0.5566546365450975
+chrf,gemma-int4@neutral,tel-eng,72.5285,3,,,
+chrf,gemma-int4,tel-eng,59.156,3,-13.372444221385173,-19.017556377791934,-3.461129836906025
+chrf,gemma-int4@neutral,urd-eng,64.1375,3,,,
+chrf,gemma-int4,urd-eng,47.7872,3,-16.350356768193947,-29.959514345597782,-2.449997352369344
+comet,gemma-int4@neutral,asm-eng,86.6114,3,,,
+comet,gemma-int4,asm-eng,70.5447,3,-16.066779692967728,-29.640811681747437,-3.275054693222046
+comet,gemma-int4@neutral,ben-eng,87.8381,3,,,
+comet,gemma-int4,ben-eng,72.7993,3,-15.0387426217397,-36.058348417282104,0.6772160530090332
+comet,gemma-int4@neutral,brx-eng,53.8278,3,,,
+comet,gemma-int4,brx-eng,47.0241,3,-6.803725163141884,-17.479288578033447,8.286237716674805
+comet,gemma-int4@neutral,doi-eng,81.9797,3,,,
+comet,gemma-int4,doi-eng,52.82,3,-29.1596790154775,-38.056522607803345,-24.34294819831848
+comet,gemma-int4@neutral,eng-asm,72.1827,3,,,
+comet,gemma-int4,eng-asm,39.3576,3,-32.82517592112224,-39.45093750953674,-26.411956548690796
+comet,gemma-int4@neutral,eng-ben,88.9714,3,,,
+comet,gemma-int4,eng-ben,46.2522,3,-42.7192360162735,-52.462412913640335,-24.519121646881104
+comet,gemma-int4@neutral,eng-brx,26.0638,3,,,
+comet,gemma-int4,eng-brx,27.2121,3,1.1483053366343192,-6.4300477504730225,6.007266044616699
+comet,gemma-int4@neutral,eng-doi,51.4691,3,,,
+comet,gemma-int4,eng-doi,32.2914,3,-19.17771498362223,-29.621845483779907,-13.341408967971802
+comet,gemma-int4@neutral,eng-gom,42.7322,3,,,
+comet,gemma-int4,eng-gom,30.1074,3,-12.624716758728027,-28.060945868492126,3.1866997480392456
+comet,gemma-int4@neutral,eng-guj,89.5052,3,,,
+comet,gemma-int4,eng-guj,43.9686,3,-45.536645253499344,-52.64439880847931,-37.373608350753784
+comet,gemma-int4@neutral,eng-hin,84.3583,3,,,
+comet,gemma-int4,eng-hin,43.036,3,-41.32224420706431,-47.7445125579834,-36.04595363140106
+comet,gemma-int4@neutral,eng-kan,77.4538,3,,,
+comet,gemma-int4,eng-kan,38.7052,3,-38.748602072397865,-47.58519530296326,-25.044330954551697
+comet,gemma-int4@neutral,eng-kas,34.6048,3,,,
+comet,gemma-int4,eng-kas,35.5655,3,0.9607354799906389,-1.153033971786499,4.417246580123901
+comet,gemma-int4@neutral,eng-mai,66.124,3,,,
+comet,gemma-int4,eng-mai,34.0292,3,-32.09479848543803,-42.719489336013794,-19.274628162384033
+comet,gemma-int4@neutral,eng-mal,66.4992,3,,,
+comet,gemma-int4,eng-mal,35.8731,3,-30.626104275385536,-47.44400978088379,-22.05755114555359
+comet,gemma-int4@neutral,eng-mar,78.9699,3,,,
+comet,gemma-int4,eng-mar,32.6782,3,-46.29173378149668,-52.3545116186142,-37.82057762145996
+comet,gemma-int4@neutral,eng-mni,76.9773,3,,,
+comet,gemma-int4,eng-mni,53.08,3,-23.897257447242737,-48.89863431453705,-2.4860799312591553
+comet,gemma-int4@neutral,eng-npi,83.4375,3,,,
+comet,gemma-int4,eng-npi,33.1047,3,-50.33273597558339,-55.22276759147644,-44.39161419868469
+comet,gemma-int4@neutral,eng-ory,50.4705,3,,,
+comet,gemma-int4,eng-ory,33.3294,3,-17.141091326872505,-45.49539536237717,8.877390623092651
+comet,gemma-int4@neutral,eng-pan,73.016,3,,,
+comet,gemma-int4,eng-pan,41.932,3,-31.084009011586502,-41.62569046020508,-17.73529052734375
+comet,gemma-int4@neutral,eng-san,60.2937,3,,,
+comet,gemma-int4,eng-san,28.6101,3,-31.683617830276493,-39.9013876914978,-25.178968906402588
+comet,gemma-int4@neutral,eng-sat,16.1315,3,,,
+comet,gemma-int4,eng-sat,17.5574,3,1.4258573452631609,-1.9101470708847046,3.398318588733673
+comet,gemma-int4@neutral,eng-snd,32.0471,3,,,
+comet,gemma-int4,eng-snd,30.2353,3,-1.8117412924766505,-12.544769048690796,17.163018882274628
+comet,gemma-int4@neutral,eng-tam,91.5374,3,,,
+comet,gemma-int4,eng-tam,43.454,3,-48.08340966701508,-53.787052631378174,-44.55481469631195
+comet,gemma-int4@neutral,eng-tel,88.4965,3,,,
+comet,gemma-int4,eng-tel,45.5859,3,-42.9105818271637,-47.60926365852356,-34.98954772949219
+comet,gemma-int4@neutral,eng-urd,83.9291,3,,,
+comet,gemma-int4,eng-urd,41.2347,3,-42.69440074761709,-53.21635901927948,-35.59025824069977
+comet,gemma-int4@neutral,gom-eng,80.5043,3,,,
+comet,gemma-int4,gom-eng,64.056,3,-16.448229551315308,-21.489274501800537,-12.667286396026611
+comet,gemma-int4@neutral,guj-eng,89.4681,3,,,
+comet,gemma-int4,guj-eng,79.8348,3,-9.633302688598633,-21.375668048858643,-0.5097866058349609
+comet,gemma-int4@neutral,hin-eng,90.3694,3,,,
+comet,gemma-int4,hin-eng,76.7535,3,-13.615864515304565,-19.469447930653885,-2.5370538234710693
+comet,gemma-int4@neutral,kan-eng,88.4644,3,,,
+comet,gemma-int4,kan-eng,67.7225,3,-20.741895834604904,-41.85587167739868,-0.7370710372924805
+comet,gemma-int4@neutral,kas-eng,76.0161,3,,,
+comet,gemma-int4,kas-eng,60.5409,3,-15.47516783078511,-17.331314086914062,-13.80884051322937
+comet,gemma-int4@neutral,mai-eng,84.2931,3,,,
+comet,gemma-int4,mai-eng,62.0649,3,-22.22821911176046,-23.33051562309265,-21.437454223632812
+comet,gemma-int4@neutral,mal-eng,89.7275,3,,,
+comet,gemma-int4,mal-eng,75.5049,3,-14.222564299901336,-29.633963108062744,-3.107309341430664
+comet,gemma-int4@neutral,mar-eng,89.699,3,,,
+comet,gemma-int4,mar-eng,80.0799,3,-9.619061152140304,-23.482990264892578,-1.2620627880096436
+comet,gemma-int4@neutral,mni-eng,43.9287,3,,,
+comet,gemma-int4,mni-eng,43.4108,3,-0.5179425080617222,-2.0001500844955444,0.5958974361419678
+comet,gemma-int4@neutral,npi-eng,91.3347,3,,,
+comet,gemma-int4,npi-eng,82.7168,3,-8.617889881134033,-17.05908179283142,-4.134678840637207
+comet,gemma-int4@neutral,ory-eng,87.1995,3,,,
+comet,gemma-int4,ory-eng,71.7338,3,-15.465698639551803,-27.452969551086426,-2.981919050216675
+comet,gemma-int4@neutral,pan-eng,83.4079,3,,,
+comet,gemma-int4,pan-eng,79.513,3,-3.894909222920745,-11.711937189102173,0.511014461517334
+comet,gemma-int4@neutral,san-eng,82.4895,3,,,
+comet,gemma-int4,san-eng,59.8965,3,-22.59305715560913,-29.831665754318237,-9.582734107971191
+comet,gemma-int4@neutral,sat-eng,60.3558,3,,,
+comet,gemma-int4,sat-eng,53.1739,3,-7.181913654009499,-12.736734747886658,-1.375061273574829
+comet,gemma-int4@neutral,snd-eng,67.908,3,,,
+comet,gemma-int4,snd-eng,48.5419,3,-19.366101423899337,-20.871180295944214,-16.559267044067383
+comet,gemma-int4@neutral,tam-eng,87.2593,3,,,
+comet,gemma-int4,tam-eng,74.0171,3,-13.24222882588704,-26.292330026626587,-0.9898364543914795
+comet,gemma-int4@neutral,tel-eng,89.9986,3,,,
+comet,gemma-int4,tel-eng,80.8793,3,-9.119325876235962,-15.872883796691895,-3.6037802696228027
+comet,gemma-int4@neutral,urd-eng,89.2289,3,,,
+comet,gemma-int4,urd-eng,76.8731,3,-12.355838219324752,-28.64024043083191,1.1051535606384277
+bpc,gemma-int4@neutral,asm-eng,1.38745,50,,,
+bpc,gemma-int4@neutral,ben-eng,1.09988,50,,,
+bpc,gemma-int4@neutral,brx-eng,1.60067,50,,,
+bpc,gemma-int4@neutral,doi-eng,1.31297,50,,,
+bpc,gemma-int4@neutral,eng-asm,3.12309,50,,,
+bpc,gemma-int4@neutral,eng-ben,1.58417,50,,,
+bpc,gemma-int4@neutral,eng-brx,4.14932,50,,,
+bpc,gemma-int4@neutral,eng-doi,3.01833,50,,,
+bpc,gemma-int4@neutral,eng-gom,3.92953,50,,,
+bpc,gemma-int4@neutral,eng-guj,1.77672,50,,,
+bpc,gemma-int4@neutral,eng-hin,1.18092,50,,,
+bpc,gemma-int4@neutral,eng-kan,2.3401,50,,,
+bpc,gemma-int4@neutral,eng-kas,4.89122,50,,,
+bpc,gemma-int4@neutral,eng-mai,2.72405,50,,,
+bpc,gemma-int4@neutral,eng-mal,2.18561,50,,,
+bpc,gemma-int4@neutral,eng-mar,1.46891,50,,,
+bpc,gemma-int4@neutral,eng-mni,5.85043,50,,,
+bpc,gemma-int4@neutral,eng-npi,2.1019,50,,,
+bpc,gemma-int4@neutral,eng-ory,3.53675,50,,,
+bpc,gemma-int4@neutral,eng-pan,3.03342,50,,,
+bpc,gemma-int4@neutral,eng-san,3.38709,50,,,
+bpc,gemma-int4@neutral,eng-sat,4.88743,50,,,
+bpc,gemma-int4@neutral,eng-snd,4.7176,50,,,
+bpc,gemma-int4@neutral,eng-tam,1.18801,50,,,
+bpc,gemma-int4@neutral,eng-tel,1.66761,50,,,
+bpc,gemma-int4@neutral,eng-urd,1.42093,50,,,
+bpc,gemma-int4@neutral,gom-eng,1.52817,50,,,
+bpc,gemma-int4@neutral,guj-eng,1.08672,50,,,
+bpc,gemma-int4@neutral,hin-eng,1.1879,50,,,
+bpc,gemma-int4@neutral,kan-eng,1.18782,50,,,
+bpc,gemma-int4@neutral,kas-eng,1.55713,50,,,
+bpc,gemma-int4@neutral,mai-eng,1.29153,50,,,
+bpc,gemma-int4@neutral,mal-eng,1.31723,50,,,
+bpc,gemma-int4@neutral,mar-eng,1.18969,50,,,
+bpc,gemma-int4@neutral,mni-eng,1.87195,50,,,
+bpc,gemma-int4@neutral,npi-eng,1.10404,50,,,
+bpc,gemma-int4@neutral,ory-eng,1.32392,50,,,
+bpc,gemma-int4@neutral,pan-eng,1.37426,50,,,
+bpc,gemma-int4@neutral,san-eng,1.61068,50,,,
+bpc,gemma-int4@neutral,sat-eng,1.59012,50,,,
+bpc,gemma-int4@neutral,snd-eng,1.46139,50,,,
+bpc,gemma-int4@neutral,tam-eng,1.3111,50,,,
+bpc,gemma-int4@neutral,tel-eng,1.16818,50,,,
+bpc,gemma-int4@neutral,urd-eng,0.97442,50,,,
+bpc_end,gemma-int4@neutral,asm-eng,1.38746,50,,,
+bpc_end,gemma-int4@neutral,ben-eng,1.09988,50,,,
+bpc_end,gemma-int4@neutral,brx-eng,1.60717,50,,,
+bpc_end,gemma-int4@neutral,doi-eng,1.31706,50,,,
+bpc_end,gemma-int4@neutral,eng-asm,3.12332,50,,,
+bpc_end,gemma-int4@neutral,eng-ben,1.58423,50,,,
+bpc_end,gemma-int4@neutral,eng-brx,4.14937,50,,,
+bpc_end,gemma-int4@neutral,eng-doi,3.01837,50,,,
+bpc_end,gemma-int4@neutral,eng-gom,3.93293,50,,,
+bpc_end,gemma-int4@neutral,eng-guj,1.7801,50,,,
+bpc_end,gemma-int4@neutral,eng-hin,1.18106,50,,,
+bpc_end,gemma-int4@neutral,eng-kan,2.34656,50,,,
+bpc_end,gemma-int4@neutral,eng-kas,4.8926,50,,,
+bpc_end,gemma-int4@neutral,eng-mai,2.72408,50,,,
+bpc_end,gemma-int4@neutral,eng-mal,2.18819,50,,,
+bpc_end,gemma-int4@neutral,eng-mar,1.46938,50,,,
+bpc_end,gemma-int4@neutral,eng-mni,5.85965,50,,,
+bpc_end,gemma-int4@neutral,eng-npi,2.10247,50,,,
+bpc_end,gemma-int4@neutral,eng-ory,3.5389,50,,,
+bpc_end,gemma-int4@neutral,eng-pan,3.0346,50,,,
+bpc_end,gemma-int4@neutral,eng-san,3.38957,50,,,
+bpc_end,gemma-int4@neutral,eng-sat,4.88929,50,,,
+bpc_end,gemma-int4@neutral,eng-snd,4.72001,50,,,
+bpc_end,gemma-int4@neutral,eng-tam,1.18812,50,,,
+bpc_end,gemma-int4@neutral,eng-tel,1.66783,50,,,
+bpc_end,gemma-int4@neutral,eng-urd,1.42114,50,,,
+bpc_end,gemma-int4@neutral,gom-eng,1.53058,50,,,
+bpc_end,gemma-int4@neutral,guj-eng,1.08673,50,,,
+bpc_end,gemma-int4@neutral,hin-eng,1.18792,50,,,
+bpc_end,gemma-int4@neutral,kan-eng,1.18782,50,,,
+bpc_end,gemma-int4@neutral,kas-eng,1.5621,50,,,
+bpc_end,gemma-int4@neutral,mai-eng,1.29155,50,,,
+bpc_end,gemma-int4@neutral,mal-eng,1.31723,50,,,
+bpc_end,gemma-int4@neutral,mar-eng,1.18969,50,,,
+bpc_end,gemma-int4@neutral,mni-eng,1.91226,50,,,
+bpc_end,gemma-int4@neutral,npi-eng,1.10404,50,,,
+bpc_end,gemma-int4@neutral,ory-eng,1.32392,50,,,
+bpc_end,gemma-int4@neutral,pan-eng,1.37426,50,,,
+bpc_end,gemma-int4@neutral,san-eng,1.61092,50,,,
+bpc_end,gemma-int4@neutral,sat-eng,1.59758,50,,,
+bpc_end,gemma-int4@neutral,snd-eng,1.47873,50,,,
+bpc_end,gemma-int4@neutral,tam-eng,1.31111,50,,,
+bpc_end,gemma-int4@neutral,tel-eng,1.16818,50,,,
+bpc_end,gemma-int4@neutral,urd-eng,0.974421,50,,,
+chrf,gemma-int4@neutral,macro English -> X all (22),26.9023,3,,,
+chrf,gemma-int4,macro English -> X all (22),11.7468,3,-15.155530559083179,-18.031829428158737,-11.72363438665976
+chrf,gemma-int4@neutral,macro English -> X one script (18),32.3063,3,,,
+chrf,gemma-int4,macro English -> X one script (18),14.0433,3,-18.2630108803705,-21.71584685581415,-13.776368939482904
+chrf,gemma-int4@neutral,macro X -> English all (22),51.8327,3,,,
+chrf,gemma-int4,macro X -> English all (22),41.0239,3,-10.808839363091714,-15.013785471298625,-4.457296334870989
+chrf,gemma-int4@neutral,macro X -> English one script (18),56.6337,3,,,
+chrf,gemma-int4,macro X -> English one script (18),44.5213,3,-12.112479363044812,-16.755595863590933,-4.767523693431549
+comet,gemma-int4@neutral,macro English -> X all (22),65.2396,3,,,
+comet,gemma-int4,macro English -> X all (22),36.6909,3,-28.54867812358973,-32.62098621238361,-22.400036521933295
+comet,gemma-int4@neutral,macro English -> X one script (18),70.8617,3,,,
+comet,gemma-int4,macro English -> X one script (18),37.2646,3,-33.59713960025047,-36.99534643027518,-28.065866066349884
+comet,gemma-int4@neutral,macro English -> X XLM-R's languages (14),77.7944,3,,,
+comet,gemma-int4,macro English -> X XLM-R's languages (14),39.0801,3,-38.71425627952531,-43.419890637908665,-31.020059117249076
+comet,gemma-int4@neutral,macro X -> English all (22),80.9959,3,,,
+comet,gemma-int4,macro X -> English all (22),67.2955,3,-13.700369858380526,-18.926361474123873,-6.260537965731189
+comet,gemma-int4@neutral,macro X -> English one script (18),85.2056,3,,,
+comet,gemma-int4,macro X -> English one script (18),70.8241,3,-14.381500637089786,-20.489645666546295,-5.695111552874252
+comet,gemma-int4@neutral,macro X -> English XLM-R's languages (14),88.0783,3,,,
+comet,gemma-int4,macro X -> English XLM-R's languages (14),74.9192,3,-13.15908275899433,-21.151186312947942,-2.210938079016543
+bpc,gemma-int4@neutral,macro English -> X all (22),2.91651,50,,,
+bpc,gemma-int4@neutral,macro English -> X one script (18),2.43425,50,,,
+bpc,gemma-int4@neutral,macro X -> English all (22),1.3426,50,,,
+bpc,gemma-int4@neutral,macro X -> English one script (18),1.28093,50,,,
+bpc_end,gemma-int4@neutral,macro English -> X all (22),2.91826,50,,,
+bpc_end,gemma-int4@neutral,macro English -> X one script (18),2.43557,50,,,
+bpc_end,gemma-int4@neutral,macro X -> English all (22),1.34639,50,,,
+bpc_end,gemma-int4@neutral,macro X -> English one script (18),1.28166,50,,,
